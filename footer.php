@@ -199,7 +199,7 @@
                                     </ul>
                                 </address>
                                 <a
-                                    href="#"
+                                    href="<?php echo get_permalink(3); ?>"
                                     data-aos="fade-in"
                                     data-aos-duration="1000"
                                     data-aos-delay="300"
@@ -550,7 +550,9 @@
                                                     for="privacidad-vacantes"
                                                 >
                                                     Acepto el
-                                                    <a href="#"
+                                                    <a href="<?php echo get_permalink(
+                                                        3
+                                                    ); ?>"
                                                         >Aviso de Privacidad</a
                                                     >
                                                 </label>
@@ -962,7 +964,9 @@
                                                     for="privacidad-proveedores-y-contratistas"
                                                 >
                                                     Acepto el
-                                                    <a href="#"
+                                                    <a href="<?php echo get_permalink(
+                                                        3
+                                                    ); ?>"
                                                         >Aviso de Privacidad</a
                                                     >
                                                 </label>
