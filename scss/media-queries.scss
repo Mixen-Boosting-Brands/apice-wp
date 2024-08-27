@@ -1,0 +1,227 @@
+// No media query necessary for xs breakpoint as it's effectively `@media (min-width: 0) { ... }`
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+    #proyectos-y-servicios {
+        /*
+        .categoria {
+            &::before {
+                right: -50px;
+                top: -76px;
+                width: 170px;
+                height: 170px;
+            }
+        }
+        */
+    }
+
+    #modelos {
+        ul.nav {
+            li {
+                margin-right: 30px;
+            }
+
+            li:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+    #proyectos-y-servicios {
+        .second-row > div:first-child {
+            border-right: 0.5px solid $white;
+        }
+
+        /*
+        .categoria {
+            &::before {
+                right: -64px;
+                top: -93px;
+                width: 206px;
+                height: 206px;
+            }
+        }
+        */
+    }
+
+    #apiteca {
+        .second-row > div {
+            border-right: 0.5px solid $white;
+        }
+
+        .second-row > div:first-child {
+            border-bottom: none;
+        }
+
+        .second-row > div:nth-child(2) {
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .second-row > div:last-child {
+            border-right: none;
+        }
+
+        .categoria {
+            width: 260px;
+            height: 260px;
+        }
+
+        /*
+        .triangulo {
+            &::after {
+                top: -50px;
+                right: -37px;
+                width: 110px;
+                height: 110px;
+            }
+        }
+
+        .circulo {
+            &::after {
+                top: -33px;
+                right: -52px;
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        .hexagono {
+            &::after {
+                top: -24px;
+                left: -27px;
+                width: 86px;
+                height: 86px;
+            }
+        }
+
+        .cuadrado {
+            &::after {
+                top: -22px;
+                width: 114px;
+                height: 114px;
+            }
+        }
+        */
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+    body {
+        .fixed-social {
+            right: 42px;
+        }
+    }
+
+    header {
+        padding: 15px 30px;
+
+        #mburger {
+            position: relative;
+            left: 10px;
+        }
+    }
+
+    .navbar-scroll {
+        padding: 10px 30px !important;
+    }
+
+    #proyectos-y-servicios {
+        /*
+        .categoria {
+            &::before {
+                right: -74px;
+                top: -110px;
+                width: 240px;
+                height: 240px;
+            }
+        }
+        */
+    }
+
+    #apiteca {
+        .second-row > div:nth-child(2) {
+            border-right: none;
+        }
+
+        .second-row > div:last-child {
+            border-right: none;
+        }
+
+        h2 {
+            @include font-size(2rem);
+        }
+
+        /*
+        .triangulo {
+            &::after {
+                top: -51px;
+                right: -37px;
+                width: 116px;
+                height: 116px;
+            }
+        }
+
+        .circulo {
+            &::after {
+                top: -37px;
+                right: -52px;
+                width: 145px;
+                height: 145px;
+            }
+        }
+
+        .hexagono {
+            &::after {
+                top: -25px;
+                left: -27px;
+                width: 92px;
+                height: 92px;
+            }
+        }
+
+        .cuadrado {
+            &::after {
+                top: -25px;
+                width: 126px;
+                height: 126px;
+            }
+        }
+        */
+    }
+
+    footer {
+        background-color: $primary;
+        color: $secondary;
+
+        #logo-footer {
+            max-width: 120px;
+            margin-bottom: 3rem;
+        }
+
+        .menu-contenido {
+            nav {
+                a {
+                    padding: 0px 10px 0px;
+                }
+            }
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+    #apiteca {
+        .second-row > div:nth-child(2) {
+            border-right: 0.5px solid $white;
+        }
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}

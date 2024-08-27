@@ -1,0 +1,55 @@
+#interna {
+    h1 {
+        @include font-size(2.5rem);
+    }
+
+    img {
+        @include transition(ease, 1s);
+
+        &:hover {
+            -webkit-transform: scale(
+                0.9
+            ); /* Safari and older versions of Chrome */
+            -moz-transform: scale(0.9); /* Firefox */
+            -ms-transform: scale(0.9); /* Internet Explorer 9 */
+            -o-transform: scale(0.9); /* Opera */
+            transform: scale(0.9);
+        }
+    }
+
+    .icono {
+        display: inline-block;
+        max-width: 20px;
+        vertical-align: top;
+    }
+}
+
+#modelos {
+    text-align: center;
+
+    .nav-pills {
+        display: flex;
+        justify-content: center;
+
+        .nav-link {
+            background-color: $secondary;
+            border-radius: 0;
+            font-family: "futuratmedregular", sans-serif;
+            text-transform: uppercase;
+        }
+
+        .nav-link.active {
+            background-color: $primary;
+        }
+    }
+
+    .tab-content {
+        img {
+            max-height: 440px;
+        }
+    }
+}
+
+#footer-modelos {
+    text-align: center;
+}

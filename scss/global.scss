@@ -1,0 +1,1140 @@
+// Global styles
+::selection {
+    background-color: #c06b36;
+    color: $primary;
+}
+
+/* For Firefox specifically */
+::-moz-selection {
+    background-color: #c06b36;
+    color: $primary;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $main-font-color;
+    font-family: "futura_bkbook", sans-serif;
+    position: relative;
+
+    .fixed-social {
+        position: fixed;
+        right: 22px;
+        top: 40%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 9999;
+
+        a {
+            background-color: $secondary;
+            border: 1px solid $secondary;
+            border-radius: 50px;
+            color: $primary;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $secondary;
+            }
+        }
+    }
+}
+
+header,
+section,
+footer {
+    width: 100%;
+    float: left;
+}
+
+.mh-100 {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    @include transition(ease, 0.3s);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "fulgatemedium", sans-serif;
+    text-transform: uppercase;
+}
+
+ul {
+    li::marker {
+        color: $list-bullet-color;
+    }
+}
+
+.black-headings {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: $primary;
+    }
+}
+
+.btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    @include transition(ease, 0.3s);
+}
+
+.my-30 {
+    margin: 30px 0;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.my-40 {
+    margin: 40px 0;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.py-60 {
+    padding: 60px 0;
+}
+
+.pt-60 {
+    padding-top: 60px;
+}
+
+.pb-60 {
+    padding-bottom: 60px;
+}
+
+.py-30 {
+    padding: 30px 0;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.pb-30 {
+    padding-bottom: 30px;
+}
+
+form {
+    .form-control,
+    .form-select {
+        background-color: $form-input-bg-color;
+        border: none;
+        border-radius: 0;
+        color: $primary;
+    }
+
+    textarea {
+        height: unset !important;
+    }
+
+    .form-text {
+        color: $secondary;
+    }
+
+    .form-control:focus {
+        background-color: $form-input-bg-color;
+    }
+
+    .form-floating > .form-control:focus ~ label::after,
+    .form-floating > .form-control:not(:placeholder-shown) ~ label::after,
+    .form-floating > .form-control-plaintext ~ label::after,
+    .form-floating > .form-select ~ label::after {
+        background-color: transparent;
+    }
+
+    .btn {
+        background-color: $form-button-color;
+        color: $primary;
+
+        &:hover,
+        &:focus {
+            background-color: $form-button-color-hover;
+            color: $primary;
+        }
+    }
+}
+
+.whatsapp {
+    @include whatsapp-button;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    // color: ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    @include transition(ease, 0.3s);
+
+    #logo-navbar {
+        width: 70px;
+        @include transition(ease, 0.3s);
+    }
+
+    #mburger {
+        border-radius: 0;
+        font-size: 1.6rem;
+        color: $white;
+        padding: 4px 10px;
+        @include transition(ease, 0.3s);
+
+        &:hover,
+        &:focus {
+            background-color: $secondary;
+            color: $primary;
+        }
+    }
+}
+
+.navbar-scroll {
+    background-image: linear-gradient(rgba(15, 15, 15, 0.7), rgba(0, 0, 0, 0));
+    padding: 10px 0 !important;
+    @include transition(ease, 0.3s);
+
+    #logo-navbar {
+        width: 50px !important;
+    }
+
+    #mburger {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            background-color: $secondary;
+            color: $primary;
+        }
+    }
+}
+
+#mapa {
+    line-height: 0;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#jumbotron {
+    color: $white;
+    height: 100vh;
+    position: relative;
+
+    .overlay {
+        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3));
+    }
+
+    .container,
+    .container-fluid {
+        height: 100vh;
+        position: relative;
+        z-index: 2;
+
+        .row {
+            width: 100%;
+            height: 100vh;
+        }
+    }
+
+    .flash {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        opacity: 0;
+        z-index: 9999;
+        pointer-events: none;
+        transition: opacity 0.5s ease-in-out; /* Match this duration with setTimeout */
+    }
+
+    .flash.active {
+        opacity: 1;
+    }
+
+    h1 {
+        @include font-size(6rem);
+    }
+}
+
+$jumbotron-bg-images: (
+    "../images/jumbotron/1.webp",
+    "../images/jumbotron/2.webp"
+);
+
+$index-jumbotron: 1;
+
+@each $image in $jumbotron-bg-images {
+    .bg-jumbotron-#{$index-jumbotron}::before {
+        @include background("#{$image}", center, cover);
+    }
+    $index-jumbotron: $index-jumbotron + 1;
+}
+
+@keyframes kenburns {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    100% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+}
+
+#historia {
+    h1 {
+        @include font-size(4rem);
+    }
+
+    img {
+        @include transition(ease, 1s);
+
+        &:hover {
+            -webkit-transform: scale(
+                0.9
+            ); /* Safari and older versions of Chrome */
+            -moz-transform: scale(0.9); /* Firefox */
+            -ms-transform: scale(0.9); /* Internet Explorer 9 */
+            -o-transform: scale(0.9); /* Opera */
+            transform: scale(0.9);
+        }
+    }
+}
+
+#valores {
+    text-align: center;
+
+    .card {
+        border: none;
+        min-height: 260px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin: 0 auto;
+            max-width: 80px;
+            @include transition(ease, 0.3s);
+            transform: scale(1); /* Initial scale */
+        }
+
+        /* Scale up on hover for Ken Burns effect */
+        img:hover,
+        img:focus {
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+    }
+}
+
+#descanso {
+    background-color: $primary;
+    color: $secondary;
+    padding: 100px 0 50px;
+
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "futuratmedregular", sans-serif;
+    }
+}
+
+#equipo {
+    background-color: $primary;
+    color: $secondary;
+    padding: 50px 0 100px;
+
+    .descripcion {
+        @include font-size(1.6rem);
+    }
+
+    .thumbnail-grande {
+        @include background("../images/equipo/saul-sanchez.png", center, cover);
+        width: 100%;
+        height: 600px;
+        background-size: cover;
+        background-position: center top;
+        overflow: hidden;
+        position: relative;
+        transition: background-image 0.5s ease-in-out;
+        -webkit-transition: background-image 0.5s ease-in-out; /* Safari */
+        -moz-transition: background-image 0.5s ease-in-out; /* Firefox */
+        -o-transition: background-image 0.5s ease-in-out; /* Opera */
+        -ms-transition: background-image 0.5s ease-in-out; /* Internet Explorer */
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            z-index: 1;
+        }
+
+        &.fade-in::before {
+            opacity: 1;
+        }
+    }
+
+    .integrante {
+        background-position: center !important;
+        background-size: cover !important;
+        width: 100%;
+        height: 600px;
+        display: block;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+        position: relative;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        transition: filter 0.3s ease;
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        &:hover,
+        &:focus {
+            filter: grayscale(100%) sepia(70%) hue-rotate(-16deg) saturate(300%);
+            -webkit-filter: grayscale(100%) sepia(70%) hue-rotate(-16deg)
+                saturate(300%);
+            -moz-filter: grayscale(100%) sepia(70%) hue-rotate(-16deg)
+                saturate(300%);
+            -o-filter: grayscale(100%) sepia(70%) hue-rotate(-16deg)
+                saturate(300%);
+            -ms-filter: grayscale(100%) sepia(70%) hue-rotate(-16deg)
+                saturate(300%);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: inherit;
+            background-size: inherit;
+            background-position: inherit;
+            background-repeat: no-repeat;
+            transition: transform 5s ease; /* Smooth transition for Ken Burns effect */
+            transform: scale(1); /* Initial scale */
+            z-index: -1; /* Ensure the pseudo-element is behind the content */
+        }
+
+        /* Scale up on hover for Ken Burns effect */
+        &:hover::before {
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -o-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+    }
+
+    h1 {
+        @include font-size(1rem);
+        margin-bottom: 0;
+    }
+
+    p {
+        font-family: "futuratmedregular", sans-serif;
+        @include font-size(0.8rem);
+        text-transform: uppercase;
+    }
+
+    /*
+    $equipo-bg-images: (
+        "../images/equipo/valeria-jimenez.webp",
+        "../images/equipo/valeria-jimenez.webp",
+        "../images/equipo/valeria-jimenez.webp",
+        "../images/equipo/valeria-jimenez.webp"
+    );
+
+    $index-equipo: 1;
+
+    @each $image in $equipo-bg-images {
+        .integrante-#{$index-equipo} {
+            @include background("#{$image}", center, cover);
+        }
+        $index-equipo: $index-equipo + 1;
+    }
+    */
+}
+
+#proyectos-y-servicios {
+    @include background(
+        "../images/proyectos-y-servicios/bg-1.webp",
+        center,
+        cover
+    );
+    color: $white;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: background-image 0.5s ease-in-out;
+    -webkit-transition: background-image 0.5s ease-in-out; /* Safari */
+    -moz-transition: background-image 0.5s ease-in-out; /* Firefox */
+    -o-transition: background-image 0.5s ease-in-out;
+
+    /*
+    .overlay {
+        background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.3));
+
+    */
+
+    .container,
+    .container-fluid {
+        position: relative;
+        z-index: 2;
+    }
+
+    .second-row > div:first-child {
+        border-bottom: 0.5px solid $white;
+    }
+
+    h1 {
+        @include font-size(3rem);
+        @include transition(ease, 0.3s);
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+
+        h1 {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        &:hover,
+        &:focus {
+            color: $white;
+
+            h1 {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+
+    .categoria {
+        border: 0.5px solid rgba(255, 255, 255, 0.6);
+        font-family: "futura_bkbook", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        text-transform: none;
+        width: 260px;
+        height: 260px;
+        z-index: 1;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            transition:
+                width 1s ease,
+                height 1s ease;
+        }
+
+        // Left border (4th)
+        &::before {
+            border: 0.5px solid rgba(255, 255, 255, 1);
+            width: 0;
+            height: 0;
+            bottom: 0;
+            left: 0;
+            transition-delay: 2.4s;
+        }
+
+        // Top border (1st)
+        &::after {
+            border: 0.5px solid rgba(255, 255, 255, 1);
+            height: 0;
+            width: 0;
+            top: 0;
+            left: 0;
+            transition-delay: 0;
+        }
+
+        // Left border hover
+        &:hover::before {
+            width: 0;
+            height: 100%;
+        }
+
+        // Top border hover
+        &:hover::after {
+            width: 100%;
+            height: 0;
+        }
+
+        // Right border hover
+        &:hover {
+            span::before {
+                width: 0;
+                height: 100%;
+            }
+        }
+
+        // Bottom border hover
+        &:hover {
+            span::after {
+                width: 100%;
+                height: 0;
+            }
+        }
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                transition:
+                    width 1s ease,
+                    height 1s ease;
+            }
+
+            // Right border (2nd)
+            &::before {
+                border: 0.5px solid rgba(255, 255, 255, 1);
+                width: 0;
+                height: 0;
+                top: 0;
+                right: 0;
+                transition-delay: 0.8s;
+            }
+
+            // Bottom border (3rd)
+            &::after {
+                border: 0.5px solid rgba(255, 255, 255, 1);
+                height: 0;
+                width: 0;
+                bottom: 0;
+                right: 0;
+                transition-delay: 1.6s;
+            }
+        }
+
+        /*
+        &::before {
+            @include background(
+                "../images/proyectos-y-servicios/triangulo.png",
+                center,
+                contain
+            );
+            position: absolute;
+            right: -50px;
+            top: -65px;
+            width: 150px;
+            height: 150px;
+            content: "";
+            z-index: -1;
+        }
+        */
+    }
+}
+
+.residencial-bg {
+    background-image: url("../images/proyectos-y-servicios/bg-1.webp") !important;
+}
+
+.industrial-bg {
+    background-image: url("../images/proyectos-y-servicios/bg-2.webp") !important;
+}
+
+#apiteca {
+    @include background("../images/apiteca/bg-articulos.webp", center, cover);
+    color: $white;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: background-image 0.5s ease-in-out;
+    -webkit-transition: background-image 0.5s ease-in-out; /* Safari */
+    -moz-transition: background-image 0.5s ease-in-out; /* Firefox */
+    -o-transition: background-image 0.5s ease-in-out;
+
+    /*
+    &.hover-effect::before {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include background("../images/apiteca/bg.webp", center, cover);
+        -webkit-transition: -webkit-transform 5s ease-out;
+        -moz-transition: -moz-transform 5s ease-out;
+        -o-transition: -o-transform 5s ease-out;
+        transition: transform 5s ease-out;
+        z-index: -1;
+    }
+    */
+
+    .second-row > div:first-child {
+        border-bottom: 0.5px solid $white;
+    }
+
+    .second-row > div:nth-child(2) {
+        border-bottom: 0.5px solid $white;
+    }
+
+    a {
+        color: rgba(255, 255, 255, 0.6);
+        display: block;
+
+        h2 {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        &:hover,
+        &:focus {
+            color: $white;
+
+            h2 {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+
+    h1 {
+        @include font-size(4rem);
+    }
+
+    h2 {
+        font-family: "futuratmedregular", sans-serif;
+        position: relative;
+        @include font-size(1.4rem);
+        @include transition(ease, 0.3s);
+
+        &::after {
+            position: absolute;
+            content: "";
+        }
+
+        &:hover,
+        &:focus {
+            &::after {
+            }
+        }
+    }
+
+    .categoria {
+        border: 0.5px solid rgba(255, 255, 255, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        width: 140px;
+        height: 140px;
+        z-index: 1;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            transition:
+                width 1s ease,
+                height 1s ease;
+        }
+
+        // Left border (4th)
+        &::before {
+            border: 0.5px solid rgba(255, 255, 255, 1);
+            width: 0;
+            height: 0;
+            bottom: 0;
+            left: 0;
+            transition-delay: 2.4s;
+        }
+
+        // Top border (1st)
+        &::after {
+            border: 0.5px solid rgba(255, 255, 255, 1);
+            height: 0;
+            width: 0;
+            top: 0;
+            left: 0;
+            transition-delay: 0;
+        }
+
+        // Left border hover
+        &:hover::before {
+            width: 0;
+            height: 100%;
+        }
+
+        // Top border hover
+        &:hover::after {
+            width: 100%;
+            height: 0;
+        }
+
+        // Right border hover
+        &:hover {
+            span::before {
+                width: 0;
+                height: 100%;
+            }
+        }
+
+        // Bottom border hover
+        &:hover {
+            span::after {
+                width: 100%;
+                height: 0;
+            }
+        }
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                transition:
+                    width 1s ease,
+                    height 1s ease;
+            }
+
+            // Right border (2nd)
+            &::before {
+                border: 0.5px solid rgba(255, 255, 255, 1);
+                width: 0;
+                height: 0;
+                top: 0;
+                right: 0;
+                transition-delay: 0.8s;
+            }
+
+            // Bottom border (3rd)
+            &::after {
+                border: 0.5px solid rgba(255, 255, 255, 1);
+                height: 0;
+                width: 0;
+                bottom: 0;
+                right: 0;
+                transition-delay: 1.6s;
+            }
+        }
+    }
+
+    /*
+    .triangulo {
+        &::after {
+            @include background(
+                "../images/apiteca/triangulo.png",
+                center,
+                contain
+            );
+            top: -45px;
+            right: -37px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .circulo {
+        &::after {
+            @include background(
+                "../images/apiteca/circulo.png",
+                center,
+                contain
+            );
+            top: -36px;
+            right: -52px;
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    .hexagono {
+        &::after {
+            @include background(
+                "../images/apiteca/hexagono.png",
+                center,
+                contain
+            );
+            top: -21px;
+            left: -29px;
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    .cuadrado {
+        &::after {
+            @include background(
+                "../images/apiteca/cuadrado.png",
+                center,
+                contain
+            );
+            top: -20px;
+            @include absolute-center-x;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    */
+}
+
+.articulos-bg {
+    background-image: url("../images/apiteca/bg-articulos.webp") !important;
+}
+
+.contenido-multimedia-bg {
+    background-image: url("../images/apiteca/bg-contenido-multimedia.webp") !important;
+}
+
+.noticias-bg {
+    background-image: url("../images/apiteca/bg-noticias.webp") !important;
+}
+
+.ebooks-descargables-bg {
+    background-image: url("../images/apiteca/bg-ebooks-descargables.webp") !important;
+}
+
+#contacto {
+    @include background("../images/contacto/bg.webp", center, cover);
+    color: $white;
+
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    h1 {
+        @include font-size(4rem);
+    }
+
+    a {
+        color: $white;
+
+        &:hover,
+        &:focus {
+            color: $secondary;
+        }
+    }
+
+    i {
+        @include font-size(2rem);
+    }
+
+    .contenedor-calendly {
+        background-color: $calendly-bg-color;
+        color: $primary;
+        width: 100%;
+        height: 100%;
+        float: left;
+        text-align: center;
+
+        h1 {
+            @include font-size(2.5rem);
+        }
+    }
+}
+
+footer {
+    background-color: $primary;
+    color: $secondary;
+
+    a {
+        border-radius: 0;
+        color: $secondary;
+        display: inline-block;
+        padding: 0;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            background-color: $secondary;
+            color: $primary;
+        }
+    }
+
+    #logo-footer-a {
+        &:hover,
+        &:focus {
+            background-color: unset;
+            color: initial;
+        }
+    }
+
+    #logo-footer {
+        max-width: 120px;
+        margin-bottom: 3rem;
+
+        &:hover,
+        &:focus {
+            background-color: unset !important;
+            color: initial !important;
+        }
+    }
+
+    .menu-contenido {
+        width: 100%;
+
+        nav {
+            width: 100%;
+            float: left;
+            display: block;
+        }
+
+        nav {
+            width: 100%;
+            font-family: "futuratmedregular", sans-serif;
+            font-weight: bold;
+            float: left;
+            line-height: 2.4rem;
+            text-transform: uppercase;
+
+            li {
+                // margin-bottom: 0.6rem;
+                margin-bottom: 0;
+            }
+
+            a {
+                border-radius: 0;
+                color: $secondary;
+                display: inline-block;
+                padding: 0;
+                text-decoration: none;
+
+                &:hover,
+                &:focus {
+                    background-color: $secondary;
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .fa-location-pin {
+        @include font-size(2rem);
+    }
+
+    .social {
+        position: relative;
+        z-index: 1;
+
+        a {
+            background-color: $secondary;
+            border: 1px solid $secondary;
+            border-radius: 50px;
+            color: $primary;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover,
+            &:focus {
+                background-color: transparent;
+                color: $secondary;
+            }
+        }
+    }
+
+    .copyright {
+        @include font-size(1.3rem);
+    }
+}

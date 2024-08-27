@@ -1,0 +1,164 @@
+.modal {
+    color: $secondary;
+    margin-top: 43px;
+    overflow: hidden;
+
+    .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .modal-content {
+        background-color: $primary;
+        border-radius: 0;
+        position: relative;
+        overflow: hidden;
+
+        a {
+            color: $white;
+        }
+
+        .modal-header {
+            border-bottom: 0;
+            color: $white !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            z-index: 2;
+
+            .btn-close {
+                --bs-btn-close-bg: none;
+                color: $white;
+                display: flex;
+                @include font-size(3rem);
+            }
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+    }
+
+    .foto {
+        background-position: center top !important;
+        background-size: cover !important;
+        width: 100%;
+        height: 300px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        /*
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        transition: filter 0.3s ease;
+        */
+        filter: none; /* Reset the filter to default */
+        -webkit-filter: none;
+        -moz-filter: none;
+        -o-filter: none;
+        -ms-filter: none;
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        &:hover,
+        &:focus {
+            filter: none; /* Reset the filter to default */
+            -webkit-filter: none;
+            -moz-filter: none;
+            -o-filter: none;
+            -ms-filter: none;
+        }
+    }
+
+    h1 {
+        color: $white;
+    }
+
+    h2 {
+        font-family: "futuratmedregular", sans-serif;
+    }
+}
+
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px) !important; /* Standard syntax */
+    -webkit-backdrop-filter: blur(
+        5px
+    ) !important; /* For Safari and older versions of Chrome */
+}
+
+.modal-backdrop.show {
+    opacity: inherit;
+}
+
+#modal-equipo {
+    .quote {
+        color: $white;
+        font-family: "the_star_in_the_midnightRg", serif;
+        line-height: 2.4rem;
+        @include font-size(2.8rem);
+    }
+
+    .quote-author {
+        font-style: italic;
+    }
+}
+
+#modal-vacantes {
+    .foto {
+        @include background("../images/vacantes/foto.webp", right, cover);
+        background-position: right !important;
+    }
+
+    h1 {
+        color: $secondary;
+    }
+}
+
+#modal-proveedores-y-contratistas {
+    .foto {
+        @include background(
+            "../images/proveedores-y-contratistas/foto.webp",
+            center,
+            cover
+        );
+    }
+
+    h1 {
+        color: $secondary;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@include media-breakpoint-up(sm) {
+}
+
+// Medium devices (tablets, 768px and up)
+@include media-breakpoint-up(md) {
+}
+
+// Large devices (desktops, 992px and up)
+@include media-breakpoint-up(lg) {
+    .modal {
+        margin-top: initial;
+
+        .foto {
+            height: 100%;
+        }
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@include media-breakpoint-up(xl) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@include media-breakpoint-up(xxl) {
+}

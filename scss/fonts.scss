@@ -1,0 +1,45 @@
+// Fonts
+$fa-font-path: "../fonts/webfonts" !default;
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/regular";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
+// @import url(https://fonts.bunny.net/css?family=raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i);
+
+@font-face {
+    font-family: "fulgatemedium";
+    src:
+        url("../fonts/fulgate-medium-webfont.woff2") format("woff2"),
+        url("../fonts/fulgate-medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "futuratmedregular";
+    src:
+        url("../fonts/futura_urw_medium-webfont.woff2") format("woff2"),
+        url("../fonts/futura_urw_medium-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "futura_bkbook";
+    src:
+        url("../fonts/futura_book-webfont.woff2") format("woff2"),
+        url("../fonts/futura_book-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "the_star_in_the_midnightRg";
+    src:
+        url("../fonts/the_star_in_the_midnight-webfont.woff2") format("woff2"),
+        url("../fonts/the_star_in_the_midnight-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
