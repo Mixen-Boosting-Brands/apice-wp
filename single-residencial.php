@@ -197,23 +197,31 @@
                     data-aos-duration="1000"
                     data-aos-delay="0"
                 >
-                    <?php $i = 1; while (have_rows("modelos")):
+                    <?php
+                    $i = 1;
+                    while (have_rows("modelos")):
                         the_row(); ?>
                         <li class="nav-item" role="presentation">
                             <button
-                                class="nav-link <?php if( $i == 1 ): ?>active<?php endif;>"
+                                class="nav-link <?php if (
+                                    $i == 1
+                                ): ?>active<?php endif; ?>"
                                 id="pills-<?php echo $i; ?>-tab"
                                 data-bs-toggle="pill"
                                 data-bs-target="#pills-<?php echo $i; ?>"
                                 type="button"
                                 role="tab"
                                 aria-controls="pills-<?php echo $i; ?>"
-                                aria-selected="<?php if( $i == 1 ): ?>true<?php else: ?>false<?php endif; ?>"
+                                aria-selected="<?php if (
+                                    $i == 1
+                                ): ?>true<?php else: ?>false<?php endif; ?>"
                             >
                                 Modelo <?php echo $i; ?>
                             </button>
                         </li>
-                    <?php $i++; endwhile; ?>
+                    <?php $i++;
+                    endwhile;
+                    ?>
                 </ul>
                 <div
                     class="tab-content"
@@ -222,10 +230,14 @@
                     data-aos-duration="1000"
                     data-aos-delay="100"
                 >
-                    <?php $i = 1; while (have_rows("modelos")):
+                    <?php
+                    $i = 1;
+                    while (have_rows("modelos")):
                         the_row(); ?>
                         <div
-                            class="tab-pane fade <?php if( $i == 1 ): ?>show active<?php endif; ?>"
+                            class="tab-pane fade <?php if (
+                                $i == 1
+                            ): ?>show active<?php endif; ?>"
                             id="pills-<?php echo $i; ?>"
                             role="tabpanel"
                             aria-labelledby="pills-<?php echo $i; ?>-tab"
@@ -289,8 +301,9 @@
                                 </div>
                             </div>
                         </div>
-                    <?php $i++; endwhile; ?>
-
+                    <?php $i++;
+                    endwhile;
+                    ?>
                 </div>
             </div>
         </div>
