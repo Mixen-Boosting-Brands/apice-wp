@@ -84,6 +84,7 @@
                     >
                         <?php html5wp_excerpt("html5wp_custom_post"); ?>
                     </p>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-secondary">Ver más <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
                 <div class="col-lg-6 my-lg-auto">
                     <a href="<?php the_permalink(); ?>">
