@@ -664,7 +664,7 @@
                 class="col-6 col-xl-3 d-flex align-items-center justify-content-center"
             >
                 <a
-                    href="#"
+                    href="<?php echo get_category_link(2); ?>"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="0"
@@ -678,7 +678,7 @@
                 class="col-6 col-xl-3 d-flex align-items-center justify-content-center"
             >
                 <a
-                    href="#"
+                    href="<?php echo get_category_link(3); ?>"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="100"
@@ -694,7 +694,7 @@
                 class="col-6 col-xl-3 d-flex align-items-center justify-content-center"
             >
                 <a
-                    href="#"
+                    href="<?php echo get_category_link(4); ?>"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200"
@@ -708,7 +708,7 @@
                 class="col-6 col-xl-3 d-flex align-items-center justify-content-center"
             >
                 <a
-                    href="#"
+                    href="<?php echo get_category_link(5); ?>"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="300"
