@@ -137,22 +137,30 @@
                                             class="list-unstyled"
                                         >
                                             <li>
-                                                <a href="#historia"
+                                                <a href="<?php if (!is_home()):
+                                                    echo esc_url(home_url());
+                                                endif; ?>#historia"
                                                     >Conócenos</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="#proyectos-y-servicios"
+                                                <a href="<?php if (!is_home()):
+                                                    echo esc_url(home_url());
+                                                endif; ?>#proyectos-y-servicios"
                                                     >Proyectos y Servicios</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="#equipo"
+                                                <a href="<?php if (!is_home()):
+                                                    echo esc_url(home_url());
+                                                endif; ?>#equipo"
                                                     >Nuestro Equipo</a
                                                 >
                                             </li>
                                             <li>
-                                                <a href="#apiteca">Ápiteca</a>
+                                                <a href="<?php if (!is_home()):
+                                                    echo esc_url(home_url());
+                                                endif; ?>#apiteca">Ápiteca</a>
                                             </li>
                                             <li>
                                                 <a
