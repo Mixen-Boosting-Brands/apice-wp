@@ -327,7 +327,7 @@ function html5wp_excerpt($length_callback = "", $more_callback = "")
 function html5_blank_view_article($more)
 {
     global $post;
-    return "";
+    return "...";
 }
 
 // Remove Admin bar
