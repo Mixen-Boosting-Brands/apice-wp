@@ -60,7 +60,7 @@
             <div class="row mb-4">
                 <div class="col-lg-6 <?php if ($i % 2 != 0):
                 else:
-                     ?>order-lg-2<?php
+                     ?>order-1 order-lg-2<?php
                 endif; ?> mb-4 my-lg-auto">
                     <a href="<?php the_permalink(); ?>">
                         <h1
