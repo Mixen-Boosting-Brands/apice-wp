@@ -123,7 +123,29 @@
                             ); ?> m²
                         </li>
                     <?php endif; ?>
+                    <?php if (have_rows("amenidades")): ?>
+                        <li
+                            class="mb-5"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                            data-aos-delay="400"
+                        >
+                            <img
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/residencial/ico-amenidades.webp"
+                                alt=""
+                                class="icono"
+                            />
+                            Amenidades:
+                            <ul class="mt-3">
+                                <?php while (have_rows("amenidades")):
+                                    the_row(); ?>
 
+                                <?php endif; ?>
+                            </ul>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="col-lg-7">
