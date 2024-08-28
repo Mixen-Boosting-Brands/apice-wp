@@ -62,7 +62,8 @@
                     <?php the_title(); ?>
                 </h1>
 
-                <div class="meta-data">
+                <div class="meta-data" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="100">
                     <ul class="list-inline fst-italic">
                         <li class="list-inline-item">
                             <?php esc_html_e(
@@ -74,14 +75,21 @@
                             <time>
                                 <?php
                                 // Set the date and time format
-                                $date_format = 'j \d\e F, Y \a \l\a\(s\) g:i a';
+                                $date_format = 'j \d\e F, Y \a \l\a(s) g:i a';
 
-                                // Output the formatted date and time
-                                echo "el " .
-                                    date_i18n(
-                                        $date_format,
-                                        strtotime(get_the_date("Y-m-d H:i:s"))
-                                    );
+                                // Replace the problematic character sequence manually
+                                $formatted_date = date_i18n(
+                                    $date_format,
+                                    strtotime(get_the_date("Y-m-d H:i:s"))
+                                );
+                                $formatted_date = str_replace(
+                                    "(s)",
+                                    "s",
+                                    $formatted_date
+                                );
+
+                                // Output the final formatted date and time
+                                echo "el " . $formatted_date;
                                 ?>
             				</time>
                         </li>
@@ -98,7 +106,7 @@
                 </div>
 
                 <div class="content" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="100">
+                data-aos-duration="1000" data-aos-delay="200">
                     <?php the_content(); ?>
 
                     <?php edit_post_link(); ?>
