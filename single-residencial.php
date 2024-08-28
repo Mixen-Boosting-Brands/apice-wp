@@ -66,29 +66,25 @@
                     <?php the_title(); ?>
                 </h1>
                 <ul class="list-unstyled">
-                    <?php if (have_rows("disenador")):
-                        while (have_rows("disenador")):
-                            the_row(); ?>
-                    <li
-                        class="mb-5"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="100"
-                    >
-                        <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/residencial/ico-pin.webp"
-                            alt=""
-                            class="icono"
-                        />
-                        Diseñador: <?php echo acf_esc_html(
-                            get_sub_field("disenador")
-                        ); ?>
-                    </li>
-                    <?php $i++;
-                        endwhile;
-                    endif; ?>
+                    <?php if (get_field("disenador")): ?>
+                        <li
+                            class="mb-5"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                            data-aos-delay="100"
+                        >
+                            <img
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/residencial/ico-pin.webp"
+                                alt=""
+                                class="icono"
+                            />
+                            Diseñador: <?php echo acf_esc_html(
+                                the_field("disenador")
+                            ); ?>
+                        </li>
+                    <?php endif; ?>
                     <li
                         class="mb-5"
                         data-aos="fade-right"
