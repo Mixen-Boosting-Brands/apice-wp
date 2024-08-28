@@ -482,12 +482,38 @@
                                                     Puesto al que deseas
                                                     postularte
                                                 </option>
-                                                <option value="Residencial">
-                                                    Puesto 1
-                                                </option>
-                                                <option value="Industrial">
-                                                    Puesto 2
-                                                </option>
+                                                <?php
+                                                // Define the custom query
+                                                $args = [
+                                                    "post_type" => "vacantes",
+                                                    "posts_per_page" => -1,
+                                                ];
+
+                                                $query = new WP_Query($args);
+
+                                                if ($query->have_posts()):
+                                                    while (
+                                                        $query->have_posts()
+                                                    ):
+                                                        $query->the_post(); ?>
+                                                    <option value="<?php the_title(); ?>">
+                                                        <?php the_title(); ?>
+                                                    </option>
+                                                <?php
+                                                    endwhile; ?>
+                                                <?php
+                                                else:
+                                                     ?>
+                                                    <option
+                                                        disabled
+                                                        value=""
+                                                    >
+                                                        ―
+                                                    </option>
+                                                <?php
+                                                endif;
+                                                wp_reset_postdata();
+                                                ?>
                                             </select>
                                             <label for="puesto">Puesto*</label>
                                             <div class="valid-feedback">
