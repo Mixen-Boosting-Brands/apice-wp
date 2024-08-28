@@ -151,86 +151,35 @@
                     <?php endif; ?>
                 </ul>
             </div>
+            <?php if (have_rows("galeria")): ?>
             <div class="col-lg-7">
                 <div class="row gallery">
-                    <div class="col-6 mb-4">
-                        <a
-                            href="javascript: void(0)"
-                            data-image="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/home/thumb-historia.webp"
-                        >
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/home/thumb-historia.webp"
-                                alt=""
-                                class="img-fluid"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-delay="0"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-6 mb-4">
-                        <a
-                            href="javascript: void(0)"
-                            data-image="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/home/thumb-historia.webp"
-                        >
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/home/thumb-historia.webp"
-                                alt=""
-                                class="img-fluid"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-delay="0"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-6 mb-4">
-                        <a
-                            href="javascript: void(0)"
-                            data-image="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/home/thumb-historia.webp"
-                        >
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/home/thumb-historia.webp"
-                                alt=""
-                                class="img-fluid"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-delay="0"
-                            />
-                        </a>
-                    </div>
-                    <div class="col-6 mb-4">
-                        <a
-                            href="javascript: void(0)"
-                            data-image="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/home/thumb-historia.webp"
-                        >
-                            <img
-                                src="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/home/thumb-historia.webp"
-                                alt=""
-                                class="img-fluid"
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-delay="0"
-                            />
-                        </a>
-                    </div>
+                    <?php while (have_rows("amenidades")):
+                        the_row(); ?>
+                        <div class="col-6 mb-4">
+                            <a
+                                href="javascript:void(0)"
+                                data-image="<?php echo acf_esc_html(
+                                    get_sub_field("imagen")
+                                ); ?>"
+                            >
+                                <img
+                                    src="<?php echo acf_esc_html(
+                                        get_sub_field("imagen")
+                                    ); ?>"
+                                    alt=""
+                                    class="img-fluid"
+                                    data-aos="fade-left"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="0"
+                                />
+                            </a>
+                        </div>
+                    <?php
+                    endwhile; ?>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 </section>
