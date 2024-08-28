@@ -112,18 +112,26 @@
                 <nav>
                     <ul id="navmenu" class="list-unstyled">
                         <li>
-                            <a href="#historia">Conócenos</a>
+                            <a href="<?php if (!is_home()):
+                                echo esc_url(home_url());
+                            endif; ?>#historia">Conócenos</a>
                         </li>
                         <li>
-                            <a href="#proyectos-y-servicios"
+                            <a href="<?php if (!is_home()):
+                                echo esc_url(home_url());
+                            endif; ?>#proyectos-y-servicios"
                                 >Proyectos y Servicios</a
                             >
                         </li>
                         <li>
-                            <a href="#equipo">Nuestro Equipo</a>
+                            <a href="<?php if (!is_home()):
+                                echo esc_url(home_url());
+                            endif; ?>#equipo">Nuestro Equipo</a>
                         </li>
                         <li>
-                            <a href="#apiteca">Ápiteca</a>
+                            <a href="<?php if (!is_home()):
+                                echo esc_url(home_url());
+                            endif; ?>#apiteca">Ápiteca</a>
                         </li>
                         <li>
                             <a
