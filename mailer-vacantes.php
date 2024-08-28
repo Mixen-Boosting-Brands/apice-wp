@@ -18,15 +18,13 @@ $mail = new PHPMailer(true);
 $mail->CharSet = "UTF-8";
 
 //Server settings
-//Mailjet User: correos@grupogeg.com
-//Mailjet Password: Rs0_-cusCLj5
 $mail->isSMTP(); //Send using SMTP
 $mail->Host = "smtp.hostinger.com"; //Set the SMTP server to send through
 $mail->SMTPAuth = true; //Enable SMTP authentication
 $mail->Username = "noreply@apiceac.com"; //SMTP username
 $mail->Password = 'LXEo$jVKh9cQ'; //SMTP password
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-$mail->Port = 465;
+$mail->Port = 587;
 $mail->SMTPDebug = 1;
 
 if (isset($_FILES["userfile-vacantes"]["tmp_name"])) {
