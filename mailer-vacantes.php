@@ -25,7 +25,7 @@ $mail->Username = "noreply@apiceac.com"; //SMTP username
 $mail->Password = 'LXEo$jVKh9cQ'; //SMTP password
 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
 $mail->Port = 587;
-$mail->SMTPDebug = 1;
+// $mail->SMTPDebug = 1;
 
 if (isset($_FILES["userfile-vacantes"]["tmp_name"])) {
     $name = strip_tags(trim($_POST["nombre"]));
