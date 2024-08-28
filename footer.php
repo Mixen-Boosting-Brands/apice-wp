@@ -607,9 +607,9 @@
                                                 ></i>
                                                 Enviar
                                             </button>
-                                            <div id="hold-on-a-sec">
+                                            <div id="hold-on-a-sec-vacantes">
                                                 <i
-                                                    id="contact-spinner"
+                                                    id="contact-spinner-vacantes"
                                                     class="fas fa-spinner fa-spin"
                                                 ></i>
                                                 Espera un momento por favor...
@@ -1021,9 +1021,9 @@
                                                 ></i>
                                                 Enviar
                                             </button>
-                                            <div id="hold-on-a-sec">
+                                            <div id="hold-on-a-sec-proveedores-y-contratistas">
                                                 <i
-                                                    id="contact-spinner"
+                                                    id="contact-spinner-proveedores-y-contratistas"
                                                     class="fas fa-spinner fa-spin"
                                                 ></i>
                                                 Espera un momento por favor...

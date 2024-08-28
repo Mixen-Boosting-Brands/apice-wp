@@ -24,12 +24,14 @@
 }
 
 // Spinner
-#hold-on-a-sec {
+#hold-on-a-sec-vacantes,
+#hold-on-a-sec-proveedores-y-contratistas {
     display: none;
     margin-top: 15px;
     float: left;
 }
 
-#hold-on-a-sec.is-loading {
+#hold-on-a-sec-vacantes.is-loading,
+#hold-on-a-sec-proveedores-y-contratistas.is-loading {
     display: block;
 }

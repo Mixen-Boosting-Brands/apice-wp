@@ -41,7 +41,9 @@ window.addEventListener(
                                 contentType: false,
                                 beforeSend: function () {
                                     // Let's show a message to the user
-                                    $("#hold-on-a-sec").addClass("is-loading");
+                                    $("#hold-on-a-sec-vacantes").addClass(
+                                        "is-loading"
+                                    );
                                 },
                                 success: function (response) {
                                     // Make sure that the formMessages div has the 'success' class.
@@ -71,7 +73,7 @@ window.addEventListener(
                                 },
                                 error: function (response) {
                                     // Make sure that the formMessages div has the 'error' class.
-                                    $("#hold-on-a-sec").removeClass(
+                                    $("#hold-on-a-sec-vacantes").removeClass(
                                         "is-loading"
                                     );
                                     $(formMessages).removeClass("success");
@@ -109,7 +111,7 @@ window.addEventListener(
                                     }
                                 },
                                 complete: function () {
-                                    $("#hold-on-a-sec").removeClass(
+                                    $("#hold-on-a-sec-vacantes").removeClass(
                                         "is-loading"
                                     );
                                 },
