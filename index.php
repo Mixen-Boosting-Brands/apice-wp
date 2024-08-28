@@ -5,7 +5,7 @@
     <div class="swiper swiper-jumbotron">
         <div class="swiper-wrapper">
             <?php if (have_rows("slider_principal", "option")):
-                $i == 1;
+                $i = 1;
                 while (have_rows("slider_principal", "option")):
                     the_row(); ?>
                 <div class="swiper-slide bg-jumbotron-<?php echo $i; ?>">
