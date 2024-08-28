@@ -7,9 +7,10 @@
             <div
                 class="swiper-slide"
                 style="
-                    background: url(&quot;<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/residencial/bg.webp&quot;)
+                    background: url(&quot;<?php echo get_the_post_thumbnail_url(
+                        get_the_ID(),
+                        "jumbotron"
+                    ); ?>&quot;)
                         no-repeat;
                 "
             >
