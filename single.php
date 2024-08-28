@@ -68,7 +68,7 @@
                             <?php esc_html_e(
                                 "Por",
                                 "html5blank"
-                            ); ?> <?php the_author(); ?>
+                            ); ?> <?php echo get_the_author(); ?>
                         </li>
                         <li class="list-inline-item">
                             <time>
