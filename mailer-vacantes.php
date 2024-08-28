@@ -38,11 +38,11 @@ if (isset($_FILES["userfile-vacantes"]["tmp_name"])) {
     try {
         //Recipients
         $mail->setFrom("noreply@apiceac.com", "Ápice");
-        $mail->addAddress("luis.pando@mixen.mx"); //Add a recipient
+        $mail->addAddress("contacto@apiceac.com"); //Add a recipient
         // $mail->addAddress('');     //Add extra recipient
         $mail->addReplyTo(
             $email,
-            "Me interesa formar parte de su equipo de trabajo"
+            "Hola, me interesa formar parte de su equipo de trabajo"
         );
 
         //Attachments
