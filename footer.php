@@ -385,7 +385,237 @@
                                     <h1 class="mb-4">
                                         ¡Únete a nuestro equipo!
                                     </h1>
+                                    <!-- Aquí se inyecta feedback a usuario vía Ajax -->
+                                    <div id="form-messages-vacantes"></div>
+                                    <!-- /Aquí se inyecta feedback a usuario vía Ajax -->
+                                    <form
+                                        action="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/mailer-vacantes.php"
+                                        method="POST"
+                                        class="row g-3 needs-validation formulario-vacantes"
+                                        id="ajax-contact-vacantes"
+                                        novalidate
+                                    >
+                                        <div class="col-12 form-floating">
+                                            <input
+                                                type="text"
+                                                class="form-control shadow-none"
+                                                id="nombre"
+                                                name="nombre"
+                                                placeholder="Nombre*"
+                                                pattern=".{5,50}"
+                                                required
+                                            />
+                                            <label
+                                                for="nombre"
+                                                class="form-label"
+                                                >Nombre*</label
+                                            >
+                                            <div class="valid-feedback">
+                                                ¡Se ve bien!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Por favor introduce tu nombre
+                                                completo.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-floating">
+                                            <input
+                                                type="email"
+                                                class="form-control shadow-none"
+                                                id="correo"
+                                                name="correo"
+                                                placeholder="Correo electrónico*"
+                                                required
+                                            />
+                                            <label
+                                                for="correo"
+                                                class="form-label"
+                                                >Correo electrónico*</label
+                                            >
+                                            <div class="valid-feedback">
+                                                ¡Se ve bien!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Por favor introduce un correo
+                                                electrónico válido.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-floating">
+                                            <input
+                                                type="tel"
+                                                class="form-control shadow-none"
+                                                id="telefono"
+                                                name="telefono"
+                                                placeholder="Teléfono*"
+                                                pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
+                                                required
+                                            />
+                                            <label
+                                                for="telefono"
+                                                class="form-label"
+                                                >Teléfono*</label
+                                            >
+                                            <div class="valid-feedback">
+                                                ¡Se ve bien!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Por favor escribe un número de
+                                                teléfono válido (Ej:
+                                                6561234567).
+                                            </div>
+                                        </div>
+                                        <div class="col-12 form-floating">
+                                            <select
+                                                class="form-select"
+                                                id="puesto"
+                                                name="puesto"
+                                                aria-label="Puesto"
+                                                required
+                                            >
+                                                <option
+                                                    selected
+                                                    disabled
+                                                    value=""
+                                                >
+                                                    Puesto al que deseas
+                                                    postularte
+                                                </option>
+                                                <?php
+                                                // Define the custom query
+                                                $args = [
+                                                    "post_type" => "vacantes",
+                                                    "posts_per_page" => -1,
+                                                ];
 
+                                                $query = new WP_Query($args);
+
+                                                if ($query->have_posts()):
+                                                    while (
+                                                        $query->have_posts()
+                                                    ):
+                                                        $query->the_post(); ?>
+                                                    <option value="<?php the_title(); ?>">
+                                                        <?php the_title(); ?>
+                                                    </option>
+                                                <?php
+                                                    endwhile; ?>
+                                                <?php
+                                                else:
+                                                     ?>
+                                                    <option
+                                                        disabled
+                                                        value=""
+                                                    >
+                                                        En este momento no hay vacantes disponibles
+                                                    </option>
+                                                <?php
+                                                endif;
+                                                wp_reset_postdata();
+                                                ?>
+                                            </select>
+                                            <label for="puesto">Puesto*</label>
+                                            <div class="valid-feedback">
+                                                ¡Se ve bien!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Por favor selecciona el puesto
+                                                al que deseas postularte.
+                                            </div>
+                                        </div>
+                                        <div class="col-12 form-floating mb-4">
+                                            <textarea
+                                                class="form-control shadow-none"
+                                                id="comentarios"
+                                                name="comentarios"
+                                                placeholder="Comentarios"
+                                                rows="3"
+                                            ></textarea>
+                                            <label for="comentarios"
+                                                >Comentarios</label
+                                            >
+                                            <div class="valid-feedback">
+                                                ¡Se ve bien!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Por favor introduce tus
+                                                comentarios.
+                                            </div>
+                                        </div>
+                                        <div class="col-12 my-auto">
+                                            <label
+                                                for="userfile-vacantes"
+                                                class="form-label btn"
+                                            >
+                                                <i class="fas fa-file-pdf"></i>
+                                                Adjunta tu CV en formato PDF*
+                                            </label>
+                                            <input
+                                                type="hidden"
+                                                name="MAX_FILE_SIZE"
+                                                value="10000000"
+                                            />
+                                            <input
+                                                type="file"
+                                                class="form-control form-control-sm"
+                                                id="userfile-vacantes"
+                                                name="userfile-vacantes[]"
+                                                multiple="multiple"
+                                                aria-describedby="fileUploadBlock"
+                                                required
+                                            />
+                                            <div
+                                                id="fileUploadBlock"
+                                                class="form-text mb-3"
+                                            >
+                                                Tamaño máximo de archivo: 10 MB
+                                            </div>
+                                            <div class="mb-3">
+                                                <input
+                                                    class="form-check-input"
+                                                    type="checkbox"
+                                                    value=""
+                                                    id="privacidad-vacantes"
+                                                    required
+                                                />
+                                                <label
+                                                    class="form-check-label"
+                                                    for="privacidad-vacantes"
+                                                >
+                                                    Acepto el
+                                                    <a href="<?php echo get_permalink(
+                                                        3
+                                                    ); ?>"
+                                                        >Aviso de Privacidad</a
+                                                    >
+                                                </label>
+                                                <div class="invalid-feedback">
+                                                    Debes de aceptar nuestro
+                                                    aviso de privacidad para
+                                                    poder enviar tu currículum.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 my-auto text-center">
+                                            <button
+                                                type="submit"
+                                                class="btn btn-block"
+                                            >
+                                                <i
+                                                    class="fa-solid fa-paper-plane"
+                                                ></i>
+                                                Enviar
+                                            </button>
+                                            <div id="hold-on-a-sec-vacantes">
+                                                <i
+                                                    id="contact-spinner-vacantes"
+                                                    class="fas fa-spinner fa-spin"
+                                                ></i>
+                                                Espera un momento por favor...
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

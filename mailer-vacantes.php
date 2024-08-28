@@ -70,7 +70,7 @@ if (isset($_FILES["userfile-vacantes"]["tmp_name"])) {
             $position .
             "<br><br>Comentarios:<br>" .
             $message .
-            "<br><br>Este mensaje fue enviado a través del formulario de contacto del sitio web de Ápice.";
+            "<br><br>Este mensaje fue enviado a través del formulario de Vacantes del sitio web de Ápice.";
 
         $mail->send();
         echo "Gracias por contactarnos, nos comunicaremos contigo a la brevedad.";

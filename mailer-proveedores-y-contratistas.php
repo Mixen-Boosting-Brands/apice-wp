@@ -84,7 +84,7 @@ if (isset($_FILES["userfile-proveedores-y-contratistas"]["tmp_name"])) {
             $state .
             "<br><br>Comentarios:<br>" .
             $message .
-            "<br><br>Este mensaje fue enviado a través del formulario de contacto del sitio web de Ápice.";
+            "<br><br>Este mensaje fue enviado a través del formulario de Proveedores y Contratistas del sitio web de Ápice.";
 
         $mail->send();
         echo "Gracias por contactarnos, nos comunicaremos contigo a la brevedad.";
