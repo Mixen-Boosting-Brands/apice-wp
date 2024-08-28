@@ -79,7 +79,7 @@
      " " .
      get_the_author_meta("user_lastname"); ?>
                         </li>
-                        <li class="list-inline-item">
+                        <li class="list-inline-item me-0">
                             <time>
                                 <?php
                                 // Set the date and time format
