@@ -23,7 +23,7 @@
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                             >
-                                Archivos
+                                <?php single_cat_title(); ?>
                             </h1>
                         </div>
                     </div>
