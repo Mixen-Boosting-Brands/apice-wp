@@ -381,13 +381,58 @@ function html5blankcomments($comment, $args, $depth)
         $tag = "li";
         $add_below = "div-comment";
     }
-}
+    ?>
+    <!-- heads up: starting < for the html tag (li or div) in the next line: -->
+    <<?php echo esc_html(
+        $tag
+    ); ?> <?php comment_class(empty($args["has_children"]) ? "" : "parent"); ?> id="comment-<?php comment_ID(); ?>">
+    <?php if ("div" != $args["style"]): ?>
+    <div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+    <?php endif; ?>
+    <div class="comment-author vcard">
+    <?php if ($args["avatar_size"] != 0) {
+        echo get_avatar($comment, $args["avatar_size"]);
+    } ?>
+    <?php printf(
+        esc_html('<cite class="fn">%s</cite> <span class="says">says:</span>'),
+        get_comment_author_link()
+    ); ?>
+    </div>
+<?php if ($comment->comment_approved == "0"): ?>
+    <em class="comment-awaiting-moderation"><?php esc_html_e(
+        "Your comment is awaiting moderation."
+    ); ?></em>
+    <br />
+<?php endif; ?>
 
-/*------------------------------------*\
+    <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars(
+        get_comment_link($comment->comment_ID)
+    ); ?>">
+        <?php printf(
+            esc_html('%1$s at %2$s'),
+            get_comment_date(),
+            get_comment_time()
+        ); ?></a><?php edit_comment_link(esc_html_e("(Edit)"), "  ", ""); ?>
+    </div>
+
+    <?php comment_text(); ?>
+
+    <div class="reply">
+    <?php comment_reply_link(
+        array_merge($args, [
+            "add_below" => $add_below,
+            "depth" => $depth,
+            "max_depth" => $args["max_depth"],
+        ])
+    ); ?>
+    </div>
+    <?php if ("div" != $args["style"]): ?>
+    </div>
+    <?php endif; ?>
+<?php
+} /*------------------------------------*\
     Actions + Filters + ShortCodes
-\*------------------------------------*/
-
-// Add Actions
+\*------------------------------------*/ // Add Actions
 add_action("wp_enqueue_scripts", "html5blank_header_scripts"); // Add Custom Scripts to wp_head
 add_action("wp_print_scripts", "html5blank_conditional_scripts"); // Add Conditional Page Scripts
 add_action("get_header", "enable_threaded_comments"); // Enable Threaded Comments
@@ -396,7 +441,6 @@ add_action("init", "register_html5_menu"); // Add HTML5 Blank Menu
 add_action("init", "create_post_type_html5"); // Add our HTML5 Blank Custom Post Type
 add_action("widgets_init", "my_remove_recent_comments_style"); // Remove inline Recent Comment Styles from wp_head()
 add_action("init", "html5wp_pagination"); // Add our HTML5 Pagination
-
 // Remove Actions
 remove_action("wp_head", "feed_links_extra", 3); // Display the links to the extra feeds such as category feeds
 remove_action("wp_head", "feed_links", 2); // Display the links to the general feeds: Post and Comment Feed
@@ -405,7 +449,6 @@ remove_action("wp_head", "wlwmanifest_link"); // Display the link to the Windows
 remove_action("wp_head", "wp_generator"); // Display the XHTML generator that is generated on the wp_head hook, WP version
 remove_action("wp_head", "rel_canonical");
 remove_action("wp_head", "wp_shortlink_wp_head", 10, 0);
-
 // Add Filters
 add_filter("avatar_defaults", "html5blankgravatar"); // Custom Gravatar in Settings > Discussion
 add_filter("body_class", "add_slug_to_body_class"); // Add slug to body class (Starkers build)
@@ -424,31 +467,27 @@ add_filter("style_loader_tag", "html5_style_remove"); // Remove 'text/css' from 
 add_filter("post_thumbnail_html", "remove_thumbnail_dimensions", 10); // Remove width and height dynamic attributes to thumbnails
 add_filter("post_thumbnail_html", "remove_width_attribute", 10); // Remove width and height dynamic attributes to post images
 add_filter("image_send_to_editor", "remove_width_attribute", 10); // Remove width and height dynamic attributes to post images
-
 // Remove Filters
 remove_filter("the_excerpt", "wpautop"); // Remove <p> tags from Excerpt altogether
-
 // Shortcodes
 add_shortcode("html5_shortcode_demo", "html5_shortcode_demo"); // You can place [html5_shortcode_demo] in Pages, Posts now.
 add_shortcode("html5_shortcode_demo_2", "html5_shortcode_demo_2"); // Place [html5_shortcode_demo_2] in Pages, Posts now.
-
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
-
 /*------------------------------------*\
     Custom Post Types
-\*------------------------------------*/
-
-// Create 1 Custom Post type for a Demo, called HTML5-Blank
+\*------------------------------------*/ // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function create_post_type_html5()
 {
     register_taxonomy_for_object_type("category", "html5-blank"); // Register Taxonomies for Category
     register_taxonomy_for_object_type("post_tag", "html5-blank");
     register_post_type(
-        "html5-blank", // Register Custom Post Type
+        "html5-blank",
+        // Register Custom Post Type
         [
             "labels" => [
-                "name" => esc_html("HTML5 Blank Custom Post", "html5blank"), // Rename these to suit
+                "name" => esc_html("HTML5 Blank Custom Post", "html5blank"),
+                // Rename these to suit
                 "singular_name" => esc_html(
                     "HTML5 Blank Custom Post",
                     "html5blank"
@@ -496,29 +535,20 @@ function create_post_type_html5()
             "taxonomies" => ["post_tag", "category"], // Add Category and Post Tags support
         ]
     );
-}
-
-/*------------------------------------*\
+} /*------------------------------------*\
     ShortCode Functions
 \*------------------------------------*/
-
 // Shortcode Demo with Nested Capability
 function html5_shortcode_demo($atts, $content = null)
 {
     return '<div class="shortcode-demo">' . do_shortcode($content) . "</div>"; // do_shortcode allows for nested Shortcodes
-}
-
-// Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
+} // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 function html5_shortcode_demo_2($atts, $content = null)
 {
     return "<h2>" . $content . "</h2>";
-}
-
-/*------------------------------------*\
+} /*------------------------------------*\
     Bootstrap Pagination
-\*------------------------------------*/
-
-/**
+\*------------------------------------*/ /**
  * @param WP_Query|null $wp_query
  * @param bool $echo
  * @param array $params
@@ -545,7 +575,6 @@ function html5_shortcode_demo_2($atts, $content = null)
  *       echo bootstrap_pagination($query);
  *     ?>
  */
-
 function bootstrap_pagination(
     \WP_Query $wp_query = null,
     $echo = true,
@@ -554,14 +583,10 @@ function bootstrap_pagination(
     if (null === $wp_query) {
         global $wp_query;
     }
-
-    $add_args = [];
-
-    //add query (GET) parameters to generated page URLs
+    $add_args = []; //add query (GET) parameters to generated page URLs
     /*if (isset($_GET[ 'sort' ])) {
         $add_args[ 'sort' ] = (string)$_GET[ 'sort' ];
     }*/
-
     $pages = paginate_links(
         array_merge(
             [
@@ -586,12 +611,10 @@ function bootstrap_pagination(
             $params
         )
     );
-
     if (is_array($pages)) {
         //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
         $pagination =
             '<nav aria-label="Page navigation"><ul class="pagination justify-content-center">';
-
         foreach ($pages as $page) {
             $pagination .=
                 '<li class="page-item' .
@@ -600,15 +623,12 @@ function bootstrap_pagination(
                 str_replace("page-numbers", "page-link", $page) .
                 "</li>";
         }
-
         $pagination .= "</ul></nav>";
-
         if ($echo) {
             echo $pagination;
         } else {
             return $pagination;
         }
     }
-
     return null;
 }
