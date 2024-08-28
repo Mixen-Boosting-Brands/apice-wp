@@ -250,14 +250,16 @@
                                         href="javascript:void(0)"
                                         data-bs-toggle="modal"
                                         data-bs-target="#modal-imagen"
-                                        data-image="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-1.webp"
+                                        data-image="<?php echo acf_esc_html(
+                                            get_sub_field("imagen_del_modelo")
+                                        ); ?>"
                                     >
                                         <img
-                                            src="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/residencial/thumb-modelo-1.webp"
+                                            src="<?php echo acf_esc_html(
+                                                get_sub_field(
+                                                    "imagen_del_modelo"
+                                                )
+                                            ); ?>"
                                             alt=""
                                             class="img-fluid"
                                         />
@@ -268,14 +270,18 @@
                                         href="javascript:void(0)"
                                         data-bs-toggle="modal"
                                         data-bs-target="#modal-imagen"
-                                        data-image="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
+                                        data-image="<?php echo acf_esc_html(
+                                            get_sub_field(
+                                                "plano_de_la_primera_planta"
+                                            )
+                                        ); ?>"
                                     >
                                         <img
-                                            src="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/residencial/thumb-modelo-2.webp"
+                                            src="<?php echo acf_esc_html(
+                                                get_sub_field(
+                                                    "plano_de_la_primera_planta"
+                                                )
+                                            ); ?>"
                                             alt=""
                                             class="img-fluid"
                                         />
@@ -286,14 +292,18 @@
                                         href="javascript:void(0)"
                                         data-bs-toggle="modal"
                                         data-bs-target="#modal-imagen"
-                                        data-image="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
+                                        data-image="<?php echo acf_esc_html(
+                                            get_sub_field(
+                                                "plano_de_la_segunda_planta"
+                                            )
+                                        ); ?>"
                                     >
                                         <img
-                                            src="<?php echo esc_url(
-                                                get_template_directory_uri()
-                                            ); ?>/assets/images/residencial/thumb-modelo-2.webp"
+                                            src="<?php echo acf_esc_html(
+                                                get_sub_field(
+                                                    "plano_de_la_segunda_planta"
+                                                )
+                                            ); ?>"
                                             alt=""
                                             class="img-fluid"
                                         />
@@ -311,19 +321,16 @@
 </section>
 <?php endif; ?>
 
+<?php if (get_field("imagen_del_pie")): ?>
 <section id="footer-modelos">
     <a
         href="javascript:void(0)"
         data-bs-toggle="modal"
         data-bs-target="#modal-imagen"
-        data-image="<?php echo esc_url(
-            get_template_directory_uri()
-        ); ?>/assets/images/residencial/thumb-modelo-3.webp"
+        data-image="<?php the_field("imagen_del_pie"); ?>"
     >
         <img
-            src="<?php echo esc_url(
-                get_template_directory_uri()
-            ); ?>/assets/images/residencial/thumb-modelo-3.webp"
+            src="<?php the_field("imagen_del_pie"); ?>"
             alt=""
             class="img-fluid"
             data-aos="fade-in"
@@ -332,6 +339,7 @@
         />
     </a>
 </section>
+<?php endif; ?>
 
 <?php
     endwhile; ?>
