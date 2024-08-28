@@ -1,24 +1,83 @@
 <?php get_header(); ?>
 
-	<main role="main" aria-label="Content">
-		<!-- section -->
-		<section>
+<section id="jumbotron">
+    <div class="overlay"></div>
+    <div class="swiper swiper-internas">
+        <div class="swiper-wrapper">
+            <div
+                class="swiper-slide"
+                style="
+                    background: url(&quot;<?php echo esc_url(
+                        get_template_directory_uri()
+                    ); ?>/assets/images/404/bg.webp&quot;)
+                        no-repeat;
+                "
+            >
+                <div class="container-fluid">
+                    <div class="row">
+                        <div
+                            class="col d-flex justify-content-start align-items-end"
+                        >
+                            <h1
+                                class="titulo ms-lg-4 mb-5"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                            >
+                                <?php esc_html_e(
+                                    "Error 404: Página no encontrada",
+                                    "html5blank"
+                                ); ?>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-			<!-- article -->
-			<article id="post-404">
+        <!-- If we need navigation buttons -->
+        <!-- div class="swiper-button-next"></div -->
+        <!-- div class="swiper-button-prev"></div -->
 
-				<h1><?php esc_html_e( 'Page not found', 'html5blank' ); ?></h1>
-				<h2>
-					<a href="<?php echo esc_url( home_url() ); ?>"><?php esc_html_e( 'Return home?', 'html5blank' ); ?></a>
-				</h2>
+        <!-- If we need scrollbar -->
+        <!-- div class="swiper-scrollbar"></div>
+        <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+        </div -->
+    </div>
+    <div class="flash"></div>
+</section>
 
-			</article>
-			<!-- /article -->
+<section id="interna" class="black-headings pt-60 pb-30">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col">
+                <h1
+                    class=""
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                >
+                    <?php esc_html_e(
+                        "Error 404: Página no encontrada",
+                        "html5blank"
+                    ); ?>
+                </h1>
 
-		</section>
-		<!-- /section -->
-	</main>
+                <div class="content" data-aos="fade-up"
+                data-aos-duration="1000" data-aos-delay="100">
+                    <p>Lo sentimos, la página solicitada no pudo se encontrada. Es probable que haya cambiado de ubicación o haya sido eliminada.</p>
 
-<?php get_sidebar(); ?>
+                    <a href="<?php echo esc_url(
+                        home_url()
+                    ); ?>" class="btn btn-secondary"><i class="fa-solid fa-house"></i> Volver al inicio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php get_footer(); ?>
