@@ -154,7 +154,7 @@
             <?php if (have_rows("galeria")): ?>
             <div class="col-lg-7">
                 <div class="row gallery">
-                    <?php while (have_rows("amenidades")):
+                    <?php while (have_rows("galeria")):
                         the_row(); ?>
                         <div class="col-6 mb-4">
                             <a
