@@ -84,7 +84,12 @@
                     >
                         <?php html5wp_excerpt("html5wp_custom_post"); ?>
                     </p>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-secondary">Ver más <i class="fa-solid fa-chevron-right"></i></a>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-secondary" data-aos="<?php if (
+    $i % 2 !=
+    0
+): ?>fade-right<?php else: ?>fade-left<?php endif; ?>"
+                    data-aos-duration="1000"
+                    data-aos-delay="200">Ver más <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
                 <div class="col-lg-6 my-lg-auto">
                     <a href="<?php the_permalink(); ?>">
