@@ -184,6 +184,7 @@
     </div>
 </section>
 
+<?php if (have_rows("modelos")): ?>
 <section id="modelos" class="black-headings pt-30 pb-60">
     <div class="container">
         <div class="row">
@@ -196,48 +197,23 @@
                     data-aos-duration="1000"
                     data-aos-delay="0"
                 >
-                    <li class="nav-item" role="presentation">
-                        <button
-                            class="nav-link active"
-                            id="pills-1-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#pills-1"
-                            type="button"
-                            role="tab"
-                            aria-controls="pills-1"
-                            aria-selected="true"
-                        >
-                            Modelo 1
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button
-                            class="nav-link"
-                            id="pills-2-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#pills-2"
-                            type="button"
-                            role="tab"
-                            aria-controls="pills-2"
-                            aria-selected="false"
-                        >
-                            Modelo 2
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button
-                            class="nav-link"
-                            id="pills-3-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#pills-3"
-                            type="button"
-                            role="tab"
-                            aria-controls="pills-3"
-                            aria-selected="false"
-                        >
-                            Modelo 3
-                        </button>
-                    </li>
+                    <?php $i = 1; while (have_rows("modelos")):
+                        the_row(); ?>
+                        <li class="nav-item" role="presentation">
+                            <button
+                                class="nav-link <?php if( $i == 1 ): ?>active<?php endif;>"
+                                id="pills-<?php echo $i; ?>-tab"
+                                data-bs-toggle="pill"
+                                data-bs-target="#pills-<?php echo $i; ?>"
+                                type="button"
+                                role="tab"
+                                aria-controls="pills-<?php echo $i; ?>"
+                                aria-selected="<?php if( $i == 1 ): ?>true<?php else: ?>false<?php endif; ?>"
+                            >
+                                Modelo <?php echo $i; ?>
+                            </button>
+                        </li>
+                    <?php $i++; endwhile; ?>
                 </ul>
                 <div
                     class="tab-content"
@@ -246,206 +222,81 @@
                     data-aos-duration="1000"
                     data-aos-delay="100"
                 >
-                    <div
-                        class="tab-pane fade show active"
-                        id="pills-1"
-                        role="tabpanel"
-                        aria-labelledby="pills-1-tab"
-                        tabindex="0"
-                    >
-                        <h1 class="mb-4">Modelo 1</h1>
-                        <div class="row">
-                            <div class="col-lg-6 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-1.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
+                    <?php $i = 1; while (have_rows("modelos")):
+                        the_row(); ?>
+                        <div
+                            class="tab-pane fade <?php if( $i == 1 ): ?>show active<?php endif; ?>"
+                            id="pills-<?php echo $i; ?>"
+                            role="tabpanel"
+                            aria-labelledby="pills-<?php echo $i; ?>-tab"
+                            tabindex="0"
+                        >
+                            <h1 class="mb-4">Modelo <?php echo $i; ?></h1>
+                            <div class="row">
+                                <div class="col-lg-6 mb-4 my-lg-auto">
+                                    <a
+                                        href="javascript:void(0)"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-imagen"
+                                        data-image="<?php echo esc_url(
                                             get_template_directory_uri()
                                         ); ?>/assets/images/residencial/thumb-modelo-1.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
-                            </div>
-                            <div class="col-lg-3 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
+                                    >
+                                        <img
+                                            src="<?php echo esc_url(
+                                                get_template_directory_uri()
+                                            ); ?>/assets/images/residencial/thumb-modelo-1.webp"
+                                            alt=""
+                                            class="img-fluid"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 mb-4 my-lg-auto">
+                                    <a
+                                        href="javascript:void(0)"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-imagen"
+                                        data-image="<?php echo esc_url(
                                             get_template_directory_uri()
                                         ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
-                            </div>
-                            <div class="col-lg-3 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
+                                    >
+                                        <img
+                                            src="<?php echo esc_url(
+                                                get_template_directory_uri()
+                                            ); ?>/assets/images/residencial/thumb-modelo-2.webp"
+                                            alt=""
+                                            class="img-fluid"
+                                        />
+                                    </a>
+                                </div>
+                                <div class="col-lg-3 mb-4 my-lg-auto">
+                                    <a
+                                        href="javascript:void(0)"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#modal-imagen"
+                                        data-image="<?php echo esc_url(
                                             get_template_directory_uri()
                                         ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
+                                    >
+                                        <img
+                                            src="<?php echo esc_url(
+                                                get_template_directory_uri()
+                                            ); ?>/assets/images/residencial/thumb-modelo-2.webp"
+                                            alt=""
+                                            class="img-fluid"
+                                        />
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        class="tab-pane fade"
-                        id="pills-2"
-                        role="tabpanel"
-                        aria-labelledby="pills-2-tab"
-                        tabindex="0"
-                    >
-                        <h1 class="mb-4">Modelo 2</h1>
-                        <div class="row">
-                            <div class="col-lg-6 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-1.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-1.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
-                            </div>
-                            <div class="col-lg-3 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
-                            </div>
-                            <div class="col-lg-3 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="tab-pane fade"
-                        id="pills-3"
-                        role="tabpanel"
-                        aria-labelledby="pills-3-tab"
-                        tabindex="0"
-                    >
-                        <h1 class="mb-4">Modelo 3</h1>
-                        <div class="row">
-                            <div class="col-lg-6 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-1.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-1.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
-                            </div>
-                            <div class="col-lg-3 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
-                            </div>
-                            <div class="col-lg-3 mb-4 my-lg-auto">
-                                <a
-                                    href="javascript:void(0)"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#modal-imagen"
-                                    data-image="<?php echo esc_url(
-                                        get_template_directory_uri()
-                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                >
-                                    <img
-                                        src="<?php echo esc_url(
-                                            get_template_directory_uri()
-                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
-                                        alt=""
-                                        class="img-fluid"
-                                    />
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <?php $i++; endwhile; ?>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+<?php endif; ?>
 
 <section id="footer-modelos">
     <a
