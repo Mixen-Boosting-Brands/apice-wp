@@ -50,6 +50,10 @@
     <div class="flash"></div>
 </section>
 
+<?php if (have_posts()):
+    while (have_posts()):
+        the_post(); ?>
+
 <section id="interna" class="black-headings pt-60 pb-30">
     <div class="container">
         <div class="row mb-4">
@@ -72,5 +76,14 @@
         </div>
     </div>
 </section>
+
+<?php
+    endwhile; ?>
+<?php
+else:
+     ?>
+<?php
+endif; ?>
+
 
 <?php get_footer(); ?>
