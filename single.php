@@ -83,7 +83,7 @@
                             <time>
                                 <?php
                                 // Set the date and time format
-                                $date_format = 'j \d\e F, Y \· g:i a';
+                                $date_format = 'j \d\e F, Y \· g:i a \·';
 
                                 // Replace the problematic character sequence manually
                                 $formatted_date = date_i18n(
