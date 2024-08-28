@@ -386,7 +386,7 @@
                                         ¡Únete a nuestro equipo!
                                     </h1>
                                     <!-- Aquí se inyecta feedback a usuario vía Ajax -->
-                                    <div id="form-messages"></div>
+                                    <div id="form-messages-vacantes"></div>
                                     <!-- /Aquí se inyecta feedback a usuario vía Ajax -->
                                     <form
                                         action="<?php echo esc_url(
@@ -653,7 +653,7 @@
                                 <div class="col-lg-6 my-auto p-5">
                                     <h1 class="mb-4">¡Trabaja con nosotros!</h1>
                                     <!-- Aquí se inyecta feedback a usuario vía Ajax -->
-                                    <div id="form-messages"></div>
+                                    <div id="form-messages-proveedores-y-contratistas"></div>
                                     <!-- /Aquí se inyecta feedback a usuario vía Ajax -->
                                     <form
                                         action="<?php echo esc_url(

@@ -4,7 +4,7 @@ window.addEventListener(
     "load",
     function () {
         // Get the messages div.
-        var formMessages = $("#form-messages");
+        var formMessages = $("#form-messages-vacantes");
 
         // Fetch all the forms we want to apply custom Bootstrap validation styles to
         var forms = document.getElementsByClassName("formulario-vacantes");
