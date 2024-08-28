@@ -68,21 +68,32 @@
                             <?php esc_html_e(
                                 "Por",
                                 "html5blank"
-                            ); ?> <?php the_author_posts_link(); ?>
+                            ); ?> <?php the_author(); ?>
                         </li>
                         <li class="list-inline-item">
-                            <time datetime="<?php the_time(
-                                "Y-m-d"
-                            ); ?> <?php the_time("H:i"); ?>">
-                                <?php the_date(); ?> <?php the_time(); ?>
+                            <time>
+                                <?php
+                                // Set the date and time format
+                                $date_format =
+                                    'el j \d\e F, Y \a \l\a(s) g:i a';
+
+                                // Get the post's published date and time
+                                $formatted_date = date_i18n(
+                                    $date_format,
+                                    strtotime(get_the_date("Y-m-d H:i:s"))
+                                );
+
+                                // Output the formatted date and time
+                                echo $formatted_date;
+                                ?>
             				</time>
                         </li>
                         <li class="list-inline-item">
                             <?php if (comments_open(get_the_ID())) {
                                 comments_popup_link(
-                                    __("Leave your thoughts", "html5blank"),
-                                    __("1 Comment", "html5blank"),
-                                    __("% Comments", "html5blank")
+                                    __("Comentarios", "html5blank"),
+                                    __("1 Comentario", "html5blank"),
+                                    __("% Comentarios", "html5blank")
                                 );
                             } ?>
                         </li>
