@@ -74,17 +74,14 @@
                             <time>
                                 <?php
                                 // Set the date and time format
-                                $date_format =
-                                    'el j \d\e F, Y \a \l\a(s) g:i a';
-
-                                // Get the post's published date and time
-                                $formatted_date = date_i18n(
-                                    $date_format,
-                                    strtotime(get_the_date("Y-m-d H:i:s"))
-                                );
+                                $date_format = 'l j \d\e F, Y \a \l\a(s) g:i a';
 
                                 // Output the formatted date and time
-                                echo $formatted_date;
+                                echo "el " .
+                                    date_i18n(
+                                        $date_format,
+                                        strtotime(get_the_date("c"))
+                                    );
                                 ?>
             				</time>
                         </li>
