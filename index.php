@@ -4,40 +4,32 @@
     <div class="overlay"></div>
     <div class="swiper swiper-jumbotron">
         <div class="swiper-wrapper">
-            <div class="swiper-slide bg-jumbotron-1">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div
-                            class="col d-flex justify-content-center align-items-center"
-                        >
-                            <h1
-                                class="titulo"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
+            <?php if (have_rows("slider_principal")):
+                $i == 1;
+                while (have_rows("slider_principal")):
+                    the_row(); ?>
+                <div class="swiper-slide bg-jumbotron-<?php echo $i; ?>">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div
+                                class="col d-flex justify-content-center align-items-center"
                             >
-                                El punto más alto
-                            </h1>
+                                <h1
+                                    class="titulo"
+                                    data-aos="fade-up"
+                                    data-aos-duration="1000"
+                                >
+                                    <?php echo acf_esc_html(
+                                        get_sub_field("texto")
+                                    ); ?>
+                                </h1>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="swiper-slide bg-jumbotron-2">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div
-                            class="col d-flex justify-content-center align-items-center"
-                        >
-                            <h1
-                                class="titulo"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                            >
-                                El punto más alto
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php $i++;
+                endwhile;
+            endif; ?>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
