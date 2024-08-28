@@ -624,7 +624,7 @@
                 class="col-md-6 d-flex justify-content-center align-items-center"
             >
                 <a
-                    href="javascript:void(0)"
+                    href="<?php echo esc_url(home_url()); ?>/residencial"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="100"
@@ -638,7 +638,7 @@
                 class="col-md-6 d-flex justify-content-center align-items-center"
             >
                 <a
-                    href="javascript:void(0)"
+                    href="<?php echo esc_url(home_url()); ?>/industrial"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="100"
