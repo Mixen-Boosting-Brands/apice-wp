@@ -63,7 +63,7 @@
                 </h1>
 
                 <div class="meta-data">
-                    <ul class="list-inline">
+                    <ul class="list-inline fst-italic">
                         <li class="list-inline-item">
                             <?php esc_html_e(
                                 "Por",
