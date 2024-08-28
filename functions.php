@@ -28,6 +28,9 @@ if (function_exists("add_theme_support")) {
     add_image_size("medium", 250, "", true); // Medium Thumbnail.
     add_image_size("small", 120, "", true); // Small Thumbnail.
     add_image_size("jumbotron", 1920, 1080, true); // Custom Thumbnail Size call using the_post_thumbnail('jumbotron');
+    add_image_size("galeria", 1000, 1000, true); // Custom Thumbnail Size call using the_post_thumbnail('galeria');
+    add_image_size("thumb-modelo", 1920, 1329, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-modelo');
+    add_image_size("thumb-planta", 1080, 1590, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-planta');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use.
     /*add_theme_support('custom-background', array(
