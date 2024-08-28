@@ -84,22 +84,36 @@
                     >
                         <?php html5wp_excerpt("html5wp_custom_post"); ?>
                     </p>
+                    <a href="<?php the_permalink(); ?>" class="btn btn-secondary" data-aos="<?php if (
+    $i % 2 !=
+    0
+): ?>fade-right<?php else: ?>fade-left<?php endif; ?>"
+                    data-aos-duration="1000"
+                    data-aos-delay="200">Ver más <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
                 <div class="col-lg-6 my-lg-auto">
                     <a href="<?php the_permalink(); ?>">
-                        <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/home/thumb-historia.webp"
-                            alt=""
-                            class="img-fluid"
-                            data-aos="<?php if (
-                                $i % 2 !=
-                                0
-                            ): ?>fade-left<?php else: ?>fade-right<?php endif; ?>"
-                            data-aos-duration="1000"
-                            data-aos-delay="200"
-                        />
+                        <?php
+                        // Determine the custom AOS attribute based on the counter
+                        $aos_effect = $i % 2 != 0 ? "fade-left" : "fade-right";
+
+                        // Define the attributes for the image
+                        $attributes = [
+                            "class" => "img-fluid",
+                            "alt" => "", // Add an appropriate alt text if available
+                            "data-aos" => $aos_effect,
+                            "data-aos-duration" => "1000",
+                            "data-aos-delay" => "200",
+                        ];
+
+                        // Print the post thumbnail with the custom attributes
+                        echo wp_get_attachment_image(
+                            get_post_thumbnail_id(),
+                            "galeria",
+                            false,
+                            $attributes
+                        );
+                        ?>
                     </a>
                 </div>
             </div>
