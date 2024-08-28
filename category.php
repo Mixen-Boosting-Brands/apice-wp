@@ -91,7 +91,10 @@
                     data-aos-duration="1000"
                     data-aos-delay="200">Ver más <i class="fa-solid fa-chevron-right"></i></a>
                 </div>
-                <div class="col-lg-6 my-lg-auto">
+                <div class="col-lg-6 <?php if ($i % 2 != 0):
+                else:
+                     ?>order-2<?php
+                endif; ?> my-lg-auto">
                     <a href="<?php the_permalink(); ?>">
                         <?php
                         // Determine the custom AOS attribute based on the counter
