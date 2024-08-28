@@ -9,7 +9,7 @@
                 style="
                     background: url(&quot;<?php echo esc_url(
                         get_template_directory_uri()
-                    ); ?>/assets/images/header-general/bg.webp&quot;)
+                    ); ?>/assets/images/residencial/thumb-modelo-1.webp&quot;)
                         no-repeat;
                 "
             >
@@ -23,7 +23,7 @@
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                             >
-                                Residencial
+                                Proyectos Residenciales
                             </h1>
                         </div>
                     </div>
