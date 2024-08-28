@@ -508,7 +508,7 @@
                                                         disabled
                                                         value=""
                                                     >
-                                                        ―
+                                                        En este momento no hay vacantes disponibles
                                                     </option>
                                                 <?php
                                                 endif;
