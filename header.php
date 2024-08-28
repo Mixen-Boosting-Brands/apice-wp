@@ -128,11 +128,11 @@
                                 echo esc_url(home_url());
                             endif; ?>#equipo">Nuestro Equipo</a>
                         </li>
-                        <li>
+                        <!-- li>
                             <a href="<?php if (!is_home()):
                                 echo esc_url(home_url());
                             endif; ?>#apiteca">Ápiteca</a>
-                        </li>
+                        </li -->
                         <li>
                             <a
                                 href="javascript:void(0)"

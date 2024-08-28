@@ -652,7 +652,7 @@
     </div>
 </section>
 
-<section id="apiteca" class="py-60">
+<!-- section id="apiteca" class="py-60">
     <div class="container-fluid h-100">
         <div class="row mb-2 mb-lg-4">
             <div class="col">
@@ -722,6 +722,6 @@
             </div>
         </div>
     </div>
-</section>
+</section -->
 
 <?php get_footer(); ?>
