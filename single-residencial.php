@@ -76,7 +76,9 @@
                         data-aos-delay="100"
                     >
                         <img
-                            src="./assets/images/residencial/ico-pin.webp"
+                            src="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/residencial/ico-pin.webp"
                             alt=""
                             class="icono"
                         />
@@ -94,7 +96,9 @@
                         data-aos-delay="200"
                     >
                         <img
-                            src="./assets/images/residencial/ico-area.webp"
+                            src="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/residencial/ico-area.webp"
                             alt=""
                             class="icono"
                         />
@@ -107,7 +111,9 @@
                         data-aos-delay="300"
                     >
                         <img
-                            src="./assets/images/residencial/ico-area.webp"
+                            src="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/residencial/ico-area.webp"
                             alt=""
                             class="icono"
                         />
@@ -120,7 +126,9 @@
                         data-aos-delay="400"
                     >
                         <img
-                            src="./assets/images/residencial/ico-amenidades.webp"
+                            src="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/residencial/ico-amenidades.webp"
                             alt=""
                             class="icono"
                         />
@@ -143,10 +151,14 @@
                     <div class="col-6 mb-4">
                         <a
                             href="javascript: void(0)"
-                            data-image="./assets/images/home/thumb-historia.webp"
+                            data-image="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/home/thumb-historia.webp"
                         >
                             <img
-                                src="./assets/images/home/thumb-historia.webp"
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/home/thumb-historia.webp"
                                 alt=""
                                 class="img-fluid"
                                 data-aos="fade-left"
@@ -158,10 +170,14 @@
                     <div class="col-6 mb-4">
                         <a
                             href="javascript: void(0)"
-                            data-image="./assets/images/home/thumb-historia.webp"
+                            data-image="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/home/thumb-historia.webp"
                         >
                             <img
-                                src="./assets/images/home/thumb-historia.webp"
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/home/thumb-historia.webp"
                                 alt=""
                                 class="img-fluid"
                                 data-aos="fade-left"
@@ -173,10 +189,14 @@
                     <div class="col-6 mb-4">
                         <a
                             href="javascript: void(0)"
-                            data-image="./assets/images/home/thumb-historia.webp"
+                            data-image="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/home/thumb-historia.webp"
                         >
                             <img
-                                src="./assets/images/home/thumb-historia.webp"
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/home/thumb-historia.webp"
                                 alt=""
                                 class="img-fluid"
                                 data-aos="fade-left"
@@ -188,10 +208,14 @@
                     <div class="col-6 mb-4">
                         <a
                             href="javascript: void(0)"
-                            data-image="./assets/images/home/thumb-historia.webp"
+                            data-image="<?php echo esc_url(
+                                get_template_directory_uri()
+                            ); ?>/assets/images/home/thumb-historia.webp"
                         >
                             <img
-                                src="./assets/images/home/thumb-historia.webp"
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/home/thumb-historia.webp"
                                 alt=""
                                 class="img-fluid"
                                 data-aos="fade-left"
@@ -282,10 +306,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-1.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-1.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-1.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-1.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -296,10 +324,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-2.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-2.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -310,10 +342,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-2.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-2.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -335,10 +371,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-1.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-1.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-1.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-1.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -349,10 +389,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-2.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-2.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -363,10 +407,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-2.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-2.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -388,10 +436,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-1.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-1.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-1.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-1.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -402,10 +454,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-2.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-2.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -416,10 +472,14 @@
                                     href="javascript:void(0)"
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-imagen"
-                                    data-image="./assets/images/residencial/thumb-modelo-2.webp"
+                                    data-image="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                 >
                                     <img
-                                        src="./assets/images/residencial/thumb-modelo-2.webp"
+                                        src="<?php echo esc_url(
+                                            get_template_directory_uri()
+                                        ); ?>/assets/images/residencial/thumb-modelo-2.webp"
                                         alt=""
                                         class="img-fluid"
                                     />
@@ -438,10 +498,14 @@
         href="javascript:void(0)"
         data-bs-toggle="modal"
         data-bs-target="#modal-imagen"
-        data-image="./assets/images/residencial/thumb-modelo-3.webp"
+        data-image="<?php echo esc_url(
+            get_template_directory_uri()
+        ); ?>/assets/images/residencial/thumb-modelo-3.webp"
     >
         <img
-            src="./assets/images/residencial/thumb-modelo-3.webp"
+            src="<?php echo esc_url(
+                get_template_directory_uri()
+            ); ?>/assets/images/residencial/thumb-modelo-3.webp"
             alt=""
             class="img-fluid"
             data-aos="fade-in"
