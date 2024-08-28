@@ -120,7 +120,7 @@
                             />
                             Duración: <?php echo acf_esc_html(
                                 the_field("duracion")
-                            ); ?> m²
+                            ); ?>
                         </li>
                     <?php endif; ?>
                     <?php if (have_rows("servicios")): ?>
