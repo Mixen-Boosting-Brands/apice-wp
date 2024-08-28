@@ -4,9 +4,9 @@
     <div class="overlay"></div>
     <div class="swiper swiper-jumbotron">
         <div class="swiper-wrapper">
-            <?php if (have_rows("slider_principal")):
+            <?php if (have_rows("slider_principal", "option")):
                 $i == 1;
-                while (have_rows("slider_principal")):
+                while (have_rows("slider_principal", "option")):
                     the_row(); ?>
                 <div class="swiper-slide bg-jumbotron-<?php echo $i; ?>">
                     <div class="container-fluid">
