@@ -41,12 +41,9 @@ if (isset($_FILES["userfile-proveedores-y-contratistas"]["tmp_name"])) {
     try {
         //Recipients
         $mail->setFrom("noreply@apiceac.com", "Ápice");
-        $mail->addAddress("luis.pando@mixen.mx"); //Add a recipient
+        $mail->addAddress("proveedoresycontratistas@apiceac.com"); //Add a recipient
         // $mail->addAddress('');     //Add extra recipient
-        $mail->addReplyTo(
-            $email,
-            "Hola, me interesa formar parte de su equipo de trabajo"
-        );
+        $mail->addReplyTo($email, "Qué tal, necesito contactarme con ustedes.");
 
         //Attachments
         //Attach multiple files one by one

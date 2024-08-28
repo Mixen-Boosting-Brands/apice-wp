@@ -38,11 +38,11 @@ if (isset($_FILES["userfile-vacantes"]["tmp_name"])) {
     try {
         //Recipients
         $mail->setFrom("noreply@apiceac.com", "Ápice");
-        $mail->addAddress("contacto@apiceac.com"); //Add a recipient
+        $mail->addAddress("capitalhumano@apiceac.com"); //Add a recipient
         // $mail->addAddress('');     //Add extra recipient
         $mail->addReplyTo(
             $email,
-            "Hola, me interesa formar parte de su equipo de trabajo"
+            "Hola, me interesa formar parte de su equipo de trabajo."
         );
 
         //Attachments
@@ -58,7 +58,7 @@ if (isset($_FILES["userfile-vacantes"]["tmp_name"])) {
 
         //Content
         $mail->isHTML(true); //Set email format to HTML
-        $mail->Subject = "Nuevo Currículum Vitae";
+        $mail->Subject = "Nuevo mensaje de Vacantes";
         $mail->Body =
             "Nombre: " .
             $name .
