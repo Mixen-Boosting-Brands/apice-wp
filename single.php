@@ -79,17 +79,12 @@
                             <time>
                                 <?php
                                 // Set the date and time format
-                                $date_format = 'j \d\e F, Y \a \l\a(s) g:i a';
+                                $date_format = 'j \d\e F, Y \- g:i a';
 
                                 // Replace the problematic character sequence manually
                                 $formatted_date = date_i18n(
                                     $date_format,
                                     strtotime(get_the_date("Y-m-d H:i:s"))
-                                );
-                                $formatted_date = str_replace(
-                                    "(s)",
-                                    "s",
-                                    $formatted_date
                                 );
 
                                 // Output the final formatted date and time
