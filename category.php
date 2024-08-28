@@ -116,7 +116,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <?php get_template_part("pagination"); ?>
+                <?php echo bootstrap_pagination(); ?>
             </div>
         </div>
     </div>
