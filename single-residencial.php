@@ -85,61 +85,69 @@
                             ); ?>
                         </li>
                     <?php endif; ?>
-                    <li
-                        class="mb-5"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="200"
-                    >
-                        <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/residencial/ico-area.webp"
-                            alt=""
-                            class="icono"
-                        />
-                        Lote: 350 m²
-                    </li>
-                    <li
-                        class="mb-5"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="300"
-                    >
-                        <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/residencial/ico-area.webp"
-                            alt=""
-                            class="icono"
-                        />
-                        Construcción: 388 m²
-                    </li>
-                    <li
-                        class="mb-5"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-delay="400"
-                    >
-                        <img
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/residencial/ico-amenidades.webp"
-                            alt=""
-                            class="icono"
-                        />
-                        Amenidades:
-                        <ul class="mt-3">
-                            <li>Caseta de seguridad</li>
-                            <li>Barda electrificada</li>
-                            <li>Entornos iluminados</li>
-                            <li>Parques privados</li>
-                            <li>Oferta educativa</li>
-                            <li>Hospitales cercanos</li>
-                            <li>Plazas comerciales</li>
-                            <li>Avenidas principales</li>
-                        </ul>
-                    </li>
+                    <?php if (get_field("lote")): ?>
+                        <li
+                            class="mb-5"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                            data-aos-delay="200"
+                        >
+                            <img
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/residencial/ico-area.webp"
+                                alt=""
+                                class="icono"
+                            />
+                            Lote: <?php echo acf_esc_html(
+                                the_field("lote")
+                            ); ?> m²
+                        </li>
+                    <?php endif; ?>
+                    <?php if (get_field("construccion")): ?>
+                        <li
+                            class="mb-5"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                            data-aos-delay="300"
+                        >
+                            <img
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/residencial/ico-area.webp"
+                                alt=""
+                                class="icono"
+                            />
+                            Construcción: <?php echo acf_esc_html(
+                                the_field("construccion")
+                            ); ?> m²
+                        </li>
+                    <?php endif; ?>
+                    <?php if (have_rows("amenidades")): ?>
+                        <li
+                            class="mb-5"
+                            data-aos="fade-right"
+                            data-aos-duration="1000"
+                            data-aos-delay="400"
+                        >
+                            <img
+                                src="<?php echo esc_url(
+                                    get_template_directory_uri()
+                                ); ?>/assets/images/residencial/ico-amenidades.webp"
+                                alt=""
+                                class="icono"
+                            />
+                            Amenidades:
+                            <ul class="mt-3">
+                                <?php while (have_rows("amenidades")):
+                                    the_row(); ?>
+                                    <li><?php echo acf_esc_html(
+                                        get_sub_field("amenidad")
+                                    ); ?></li>
+                                <?php endif; ?>
+                            </ul>
+                        </li>
+                    <?php  endif; ?>
                 </ul>
             </div>
             <div class="col-lg-7">
