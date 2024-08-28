@@ -69,7 +69,7 @@
                 <div class="meta-data" data-aos="fade-up"
                 data-aos-duration="1000" data-aos-delay="100">
                     <ul class="list-inline fst-italic">
-                        <li class="list-inline-item">
+                        <li class="list-inline-item me-0">
                             <?php esc_html_e(
                                 "Por",
                                 "html5blank"
@@ -83,7 +83,7 @@
                             <time>
                                 <?php
                                 // Set the date and time format
-                                $date_format = 'j \d\e F, Y \- g:i a';
+                                $date_format = 'j \d\e F, Y \· g:i a';
 
                                 // Replace the problematic character sequence manually
                                 $formatted_date = date_i18n(
