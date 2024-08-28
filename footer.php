@@ -67,8 +67,8 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </li>
                             <li>
-                                <a href="mailto:cmedrano@apiceac.com"
-                                    >cmedrano@apiceac.com</a
+                                <a href="mailto:calebmed@apiceac.com"
+                                    >calebmed@apiceac.com</a
                                 >
                             </li>
                         </ul>
