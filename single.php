@@ -74,13 +74,13 @@
                             <time>
                                 <?php
                                 // Set the date and time format
-                                $date_format = 'l j \d\e F, Y \a \l\a(s) g:i a';
+                                $date_format = 'j \d\e F, Y \a \l\a\(s\) g:i a';
 
                                 // Output the formatted date and time
                                 echo "el " .
                                     date_i18n(
                                         $date_format,
-                                        strtotime(get_the_date("c"))
+                                        strtotime(get_the_date("Y-m-d H:i:s"))
                                     );
                                 ?>
             				</time>
