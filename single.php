@@ -55,7 +55,7 @@
         <div class="row mb-4">
             <div class="col">
                 <h1
-                    class="mb-40"
+                    class=""
                     data-aos="fade-up"
                     data-aos-duration="1000"
                 >
