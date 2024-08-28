@@ -141,8 +141,11 @@
                             <ul class="mt-3">
                                 <?php while (have_rows("amenidades")):
                                     the_row(); ?>
-
-                                <?php endif; ?>
+                                    <li><?php echo acf_esc_html(
+                                        get_sub_field("amenidad")
+                                    ); ?></li>
+                                <?php
+                                endwhile; ?>
                             </ul>
                         </li>
                     <?php endif; ?>
