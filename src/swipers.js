@@ -12,7 +12,10 @@ import {
 } from "swiper/modules";
 
 // import Swiper and modules styles
-import "swiper/css/bundle";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 // import AOS
 import AOS from "aos";
@@ -159,6 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
             enabled: true,
         },
         mousewheel: false,
+        slidesPerView: 1,
         centeredSlides: true,
 
         // if we need navigation
