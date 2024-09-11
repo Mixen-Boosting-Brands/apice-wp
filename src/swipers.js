@@ -171,9 +171,15 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: ".swiper-button-prev",
         },
 
+        // If we need pagination
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+
         // If we need scrollbar
         scrollbar: {
-            el: ".swiper-scrollbar-proyectos",
+            el: ".swiper-scrollbar",
             hide: false,
             snapOnRelease: true,
         },
