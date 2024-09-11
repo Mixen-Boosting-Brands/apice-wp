@@ -108,6 +108,12 @@
     .swiper-button-next {
         color: $black;
     }
+
+    .swiper-scrollbar {
+        .swiper-scrollbar-drag {
+            background-color: $black;
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
