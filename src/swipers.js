@@ -170,6 +170,13 @@ document.addEventListener("DOMContentLoaded", function () {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+
+        // If we need scrollbar
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false,
+            snapOnRelease: true,
+        },
     });
 });
 
