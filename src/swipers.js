@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // If we need scrollbar
         scrollbar: {
-            el: ".swiper-scrollbar",
+            el: ".swiper-scrollbar-proyectos",
             hide: false,
             snapOnRelease: true,
         },
