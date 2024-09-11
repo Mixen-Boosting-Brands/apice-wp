@@ -121,15 +121,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         breakpoints: {
             576: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 25,
             },
             768: {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 25,
             },
             992: {
-                slidesPerView: 1,
+                slidesPerView: 4,
                 spaceBetween: 25,
             },
         },
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
         slidesPerView: 1,
         spaceBetween: 0,
         loop: false,
-        grabCursor: true,
+        grabCursor: false,
         keyboard: {
             enabled: true,
         },
@@ -166,15 +166,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         breakpoints: {
             576: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 25,
             },
             768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 25,
             },
             992: {
-                slidesPerView: 4,
+                slidesPerView: 1,
                 spaceBetween: 25,
             },
         },
