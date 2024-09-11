@@ -12,7 +12,7 @@ import {
 } from "swiper/modules";
 
 // import Swiper and modules styles
-import "css/bundle";
+import "swiper/css/bundle";
 
 // import AOS
 import AOS from "aos";

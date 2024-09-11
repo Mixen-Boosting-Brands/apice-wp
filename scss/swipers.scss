@@ -3,6 +3,18 @@
 .swiper-proyectos,
 .swiper-internas,
 .swiper-internas-carrusel {
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        display: flex; /* Ensures slides are flex containers */
+        justify-content: center; /* Centers content within the slide */
+        align-items: center; /* Centers content vertically within the slide */
+        width: auto; /* Adjusts the slide width automatically */
+    }
+
     .swiper-slide {
         width: 100%;
         height: 100%;
