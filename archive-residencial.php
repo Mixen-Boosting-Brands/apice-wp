@@ -59,13 +59,19 @@ $residencial_query = new WP_Query([
 // Check if the custom query has posts
 if ($residencial_query->have_posts()): ?>
     <section id="interna" class="black-headings pt-60 pb-30">
-        <h1
-            class="titulo ms-lg-4 mb-5"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-        >
-            Proyectos División Residencial
-        </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1
+                        class="titulo ms-lg-4 mb-5"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        Proyectos División Residencial
+                    </h1>
+                </div>
+            </div>
+        </div>
         <div
             class="swiper swiper-proyectos"
             data-aos="fade-in"
@@ -79,6 +85,7 @@ if ($residencial_query->have_posts()): ?>
                 // Loop through all posts from the custom query
                 // Loop through all posts from the custom query
                 // Loop through all posts from the custom query
+                // Loop through all posts from the custom query
                 while ($residencial_query->have_posts()):
                     $residencial_query->the_post(); ?>
                     <div class="swiper-slide">
@@ -88,9 +95,9 @@ if ($residencial_query->have_posts()): ?>
                             ]); ?>
                         </a>
                         <a href="<?php the_permalink(); ?>">
-                            <h1>
+                            <h2>
                                 <?php the_title(); ?>
-                            </h1>
+                            </h2>
                         </a>
                     </div>
                 <?php
@@ -109,6 +116,7 @@ if ($residencial_query->have_posts()): ?>
 <?php // Reset post data after the custom query loop
     // Reset post data after the custom query loop
     // Reset post data after the custom query loop
+// Reset post data after the custom query loop
 // Reset post data after the custom query loop
 // Reset post data after the custom query loop
 // Reset post data after the custom query loop
