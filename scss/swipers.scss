@@ -105,3 +105,10 @@
         transform: rotate(-90deg);
     }
 }
+
+.swiper-proyectos {
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $black;
+    }
+}
