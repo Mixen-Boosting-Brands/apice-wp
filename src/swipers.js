@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
             enabled: false,
         },
         mousewheel: false,
-        slidesPerView: 1,
+        slidesPerView: "auto",
         centeredSlides: true,
 
         // if we need navigation
