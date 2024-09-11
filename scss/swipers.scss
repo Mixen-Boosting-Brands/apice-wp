@@ -6,6 +6,11 @@
     width: 100%;
     float: left;
 
+    a {
+        position: relative;
+        z-index: 1;
+    }
+
     .swiper-slide {
         display: flex; /* Ensures slides are flex containers */
         justify-content: center; /* Centers content within the slide */
