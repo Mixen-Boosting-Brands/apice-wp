@@ -86,6 +86,7 @@ if ($residencial_query->have_posts()): ?>
                 // Loop through all posts from the custom query
                 // Loop through all posts from the custom query
                 // Loop through all posts from the custom query
+                // Loop through all posts from the custom query
                 while ($residencial_query->have_posts()):
                     $residencial_query->the_post(); ?>
                     <div class="swiper-slide">
@@ -109,13 +110,14 @@ if ($residencial_query->have_posts()): ?>
             <div class="swiper-button-prev"></div>
 
             <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar-proyectos"></div>
+            <div class="swiper-scrollbar-proyectos mt-4"></div>
         </div>
     </section>
 
 <?php // Reset post data after the custom query loop
     // Reset post data after the custom query loop
     // Reset post data after the custom query loop
+// Reset post data after the custom query loop
 // Reset post data after the custom query loop
 // Reset post data after the custom query loop
 // Reset post data after the custom query loop
