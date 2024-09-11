@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<section id="jumbotron">
+<section id="jumbotron" style="height: 50vh;">
     <div class="overlay"></div>
     <div class="swiper swiper-internas">
         <div class="swiper-wrapper">
