@@ -12,10 +12,7 @@ import {
 } from "swiper/modules";
 
 // import Swiper and modules styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+import "css/bundle";
 
 // import AOS
 import AOS from "aos";
