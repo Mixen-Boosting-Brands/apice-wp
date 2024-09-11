@@ -62,18 +62,15 @@
             <?php
             $i = 1;
             while (have_posts()):
-                the_post();
-            ?>
+                the_post(); ?>
                 <div class="swiper-slide">
                     <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail('galeria'); ?>
+                        <?php the_post_thumbnail("galeria"); ?>
                     </a>
                 </div>
             <?php $i++;
             endwhile;
             ?>
-            <?php else: ?>
-            <?php endif; ?>
         </div>
 
         <!-- If we need navigation buttons -->
