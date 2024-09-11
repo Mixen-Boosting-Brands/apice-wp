@@ -173,13 +173,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // If we need pagination
         pagination: {
-            el: ".swiper-pagination",
+            el: ".swiper-pagination-proyectos",
             type: "fraction",
         },
 
         // If we need scrollbar
         scrollbar: {
-            el: ".swiper-scrollbar",
+            el: ".swiper-scrollbar-proyectos",
             hide: false,
             snapOnRelease: true,
         },
