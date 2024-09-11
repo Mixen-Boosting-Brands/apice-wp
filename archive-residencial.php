@@ -69,7 +69,11 @@
                             "class" => "img-fluid",
                         ]); ?>
                     </a>
-                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                    <a href="<?php the_permalink(); ?>">
+                        <h1>
+                            <?php the_title(); ?>
+                        </h1>
+                    </a>
                 </div>
             <?php $i++;
             endwhile;
