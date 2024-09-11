@@ -63,10 +63,14 @@
             $i = 1;
             while (have_posts()):
                 the_post(); ?>
-                <div class="swiper-slide">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail("galeria"); ?>
-                    </a>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="swiper-slide">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail("galeria"); ?>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             <?php $i++;
             endwhile;
