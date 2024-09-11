@@ -146,7 +146,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // init Swiper:
     const swiperProyectos = new Swiper(".swiper-proyectos", {
         // configure Swiper to use modules
-        modules: [Navigation, Autoplay, Mousewheel, Keyboard, Scrollbar],
+        modules: [
+            Navigation,
+            Pagination,
+            Autoplay,
+            Mousewheel,
+            Keyboard,
+            Scrollbar,
+        ],
 
         // Optional parameters
         autoplay: {
