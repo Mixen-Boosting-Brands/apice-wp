@@ -110,7 +110,7 @@
     }
 
     .swiper-pagination-proyectos {
-        padding: 0 20px;
+        padding: 0 22px;
         position: relative;
         top: 34px;
         text-align: end;
@@ -149,9 +149,10 @@
 
 // Large devices (desktops, 992px and up)
 @include media-breakpoint-up(lg) {
-    .swiper-pagination-proyectos {
-        text-align: end;
-        padding: 0 42px;
+    .swiper-proyectos {
+        .swiper-pagination-proyectos {
+            padding: 0 42px;
+        }
     }
 }
 
