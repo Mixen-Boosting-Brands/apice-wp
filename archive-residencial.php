@@ -64,9 +64,11 @@
             while (have_posts()):
                 the_post(); ?>
                 <div class="swiper-slide">
-                        <?php the_post_thumbnail("galeria", [
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail("proyecto", [
                             "class" => "img-fluid",
                         ]); ?>
+                    </a>
                 </div>
             <?php $i++;
             endwhile;
