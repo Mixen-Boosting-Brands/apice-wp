@@ -99,7 +99,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     // init Swiper:
-    const swiperJumbotron = new Swiper(".swiper-equipo", {
+    const swiperEquipo = new Swiper(".swiper-equipo", {
+        // configure Swiper to use modules
+        modules: [Navigation, Autoplay, Mousewheel, Keyboard],
+
+        // Optional parameters
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        direction: "horizontal",
+        allowTouchMove: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: false,
+        grabCursor: true,
+        keyboard: {
+            enabled: true,
+        },
+        mousewheel: false,
+
+        breakpoints: {
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 25,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 25,
+            },
+            992: {
+                slidesPerView: 4,
+                spaceBetween: 25,
+            },
+        },
+
+        // if we need navigation
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // init Swiper:
+    const swiperProyectos = new Swiper(".swiper-proyectos", {
         // configure Swiper to use modules
         modules: [Navigation, Autoplay, Mousewheel, Keyboard],
 

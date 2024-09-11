@@ -53,7 +53,7 @@
 
 <section id="interna" class="black-headings pt-60 pb-30">
     <div
-        class="swiper swiper-internas-carrusel"
+        class="swiper swiper-proyectos"
         data-aos="fade-in"
         data-aos-duration="1000"
         data-aos-delay="100"
