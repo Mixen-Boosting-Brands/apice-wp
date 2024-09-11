@@ -1089,6 +1089,6 @@
 
         <script src="<?php echo esc_url(
             get_template_directory_uri()
-        ); ?>/assets/js/app.bundle.js?v=2"></script>
+        ); ?>/assets/js/app.bundle.js?v=3"></script>
     </body>
 </html>
