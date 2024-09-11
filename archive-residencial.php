@@ -59,6 +59,13 @@ $residencial_query = new WP_Query([
 // Check if the custom query has posts
 if ($residencial_query->have_posts()): ?>
     <section id="interna" class="black-headings pt-60 pb-30">
+        <h1
+            class="titulo ms-lg-4 mb-5"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+        >
+            Proyectos División Residencial
+        </h1>
         <div
             class="swiper swiper-proyectos"
             data-aos="fade-in"
@@ -69,6 +76,7 @@ if ($residencial_query->have_posts()): ?>
                 <?php // Loop through all posts from the custom query
     // Loop through all posts from the custom query
     // Loop through all posts from the custom query
+                // Loop through all posts from the custom query
                 // Loop through all posts from the custom query
                 // Loop through all posts from the custom query
                 while ($residencial_query->have_posts()):
@@ -101,6 +109,7 @@ if ($residencial_query->have_posts()): ?>
 <?php // Reset post data after the custom query loop
     // Reset post data after the custom query loop
     // Reset post data after the custom query loop
+// Reset post data after the custom query loop
 // Reset post data after the custom query loop
 // Reset post data after the custom query loop
 wp_reset_postdata();else: ?>
