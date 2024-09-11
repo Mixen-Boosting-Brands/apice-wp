@@ -9,7 +9,6 @@ import {
     Scrollbar,
     Mousewheel,
     Keyboard,
-    centeredSlides,
 } from "swiper/modules";
 
 // import Swiper and modules styles
@@ -147,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // init Swiper:
     const swiperProyectos = new Swiper(".swiper-proyectos", {
         // configure Swiper to use modules
-        modules: [Navigation, Autoplay, Mousewheel, Keyboard, centeredSlides],
+        modules: [Navigation, Autoplay, Mousewheel, Keyboard],
 
         // Optional parameters
         autoplay: {
@@ -156,30 +155,15 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         direction: "horizontal",
         allowTouchMove: true,
-        slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 25,
         loop: false,
         grabCursor: false,
         keyboard: {
             enabled: true,
         },
         mousewheel: false,
+        slidesPerView: "auto",
         centeredSlides: true,
-
-        breakpoints: {
-            576: {
-                slidesPerView: 1,
-                spaceBetween: 25,
-            },
-            768: {
-                slidesPerView: 1,
-                spaceBetween: 25,
-            },
-            992: {
-                slidesPerView: 1,
-                spaceBetween: 25,
-            },
-        },
 
         // if we need navigation
         navigation: {
