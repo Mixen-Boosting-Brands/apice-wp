@@ -59,186 +59,21 @@
         data-aos-delay="100"
     >
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <a
-                    class="integrante integrante-1"
-                    style="background: url('<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png'); no-repeat;"
-                    href="javascript:void(0)"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal-equipo"
-                    data-bg="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png"
-                    data-bg-modal="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/modal-saul-sanchez.png"
-                    data-name="Arq. Saúl Sánchez C."
-                    data-position="Director Ejecutivo"
-                    data-bio="Desde mi graduación en la Universidad La Salle en el año 2002, he estado inmerso en el mundo de la arquitectura y la gestión de proyectos, buscando constantemente superar los límites de la creatividad y la eficiencia.
-
-                    Mi pasión por la arquitectura me llevó a buscar una mayor especialización, obteniendo un Máster en Desarrollo Urbano y Regional de la Universidad Autónoma de México, donde adquirí una comprensión profunda de los entornos urbanos y regionales y su impacto en el diseño arquitectónico.
-
-                    Sin embargo, mi búsqueda de excelencia no se detuvo ahí. En el año 2024, tuve el privilegio de completar un segundo máster en Gestión de Proyectos en Summa University. Esta experiencia me brindó las habilidades y herramientas necesarias para liderar proyectos de manera efectiva y eficiente, cumpliendo con los más altos estándares de calidad y rendimiento.
-
-                    Mi especialidad en edificios inteligentes ha sido una fuente constante de inspiración para mí. Me apasiona la integración de tecnologías innovadoras con diseños arquitectónicos funcionales y estéticos, asegurando que cada proyecto que emprendemos sea tanto visionario como práctico.
-
-                    Además, mi experiencia en project management, lean management y procedimientos para construcción en concreto me ha permitido enfrentar desafíos con confianza y liderar equipos hacia el éxito en todas las etapas del proceso de construcción.
-
-                    Durante los últimos cuatro años, he tenido el privilegio de formar parte de la dirección de operaciones y planificación estratégica de nuestro equipo, donde he contribuido con mi visión y liderazgo para impulsar el crecimiento y la innovación en nuestra organización."
-                    data-quote="La arquitectura es el arte de gastar el espacio."
-                    data-quote-author="―Philip Johnson"
-                >
-                    <div class="overlay"></div>
-                </a>
-                <h1>Arq. Saúl Sánchez C.</h1>
-                <p>Director Ejecutivo</p>
-            </div>
-            <div class="swiper-slide">
-                <a
-                    class="integrante integrante-1"
-                    style="background: url('<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png'); no-repeat;"
-                    href="javascript:void(0)"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal-equipo"
-                    data-bg="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png"
-                    data-bg-modal="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/modal-saul-sanchez.png"
-                    data-name="Arq. Saúl Sánchez C."
-                    data-position="Director Ejecutivo"
-                    data-bio="Desde mi graduación en la Universidad La Salle en el año 2002, he estado inmerso en el mundo de la arquitectura y la gestión de proyectos, buscando constantemente superar los límites de la creatividad y la eficiencia.
-
-                    Mi pasión por la arquitectura me llevó a buscar una mayor especialización, obteniendo un Máster en Desarrollo Urbano y Regional de la Universidad Autónoma de México, donde adquirí una comprensión profunda de los entornos urbanos y regionales y su impacto en el diseño arquitectónico.
-
-                    Sin embargo, mi búsqueda de excelencia no se detuvo ahí. En el año 2024, tuve el privilegio de completar un segundo máster en Gestión de Proyectos en Summa University. Esta experiencia me brindó las habilidades y herramientas necesarias para liderar proyectos de manera efectiva y eficiente, cumpliendo con los más altos estándares de calidad y rendimiento.
-
-                    Mi especialidad en edificios inteligentes ha sido una fuente constante de inspiración para mí. Me apasiona la integración de tecnologías innovadoras con diseños arquitectónicos funcionales y estéticos, asegurando que cada proyecto que emprendemos sea tanto visionario como práctico.
-
-                    Además, mi experiencia en project management, lean management y procedimientos para construcción en concreto me ha permitido enfrentar desafíos con confianza y liderar equipos hacia el éxito en todas las etapas del proceso de construcción.
-
-                    Durante los últimos cuatro años, he tenido el privilegio de formar parte de la dirección de operaciones y planificación estratégica de nuestro equipo, donde he contribuido con mi visión y liderazgo para impulsar el crecimiento y la innovación en nuestra organización."
-                    data-quote="La arquitectura es el arte de gastar el espacio."
-                    data-quote-author="―Philip Johnson"
-                >
-                    <div class="overlay"></div>
-                </a>
-                <h1>Arq. Saúl Sánchez C.</h1>
-                <p>Director Ejecutivo</p>
-            </div>
-            <div class="swiper-slide">
-                <a
-                    class="integrante integrante-1"
-                    style="background: url('<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png'); no-repeat;"
-                    href="javascript:void(0)"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal-equipo"
-                    data-bg="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png"
-                    data-bg-modal="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/modal-saul-sanchez.png"
-                    data-name="Arq. Saúl Sánchez C."
-                    data-position="Director Ejecutivo"
-                    data-bio="Desde mi graduación en la Universidad La Salle en el año 2002, he estado inmerso en el mundo de la arquitectura y la gestión de proyectos, buscando constantemente superar los límites de la creatividad y la eficiencia.
-
-                    Mi pasión por la arquitectura me llevó a buscar una mayor especialización, obteniendo un Máster en Desarrollo Urbano y Regional de la Universidad Autónoma de México, donde adquirí una comprensión profunda de los entornos urbanos y regionales y su impacto en el diseño arquitectónico.
-
-                    Sin embargo, mi búsqueda de excelencia no se detuvo ahí. En el año 2024, tuve el privilegio de completar un segundo máster en Gestión de Proyectos en Summa University. Esta experiencia me brindó las habilidades y herramientas necesarias para liderar proyectos de manera efectiva y eficiente, cumpliendo con los más altos estándares de calidad y rendimiento.
-
-                    Mi especialidad en edificios inteligentes ha sido una fuente constante de inspiración para mí. Me apasiona la integración de tecnologías innovadoras con diseños arquitectónicos funcionales y estéticos, asegurando que cada proyecto que emprendemos sea tanto visionario como práctico.
-
-                    Además, mi experiencia en project management, lean management y procedimientos para construcción en concreto me ha permitido enfrentar desafíos con confianza y liderar equipos hacia el éxito en todas las etapas del proceso de construcción.
-
-                    Durante los últimos cuatro años, he tenido el privilegio de formar parte de la dirección de operaciones y planificación estratégica de nuestro equipo, donde he contribuido con mi visión y liderazgo para impulsar el crecimiento y la innovación en nuestra organización."
-                    data-quote="La arquitectura es el arte de gastar el espacio."
-                    data-quote-author="―Philip Johnson"
-                >
-                    <div class="overlay"></div>
-                </a>
-                <h1>Arq. Saúl Sánchez C.</h1>
-                <p>Director Ejecutivo</p>
-            </div>
-            <div class="swiper-slide">
-                <a
-                    class="integrante integrante-1"
-                    style="background: url('<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png'); no-repeat;"
-                    href="javascript:void(0)"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal-equipo"
-                    data-bg="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png"
-                    data-bg-modal="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/modal-saul-sanchez.png"
-                    data-name="Arq. Saúl Sánchez C."
-                    data-position="Director Ejecutivo"
-                    data-bio="Desde mi graduación en la Universidad La Salle en el año 2002, he estado inmerso en el mundo de la arquitectura y la gestión de proyectos, buscando constantemente superar los límites de la creatividad y la eficiencia.
-
-                    Mi pasión por la arquitectura me llevó a buscar una mayor especialización, obteniendo un Máster en Desarrollo Urbano y Regional de la Universidad Autónoma de México, donde adquirí una comprensión profunda de los entornos urbanos y regionales y su impacto en el diseño arquitectónico.
-
-                    Sin embargo, mi búsqueda de excelencia no se detuvo ahí. En el año 2024, tuve el privilegio de completar un segundo máster en Gestión de Proyectos en Summa University. Esta experiencia me brindó las habilidades y herramientas necesarias para liderar proyectos de manera efectiva y eficiente, cumpliendo con los más altos estándares de calidad y rendimiento.
-
-                    Mi especialidad en edificios inteligentes ha sido una fuente constante de inspiración para mí. Me apasiona la integración de tecnologías innovadoras con diseños arquitectónicos funcionales y estéticos, asegurando que cada proyecto que emprendemos sea tanto visionario como práctico.
-
-                    Además, mi experiencia en project management, lean management y procedimientos para construcción en concreto me ha permitido enfrentar desafíos con confianza y liderar equipos hacia el éxito en todas las etapas del proceso de construcción.
-
-                    Durante los últimos cuatro años, he tenido el privilegio de formar parte de la dirección de operaciones y planificación estratégica de nuestro equipo, donde he contribuido con mi visión y liderazgo para impulsar el crecimiento y la innovación en nuestra organización."
-                    data-quote="La arquitectura es el arte de gastar el espacio."
-                    data-quote-author="―Philip Johnson"
-                >
-                    <div class="overlay"></div>
-                </a>
-                <h1>Arq. Saúl Sánchez C.</h1>
-                <p>Director Ejecutivo</p>
-            </div>
-            <div class="swiper-slide">
-                <a
-                    class="integrante integrante-1"
-                    style="background: url('<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png'); no-repeat;"
-                    href="javascript:void(0)"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modal-equipo"
-                    data-bg="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/saul-sanchez.png"
-                    data-bg-modal="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/equipo/modal-saul-sanchez.png"
-                    data-name="Arq. Saúl Sánchez C."
-                    data-position="Director Ejecutivo"
-                    data-bio="Desde mi graduación en la Universidad La Salle en el año 2002, he estado inmerso en el mundo de la arquitectura y la gestión de proyectos, buscando constantemente superar los límites de la creatividad y la eficiencia.
-
-                    Mi pasión por la arquitectura me llevó a buscar una mayor especialización, obteniendo un Máster en Desarrollo Urbano y Regional de la Universidad Autónoma de México, donde adquirí una comprensión profunda de los entornos urbanos y regionales y su impacto en el diseño arquitectónico.
-
-                    Sin embargo, mi búsqueda de excelencia no se detuvo ahí. En el año 2024, tuve el privilegio de completar un segundo máster en Gestión de Proyectos en Summa University. Esta experiencia me brindó las habilidades y herramientas necesarias para liderar proyectos de manera efectiva y eficiente, cumpliendo con los más altos estándares de calidad y rendimiento.
-
-                    Mi especialidad en edificios inteligentes ha sido una fuente constante de inspiración para mí. Me apasiona la integración de tecnologías innovadoras con diseños arquitectónicos funcionales y estéticos, asegurando que cada proyecto que emprendemos sea tanto visionario como práctico.
-
-                    Además, mi experiencia en project management, lean management y procedimientos para construcción en concreto me ha permitido enfrentar desafíos con confianza y liderar equipos hacia el éxito en todas las etapas del proceso de construcción.
-
-                    Durante los últimos cuatro años, he tenido el privilegio de formar parte de la dirección de operaciones y planificación estratégica de nuestro equipo, donde he contribuido con mi visión y liderazgo para impulsar el crecimiento y la innovación en nuestra organización."
-                    data-quote="La arquitectura es el arte de gastar el espacio."
-                    data-quote-author="―Philip Johnson"
-                >
-                    <div class="overlay"></div>
-                </a>
-                <h1>Arq. Saúl Sánchez C.</h1>
-                <p>Director Ejecutivo</p>
-            </div>
+            <?php
+            $i = 1;
+            while (have_posts()):
+                the_post();
+            ?>
+                <div class="swiper-slide">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail('galeria'); ?>
+                    </a>
+                </div>
+            <?php $i++;
+            endwhile;
+            ?>
+            <?php else: ?>
+            <?php endif; ?>
         </div>
 
         <!-- If we need navigation buttons -->
