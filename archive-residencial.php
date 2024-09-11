@@ -66,7 +66,7 @@
                 <div class="swiper-slide">
                     <a href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail("proyecto", [
-                            "class" => "img-fluid",
+                            "class" => "img-fluid mb-3",
                         ]); ?>
                     </a>
                     <a href="<?php the_permalink(); ?>">
