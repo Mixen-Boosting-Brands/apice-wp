@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function () {
         loop: false,
         grabCursor: false,
         keyboard: {
-            enabled: true,
+            enabled: false,
         },
         mousewheel: false,
         slidesPerView: 1,
