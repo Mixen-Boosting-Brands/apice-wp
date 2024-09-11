@@ -68,7 +68,8 @@ if ($residencial_query->have_posts()): ?>
             <div class="swiper-wrapper">
                 <?php // Loop through all posts from the custom query
     // Loop through all posts from the custom query
-    while ($residencial_query->have_posts()):
+    // Loop through all posts from the custom query
+                while ($residencial_query->have_posts()):
                     $residencial_query->the_post(); ?>
                     <div class="swiper-slide">
                         <a href="<?php the_permalink(); ?>">
@@ -92,18 +93,13 @@ if ($residencial_query->have_posts()): ?>
 
             <!-- If we need scrollbar -->
             <div class="swiper-scrollbar"></div>
-            <div class="autoplay-progress">
-                <svg viewBox="0 0 48 48">
-                    <circle cx="24" cy="24" r="20"></circle>
-                </svg>
-                <span></span>
-            </div>
         </div>
     </section>
 
 <?php // Reset post data after the custom query loop
     // Reset post data after the custom query loop
-    wp_reset_postdata();else: ?>
+    // Reset post data after the custom query loop
+wp_reset_postdata();else: ?>
     <p>No posts found.</p>
 <?php endif;
 ?>
