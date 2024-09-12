@@ -30,10 +30,23 @@
         height: 500px;
     }
 
-    .post-details {
+    .bg-post-details {
         background-color: $bg-post-details;
+    }
+
+    .post-details {
         color: $text-post-details;
+        padding: 60px 40px;
         text-align: center;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: $text-post-details;
+        }
     }
 }
 

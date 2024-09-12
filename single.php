@@ -55,7 +55,7 @@
         the_post(); ?>
 
 <section id="interna" class="black-headings pt-60 pb-30">
-    <div class="container">
+    <div class="container mb-4">
         <div class="row g-0">
             <div class="col-lg-6 my-auto">
                 <div
@@ -70,7 +70,7 @@
                 >
                 </div>
             </div>
-            <div class="col-lg-6 my-auto">
+            <div class="bg-post-details col-lg-6 my-auto">
                 <div class="post-details">
                     <h6>
                         <time>
@@ -99,7 +99,9 @@
                     </h1>
 
                     <?php if (get_field("entradilla")): ?>
-                        <p><?php the_field("entradilla"); ?></p>
+                        <div class="text-start">
+                            <p><?php the_field("entradilla"); ?></p>
+                        </div>
                     <?php endif; ?>
 
                     <h6>
