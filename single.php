@@ -26,7 +26,7 @@
                         <time>
                             <?php
                             // Set the date and time format
-                            $date_format = 'j \d\e F, Y \· g:i a \·';
+                            $date_format = 'j \d\e F, Y \· g:i a';
 
                             // Replace the problematic character sequence manually
                             $formatted_date = date_i18n(
@@ -35,13 +35,13 @@
                             );
 
                             // Output the final formatted date and time
-                            echo "el " . $formatted_date;
+                            echo "" . $formatted_date;
                             ?>
         				</time>
                     </h6>
 
                     <h1
-                        class=""
+                        class="my-5"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                     >
@@ -69,56 +69,6 @@
     <div class="container">
         <div class="row mb-4">
             <div class="col">
-                <h1
-                    class=""
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                >
-                    <?php the_title(); ?>
-                </h1>
-
-                <div class="meta-data" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="100">
-                    <ul class="list-inline fst-italic">
-                        <li class="list-inline-item me-0">
-                            <?php esc_html_e(
-                                "Por",
-                                "html5blank"
-                            ); ?> <?php echo get_the_author_meta(
-     "user_firstname"
- ) .
-     " " .
-     get_the_author_meta("user_lastname"); ?>
-                        </li>
-                        <li class="list-inline-item me-0">
-                            <time>
-                                <?php
-                                // Set the date and time format
-                                $date_format = 'j \d\e F, Y \· g:i a \·';
-
-                                // Replace the problematic character sequence manually
-                                $formatted_date = date_i18n(
-                                    $date_format,
-                                    strtotime(get_the_date("Y-m-d H:i:s"))
-                                );
-
-                                // Output the final formatted date and time
-                                echo "el " . $formatted_date;
-                                ?>
-            				</time>
-                        </li>
-                        <li class="list-inline-item">
-                            <?php if (comments_open(get_the_ID())) {
-                                comments_popup_link(
-                                    __("Comentarios", "html5blank"),
-                                    __("1 Comentario", "html5blank"),
-                                    __("% Comentarios", "html5blank")
-                                );
-                            } ?>
-                        </li>
-                    </ul>
-                </div>
-
                 <div class="content" data-aos="fade-up"
                 data-aos-duration="1000" data-aos-delay="200">
                     <?php the_content(); ?>
