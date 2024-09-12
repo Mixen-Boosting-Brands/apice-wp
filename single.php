@@ -55,6 +55,65 @@
         the_post(); ?>
 
 <section id="interna" class="black-headings pt-60 pb-30">
+    <div class="container-fluid">
+        <div class="row g-0">
+            <div class="col-lg-6 my-auto">
+                <div
+                    class="post-thumbnail"
+                    style="
+                        background: url(&quot;<?php echo get_the_post_thumbnail_url(
+                            get_the_ID(),
+                            "jumbotron"
+                        ); ?>&quot;)
+                            no-repeat;
+                    "
+                >
+                </div>
+            </div>
+            <div class="col-lg-6 my-auto">
+                <div class="post-details">
+                    <h6>
+                        <time>
+                            <?php
+                            // Set the date and time format
+                            $date_format = 'j \d\e F, Y \· g:i a \·';
+
+                            // Replace the problematic character sequence manually
+                            $formatted_date = date_i18n(
+                                $date_format,
+                                strtotime(get_the_date("Y-m-d H:i:s"))
+                            );
+
+                            // Output the final formatted date and time
+                            echo "el " . $formatted_date;
+                            ?>
+        				</time>
+                    </h6>
+
+                    <h1
+                        class=""
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        <?php the_title(); ?>
+                    </h1>
+
+                    <?php if (get_field("entradilla")): ?>
+                        <p><?php the_field("entradilla"); ?></p>
+                    <?php endif; ?>
+
+                    <h6>
+                        <?php esc_html_e(
+                            "Por",
+                            "html5blank"
+                        ); ?> <?php echo get_the_author_meta("user_firstname") .
+     " " .
+     get_the_author_meta("user_lastname"); ?>
+                    </h6>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row mb-4">
             <div class="col">

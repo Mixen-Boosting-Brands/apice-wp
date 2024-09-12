@@ -22,6 +22,19 @@
         max-width: 20px;
         vertical-align: top;
     }
+
+    .post-thumbnail {
+        background-position: center !important;
+        background-size: cover !important;
+        width: 100%;
+        height: 500px;
+    }
+
+    .post-details {
+        background-color: $bg-post-details;
+        color: $text-post-details;
+        text-align: center;
+    }
 }
 
 #modelos {
