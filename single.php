@@ -10,6 +10,8 @@
             <div class="col-lg-6 my-auto">
                 <div
                     class="post-thumbnail"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
                     style="
                         background: url(&quot;<?php echo get_the_post_thumbnail_url(
                             get_the_ID(),
@@ -22,7 +24,10 @@
             </div>
             <div class="col-lg-6 my-auto">
                 <div class="post-details">
-                    <h6>
+                    <h6
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
                         <time>
                             <?php
                             // Set the date and time format
@@ -44,17 +49,22 @@
                         class="my-5"
                         data-aos="fade-up"
                         data-aos-duration="1000"
+                        data-aos-delay="200"
                     >
                         <?php the_title(); ?>
                     </h1>
 
                     <?php if (get_field("entradilla")): ?>
-                        <div class="text-start">
+                        <div class="text-start mb-5">
                             <p><?php the_field("entradilla"); ?></p>
                         </div>
                     <?php endif; ?>
 
-                    <h6>
+                    <h6
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="400"
+                    >
                         <?php esc_html_e(
                             "Por",
                             "html5blank"
@@ -70,7 +80,7 @@
         <div class="row mb-4">
             <div class="col">
                 <div class="content" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="200">
+                data-aos-duration="1000" data-aos-delay="600">
                     <?php the_content(); ?>
 
                     <?php edit_post_link(); ?>
