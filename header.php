@@ -169,7 +169,7 @@
                                     get_template_directory_uri()
                                 ); ?>/assets/images/logo<?php if (
     !is_home()
-): ?>-color<?php endif; ?>@2x.webp"
+): ?> -color <?php endif; ?>@2x.webp"
                                 alt=""
                                 class="logo img-fluid"
                                 id="logo-navbar"
