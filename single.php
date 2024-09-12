@@ -55,7 +55,12 @@
                     </h1>
 
                     <?php if (get_field("entradilla")): ?>
-                        <div class="text-start mb-5">
+                        <div
+                            class="text-start mb-5"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="400"
+                        >
                             <p><?php the_field("entradilla"); ?></p>
                         </div>
                     <?php endif; ?>
@@ -63,7 +68,7 @@
                     <h6
                         data-aos="fade-up"
                         data-aos-duration="1000"
-                        data-aos-delay="400"
+                        data-aos-delay="600"
                     >
                         <?php esc_html_e(
                             "Por",
@@ -80,7 +85,7 @@
         <div class="row mb-4">
             <div class="col">
                 <div class="content" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="600">
+                data-aos-duration="1000" data-aos-delay="800">
                     <?php the_content(); ?>
 
                     <?php edit_post_link(); ?>
