@@ -55,7 +55,7 @@
         the_post(); ?>
 
 <section id="interna" class="black-headings pt-60 pb-30">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row g-0">
             <div class="col-lg-6 my-auto">
                 <div

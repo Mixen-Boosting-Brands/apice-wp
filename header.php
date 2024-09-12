@@ -54,7 +54,7 @@
 
         <link rel="stylesheet" href="<?php echo esc_url(
             get_template_directory_uri()
-        ); ?>/assets/css/styles.css?v=5" />
+        ); ?>/assets/css/styles.css?v=6" />
 
         <?php wp_head(); ?>
     </head>
