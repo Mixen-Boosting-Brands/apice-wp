@@ -2,6 +2,10 @@
 
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm) {
+    .custom-container {
+        max-width: 96%;
+    }
+
     #proyectos-y-servicios {
         /*
         .categoria {
@@ -128,6 +132,10 @@
 
     .navbar-scroll {
         padding: 10px 30px !important;
+    }
+
+    .custom-container {
+        max-width: 98%;
     }
 
     #proyectos-y-servicios {
