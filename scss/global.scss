@@ -244,6 +244,26 @@ header {
     }
 }
 
+.navbar-scroll-interna {
+    background-image: linear-gradient(rgba(15, 15, 15, 0.7), rgba(0, 0, 0, 0));
+    padding: 10px 0 !important;
+    @include transition(ease, 0.3s);
+
+    #logo-navbar {
+        width: 50px !important;
+    }
+
+    #mburger {
+        color: $primary;
+
+        &:hover,
+        &:focus {
+            background-color: $secondary;
+            color: $primary;
+        }
+    }
+}
+
 #mapa {
     line-height: 0;
 
