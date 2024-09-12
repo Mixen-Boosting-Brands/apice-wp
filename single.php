@@ -4,7 +4,7 @@
     while (have_posts()):
         the_post(); ?>
 
-<section id="interna" class="black-headings pt-60 pb-30">
+<section id="interna" class="black-headings pt-100 pb-30">
     <div class="container custom-container mb-5">
         <div class="bg-post-details row g-0">
             <div class="col-lg-6 my-auto">
