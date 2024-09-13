@@ -1,58 +1,6 @@
 <?php get_header(); ?>
 
-<section id="jumbotron">
-    <div class="overlay"></div>
-    <div class="swiper swiper-internas">
-        <div class="swiper-wrapper">
-            <div
-                class="swiper-slide"
-                style="
-                    background: url(&quot;<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/404/bg.webp&quot;)
-                        no-repeat;
-                "
-            >
-                <div class="container-fluid">
-                    <div class="row">
-                        <div
-                            class="col d-flex justify-content-start align-items-end"
-                        >
-                            <h1
-                                class="titulo ms-lg-4 mb-5"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                            >
-                                <?php esc_html_e(
-                                    "Error 404: Página no encontrada",
-                                    "html5blank"
-                                ); ?>
-                            </h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <!-- div class="swiper-button-next"></div -->
-        <!-- div class="swiper-button-prev"></div -->
-
-        <!-- If we need scrollbar -->
-        <!-- div class="swiper-scrollbar"></div>
-        <div class="autoplay-progress">
-            <svg viewBox="0 0 48 48">
-                <circle cx="24" cy="24" r="20"></circle>
-            </svg>
-            <span></span>
-        </div -->
-    </div>
-    <div class="flash"></div>
-</section>
-
-<section id="interna" class="black-headings pt-60 pb-30">
+<section id="interna" class="black-headings pt-100 pb-30">
     <div class="container">
         <div class="row mb-4">
             <div class="col">
