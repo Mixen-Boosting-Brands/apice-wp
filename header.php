@@ -159,7 +159,7 @@
 
         <header id="navbar" class="<?php if (
             !is_home()
-        ): ?>navbar-scroll-interna<?php endif; ?>">
+        ): ?>navbar-interna<?php endif; ?>">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-4 my-auto">

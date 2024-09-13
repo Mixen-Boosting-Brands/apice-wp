@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var scroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (scroll >= 1) {
-            header.classList.add("navbar-scroll");
+            header.classList.add("navbar-scroll", "navbar-scroll-interna");
         } else {
-            header.classList.remove("navbar-scroll");
+            header.classList.remove("navbar-scroll", "navbar-scroll-interna");
         }
     }
 
