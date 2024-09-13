@@ -14,13 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // Cache the DOM element containing the navbar
     var header = document.getElementById("navbar");
 
+    // Check if this is not the homepage
+    var isInternalPage = header.classList.contains("navbar-interna");
+
     function updateScroll() {
         var scroll = window.pageYOffset || document.documentElement.scrollTop;
 
         if (scroll >= 1) {
-            header.classList.add("navbar-scroll", "navbar-scroll-interna");
+            header.classList.add("navbar-scroll");
+            if (isInternalPage) {
+                header.classList.add("navbar-scroll-interna");
+            }
         } else {
-            header.classList.remove("navbar-scroll", "navbar-scroll-interna");
+            header.classList.remove("navbar-scroll");
+            if (isInternalPage) {
+                header.classList.remove("navbar-scroll-interna");
+            }
         }
     }
 
