@@ -257,6 +257,11 @@ header {
 }
 
 .navbar-scroll-interna {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0),
+        rgba(240, 240, 240, 0.7)
+    );
+
     #mburger {
         color: $primary;
     }
