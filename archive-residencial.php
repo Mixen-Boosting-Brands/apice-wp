@@ -32,11 +32,7 @@ if ($residencial_query->have_posts()): ?>
             <div class="swiper-wrapper">
                 <?php // Loop through all posts from the custom query
     // Loop through all posts from the custom query
-    // Loop through all posts from the custom query
-                // Loop through all posts from the custom query
-                // Loop through all posts from the custom query
-                // Loop through all posts from the custom query
-                while ($residencial_query->have_posts()):
+    while ($residencial_query->have_posts()):
                     $residencial_query->the_post(); ?>
                     <div class="swiper-slide">
                         <a href="<?php the_permalink(); ?>">
@@ -68,11 +64,7 @@ if ($residencial_query->have_posts()): ?>
 
 <?php // Reset post data after the custom query loop
     // Reset post data after the custom query loop
-    // Reset post data after the custom query loop
-// Reset post data after the custom query loop
-// Reset post data after the custom query loop
-// Reset post data after the custom query loop
-wp_reset_postdata();else: ?>
+    wp_reset_postdata();else: ?>
     <p>No posts found.</p>
 <?php endif;
 ?>
