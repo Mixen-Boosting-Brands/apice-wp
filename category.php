@@ -17,7 +17,7 @@
         </div>
     </div>
     <div
-        class="swiper swiper-proyectos"
+        class="swiper swiper-posts"
         data-aos="fade-in"
         data-aos-duration="1000"
         data-aos-delay="100"
