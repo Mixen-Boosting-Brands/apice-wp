@@ -2,7 +2,7 @@
 
 <?php if (have_posts()): ?>
 
-<section id="interna" class="interna-posts pt-100 pb-30">
+<section id="interna" class="interna-dark interna-posts pt-100 pb-30">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -39,16 +39,21 @@
                         while ($all_posts_query->have_posts()):
                             $all_posts_query->the_post(); ?>
                             <div class="swiper-slide">
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_post_thumbnail("proyecto", [
-                                        "class" => "img-fluid mb-3",
-                                    ]); ?>
-                                </a>
-                                <a href="<?php the_permalink(); ?>">
-                                    <h2>
-                                        <?php the_title(); ?>
-                                    </h2>
-                                </a>
+                                <div class="card">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail("proyecto", [
+                                            "class" =>
+                                                "card-img-top img-fluid mb-3",
+                                        ]); ?>
+                                    </a>
+                                    <div class="card-body">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <h1>
+                                                <?php the_title(); ?>
+                                            </h1>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         <?php
                         endwhile;
