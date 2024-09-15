@@ -2,7 +2,7 @@
 
 <?php if (have_posts()): ?>
 
-<section id="interna" class="black-headings pt-100 pb-30">
+<section id="interna" class="interna-posts pt-100 pb-30">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
