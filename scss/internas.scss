@@ -54,18 +54,27 @@
     color: $white;
 
     .card {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 25px;
+
         h1 {
-            @include font-size(1rem);
+            @include font-size(1.4rem) !important;
         }
 
         a {
-            color: $white;
+            color: $main-font-color;
         }
     }
 }
 
 .interna-posts {
     background-color: #333;
+
+    .card {
+        background-color: #c4b7b0;
+    }
 }
 
 #modelos {

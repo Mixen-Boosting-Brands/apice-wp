@@ -52,6 +52,14 @@
                                                 <?php the_title(); ?>
                                             </h1>
                                         </a>
+                                        <?php esc_html_e(
+                                            "Por",
+                                            "html5blank"
+                                        ); ?> <?php echo get_the_author_meta(
+     "user_firstname"
+ ) .
+     " " .
+     get_the_author_meta("user_lastname"); ?>
                                     </div>
                                 </div>
                             </div>

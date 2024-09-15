@@ -30,6 +30,7 @@ if (function_exists("add_theme_support")) {
     add_image_size("jumbotron", 1920, 1080, true); // Custom Thumbnail Size call using the_post_thumbnail('jumbotron');
     add_image_size("galeria", 1000, 1000, true); // Custom Thumbnail Size call using the_post_thumbnail('galeria');
     add_image_size("proyecto", 1920, 1080, true); // Custom Thumbnail Size call using the_post_thumbnail('proyecto');
+    add_image_size("post", 1080, 1920, true); // Custom Thumbnail Size call using the_post_thumbnail('post');
     add_image_size("thumb-modelo", 1920, 1329, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-modelo');
     add_image_size("thumb-planta", 1080, 1590, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-planta');
 
