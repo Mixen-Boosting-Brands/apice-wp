@@ -130,6 +130,32 @@
     }
 }
 
+.swiper-posts {
+    .swiper-button-prev,
+    .swiper-button-next {
+        color: $black;
+    }
+
+    .swiper-pagination-proyectos {
+        padding: 0 22px;
+        position: relative;
+        top: 34px;
+        text-align: end;
+    }
+
+    .swiper-scrollbar-proyectos {
+        background-color: lightgray;
+        width: 44%;
+        height: 4px;
+        margin: 0 auto;
+
+        .swiper-scrollbar-drag {
+            background-color: $black;
+            width: 10%;
+        }
+    }
+}
+
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm) {
     .swiper-proyectos {

@@ -221,7 +221,6 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         mousewheel: false,
         slidesPerView: 1,
-        centeredSlides: true,
 
         breakpoints: {
             576: {
