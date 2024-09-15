@@ -11,45 +11,50 @@
                     data-aos="fade-up"
                     data-aos-duration="1000"
                 >
-                    Proyectos División Industrial
+                    <?php if (is_category()):
+                        single_cat_title();
+                    endif; ?>
                 </h1>
             </div>
         </div>
-    </div>
-    <div
-        class="swiper swiper-posts"
-        data-aos="fade-in"
-        data-aos-duration="1000"
-        data-aos-delay="100"
-    >
-        <div class="swiper-wrapper">
-            <?php while (have_posts()):
-                the_post(); ?>
-                <div class="swiper-slide">
-                    <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail("proyecto", [
-                            "class" => "img-fluid mb-3",
-                        ]); ?>
-                    </a>
-                    <a href="<?php the_permalink(); ?>">
-                        <h2>
-                            <?php the_title(); ?>
-                        </h2>
-                    </a>
+
+        <div class="row">
+            <div
+                class="swiper swiper-posts"
+                data-aos="fade-in"
+                data-aos-duration="1000"
+                data-aos-delay="100"
+            >
+                <div class="swiper-wrapper">
+                    <?php while (have_posts()):
+                        the_post(); ?>
+                        <div class="swiper-slide">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail("proyecto", [
+                                    "class" => "img-fluid mb-3",
+                                ]); ?>
+                            </a>
+                            <a href="<?php the_permalink(); ?>">
+                                <h2>
+                                    <?php the_title(); ?>
+                                </h2>
+                            </a>
+                        </div>
+                    <?php
+                    endwhile; ?>
                 </div>
-            <?php
-            endwhile; ?>
+
+                <!-- Navigation buttons for Swiper -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination-proyectos"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar-proyectos mt-4"></div>
+            </div>
         </div>
-
-        <!-- Navigation buttons for Swiper -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-
-        <!-- If we need pagination -->
-        <div class="swiper-pagination-proyectos"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar-proyectos mt-4"></div>
     </div>
 </section>
 
