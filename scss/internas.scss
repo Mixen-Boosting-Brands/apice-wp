@@ -60,7 +60,8 @@
         padding: 25px;
 
         h1 {
-            @include font-size(1.4rem) !important;
+            @include font-size(1.4rem);
+            font-size: 1.4rem !important;
         }
 
         a {
