@@ -19,66 +19,71 @@
         </div>
 
         <div class="row">
-            <div
-                class="swiper swiper-posts"
-                data-aos="fade-in"
-                data-aos-duration="1000"
-                data-aos-delay="100"
-            >
-                <div class="swiper-wrapper">
-                    <?php
-                    // Fetch all posts in the current category
-                    $category = get_queried_object(); // Get current category
-                    $args = [
-                        "cat" => $category->term_id,
-                        "posts_per_page" => -1, // Display all posts
-                    ];
-                    $all_posts_query = new WP_Query($args);
+            <div class="col-12">
+                <div
+                    class="swiper swiper-posts"
+                    data-aos="fade-in"
+                    data-aos-duration="1000"
+                    data-aos-delay="100"
+                >
+                    <div class="swiper-wrapper">
+                        <?php
+                        // Fetch all posts in the current category
+                        $category = get_queried_object(); // Get current category
+                        $args = [
+                            "cat" => $category->term_id,
+                            "posts_per_page" => -1, // Display all posts
+                        ];
+                        $all_posts_query = new WP_Query($args);
 
-                    if ($all_posts_query->have_posts()):
-                        while ($all_posts_query->have_posts()):
-                            $all_posts_query->the_post(); ?>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail("proyecto", [
-                                            "class" =>
-                                                "card-img-top img-fluid mb-3",
-                                        ]); ?>
-                                    </a>
-                                    <div class="card-body">
+                        if ($all_posts_query->have_posts()):
+                            while ($all_posts_query->have_posts()):
+                                $all_posts_query->the_post(); ?>
+                                <div class="swiper-slide">
+                                    <div class="card">
                                         <a href="<?php the_permalink(); ?>">
-                                            <h1>
-                                                <?php the_title(); ?>
-                                            </h1>
+                                            <?php the_post_thumbnail(
+                                                "proyecto",
+                                                [
+                                                    "class" =>
+                                                        "card-img-top img-fluid mb-3",
+                                                ]
+                                            ); ?>
                                         </a>
-                                        <?php esc_html_e(
-                                            "Por",
-                                            "html5blank"
-                                        ); ?> <?php echo get_the_author_meta(
+                                        <div class="card-body">
+                                            <a href="<?php the_permalink(); ?>">
+                                                <h1>
+                                                    <?php the_title(); ?>
+                                                </h1>
+                                            </a>
+                                            <?php esc_html_e(
+                                                "Por",
+                                                "html5blank"
+                                            ); ?> <?php echo get_the_author_meta(
      "user_firstname"
  ) .
      " " .
      get_the_author_meta("user_lastname"); ?>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php
-                        endwhile;
-                        wp_reset_postdata(); // Reset post data after custom query
-                    endif;
-                    ?>
+                            <?php
+                            endwhile;
+                            wp_reset_postdata(); // Reset post data after custom query
+                        endif;
+                        ?>
+                    </div>
+
+                    <!-- Navigation buttons for Swiper -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination-proyectos"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar-proyectos mt-4"></div>
                 </div>
-
-                <!-- Navigation buttons for Swiper -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-
-                <!-- If we need pagination -->
-                <div class="swiper-pagination-proyectos"></div>
-
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar-proyectos mt-4"></div>
             </div>
         </div>
     </div>
