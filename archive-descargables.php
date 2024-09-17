@@ -25,9 +25,18 @@
                     $featured_query->the_post(); ?>
                 <div class="col">
                     <div class="container-content" style="background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0%, #333 100%),
-                        url('<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/header-general/bg.webp') no-repeat;">
+                        url('<?php // Check if the post has a featured image
+
+                    if (has_post_thumbnail()) {
+                            // Get the URL of the featured image
+                            $thumbnail_url = get_the_post_thumbnail_url(
+                                get_the_ID(),
+                                "full"
+                            ); // 'full' can be replaced with other sizes like 'thumbnail', 'medium', etc.
+
+                            // Output the URL
+                            echo $thumbnail_url;
+                        } ?>') no-repeat;">
                         <h1 class="titulo mb-4" data-aos="fade-up" data-aos-duration="1000">
                             <?php the_title();
                     // Output the post title
