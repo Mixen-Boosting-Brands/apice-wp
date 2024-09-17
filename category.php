@@ -127,10 +127,10 @@
                     <div class="swiper-button-prev"></div>
 
                     <!-- If we need pagination -->
-                    <div class="swiper-pagination-proyectos"></div>
+                    <div class="swiper-pagination-posts"></div>
 
                     <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar-proyectos mt-4"></div>
+                    <div class="swiper-scrollbar-posts mt-4"></div>
                 </div>
             </div>
         </div>
