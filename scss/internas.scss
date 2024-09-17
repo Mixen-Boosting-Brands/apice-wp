@@ -94,6 +94,14 @@
 
     .card {
         background-color: #333;
+
+        a {
+            color: $white;
+        }
+
+        .card-body {
+            color: $white;
+        }
     }
 }
 

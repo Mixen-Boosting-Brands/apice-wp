@@ -27,7 +27,9 @@
                     ?>
                         </h1>
 
-                        <p class="excerpt">
+                        <p class="excerpt" data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="200">
                             <?php html5wp_excerpt("html5wp_custom_post");
                     // Output the excerpt
                     ?>
