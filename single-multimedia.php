@@ -4,7 +4,7 @@
     while (have_posts()):
         the_post(); ?>
 
-<section id="interna" class="interna-dark interna-multimedia single-multimedia pt-100 pb-30">
+<section id="interna" class="interna-dark interna-multimedia single-multimedia pt-150 pb-30">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
@@ -18,12 +18,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 my-auto">
+            <div class="col-lg-9 mb-4 my-lg-auto text-center">
                 <div class="ratio ratio-16x9">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/zpOULjyy-n8?si=O3sp9ZkhALc_3RCa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-lg-4 my-auto">
+            <div class="col-lg-3 my-auto text-center">
                 <?php
                 $current_post_id = get_the_ID(); // Get the ID of the current post
 
