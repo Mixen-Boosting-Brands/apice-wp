@@ -2,18 +2,16 @@
 
 <?php if (have_posts()): ?>
 
-<section id="interna-featured" class="interna-dark">
+<section id="interna-featured" class="interna-dark interna-posts pt-100 pb-30">
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="container-content" style="
-                    background: url(&quot;<?php echo esc_url(
+                <div class="container-content" style="background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0%, #333 100%),
+                    url(&quot;<?php echo esc_url(
                         get_template_directory_uri()
-                    ); ?>/assets/images/header-general/bg.webp&quot;)
-                        no-repeat;
-                ">
+                    ); ?>/assets/images/header-general/bg.webp&quot;) no-repeat;">
                     <h1
-                        class="titulo ms-lg-4 mb-5"
+                        class="titulo mb-5"
                         data-aos="fade-up"
                         data-aos-duration="1000"
                     >
