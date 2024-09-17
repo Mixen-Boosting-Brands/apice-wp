@@ -168,8 +168,7 @@
                                 src="<?php echo esc_url(
                                     get_template_directory_uri()
                                 ); ?>/assets/images/logo<?php if (
-    !is_home() ||
-    get_post_type() != "descargables"
+    !is_home()
 ): ?>-color<?php endif; ?>@2x.webp"
                                 alt=""
                                 class="logo img-fluid"
