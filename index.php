@@ -473,9 +473,23 @@
                                     ):
                                         the_field("puesto");
                                     endif; ?>"
-                                    data-bio="<?php echo wp_kses_post(
-                                        wpautop(get_the_content())
-                                    ); ?>"
+                                    data-bio="<?php
+                                    // Get the content
+                                    $content = get_the_content();
+
+                                    // Remove all HTML tags
+                                    $content = wp_strip_all_tags($content);
+
+                                    // Replace double line breaks with single new lines for paragraph separation
+                                    $content = preg_replace(
+                                        "/\r\n|\r|\n{2,}/",
+                                        PHP_EOL . PHP_EOL,
+                                        $content
+                                    );
+
+                                    // Convert content to plain text
+                                    echo esc_attr($content);
+                                    ?>"
                                     data-quote="<?php if (get_field("frase")):
                                         the_field("frase");
                                     endif; ?>"
