@@ -400,8 +400,8 @@ document.addEventListener("DOMContentLoaded", function () {
         keyboard: {
             enabled: false,
         },
-        mousewheel: false,
-        slidesPerView: "auto",
+        mousewheel: true,
+        slidesPerView: 3,
         centeredSlides: true,
     });
 });

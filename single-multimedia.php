@@ -7,13 +7,15 @@
 <section id="interna" class="interna-dark interna-multimedia pt-60 pb-30">
     <div class="container">
         <div class="row">
-            <h1
-                class="mb-40"
-                data-aos="fade-right"
-                data-aos-duration="1000"
-            >
-                <?php the_title(); ?>
-            </h1>
+            <div class="col-12 text-center">
+                <h1
+                    class="mb-40"
+                    data-aos="fade-right"
+                    data-aos-duration="1000"
+                >
+                    <?php the_title(); ?>
+                </h1>
+            </div>
         </div>
         <div class="row">
             <div class="col-lg-8 my-auto">

@@ -158,6 +158,14 @@
     }
 }
 
+.swiper-vertical {
+    .card {
+        .card-img-top {
+            border-radius: 0;
+        }
+    }
+}
+
 // Small devices (landscape phones, 576px and up)
 @include media-breakpoint-up(sm) {
     .swiper-proyectos {
