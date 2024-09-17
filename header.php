@@ -54,7 +54,7 @@
 
         <link rel="stylesheet" href="<?php echo esc_url(
             get_template_directory_uri()
-        ); ?>/assets/css/styles.css?v=33" />
+        ); ?>/assets/css/styles.css?v=34" />
 
         <?php wp_head(); ?>
     </head>
@@ -168,7 +168,8 @@
                                 src="<?php echo esc_url(
                                     get_template_directory_uri()
                                 ); ?>/assets/images/logo<?php if (
-    !is_home()
+    !is_home() ||
+    get_post_type() != "descargables"
 ): ?>-color<?php endif; ?>@2x.webp"
                                 alt=""
                                 class="logo img-fluid"
