@@ -401,7 +401,6 @@ document.addEventListener("DOMContentLoaded", function () {
             enabled: false,
         },
         mousewheel: true,
-        height: 600,
     });
 });
 
