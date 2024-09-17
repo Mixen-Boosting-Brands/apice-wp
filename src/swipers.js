@@ -402,7 +402,6 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         mousewheel: true,
         slidesPerView: 3,
-        centeredSlides: true,
     });
 });
 
