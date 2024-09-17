@@ -445,7 +445,8 @@
                                 <a
                                     class="integrante integrante-<?php echo $i; ?>"
                                     style="background: url('<?php // Check if the post has a featured image
-                                    if (has_post_thumbnail()) {
+
+                                if (has_post_thumbnail()) {
                                         // Get the URL of the featured image
                                         $thumbnail_url = get_the_post_thumbnail_url(
                                             get_the_ID(),
@@ -472,15 +473,15 @@
                                     ):
                                         the_field("puesto");
                                     endif; ?>"
-                                    data-bio="<?php the_content(); ?>"
+                                    data-bio="<?php echo wp_kses_post(
+                                        wpautop(get_the_content())
+                                    ); ?>"
                                     data-quote="<?php if (get_field("frase")):
                                         the_field("frase");
                                     endif; ?>"
-                                    data-quote-author="―<?php if (
+                                    data-quote-author="<?php if (
                                         get_field("autor")
-                                    ):
-                                        the_field("autor");
-                                    endif; ?>"
+                                    ): ?>―<?php the_field("autor");endif; ?>"
                                 >
                                     <div class="overlay"></div>
                                 </a>
