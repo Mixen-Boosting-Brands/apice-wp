@@ -53,6 +53,11 @@
 #interna-featured {
     background-position: center !important;
     background-size: cover !important;
+
+    .excerpt {
+        column-count: 2;
+        column-gap: 30px;
+    }
 }
 
 .interna-dark {
