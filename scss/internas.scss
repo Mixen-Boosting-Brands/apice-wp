@@ -54,6 +54,11 @@
     background-position: center !important;
     background-size: cover !important;
 
+    .container-content {
+        width: 100%;
+        float: left;
+    }
+
     .excerpt {
         column-count: 2;
         column-gap: 30px;

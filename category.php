@@ -2,28 +2,30 @@
 
 <?php if (have_posts()): ?>
 
-<section id="interna-featured" class="interna-dark" style="
-    background: url(&quot;<?php echo esc_url(
-        get_template_directory_uri()
-    ); ?>/assets/images/header-general/bg.webp&quot;)
-        no-repeat;
-">
+<section id="interna-featured" class="interna-dark">
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1
-                    class="titulo ms-lg-4 mb-5"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                >
-                    <?php if (is_category()):
-                        single_cat_title();
-                    endif; ?>
-                </h1>
+                <div class="container-content" style="
+                    background: url(&quot;<?php echo esc_url(
+                        get_template_directory_uri()
+                    ); ?>/assets/images/header-general/bg.webp&quot;)
+                        no-repeat;
+                ">
+                    <h1
+                        class="titulo ms-lg-4 mb-5"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                    >
+                        <?php if (is_category()):
+                            single_cat_title();
+                        endif; ?>
+                    </h1>
 
-                <p class="excerpt">
-                    <?php html5wp_excerpt("html5wp_custom_post"); ?>
-                </p>
+                    <p class="excerpt">
+                        <?php html5wp_excerpt("html5wp_custom_post"); ?>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
