@@ -33,7 +33,8 @@ if (function_exists("add_theme_support")) {
     add_image_size("post", 1080, 1920, true); // Custom Thumbnail Size call using the_post_thumbnail('post');
     add_image_size("thumb-modelo", 1920, 1329, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-modelo');
     add_image_size("thumb-planta", 1080, 1590, true); // Custom Thumbnail Size call using the_post_thumbnail('thumb-planta');
-    add_image_size("foto-modal", 963, 1264, true); // Custom Thumbnail Size call using the_post_thumbnail('foto-modal');
+    add_image_size("foto-integrante", 691, 786, true); // Custom Thumbnail Size call using the_post_thumbnail('foto-integrante');
+    add_image_size("foto-integrante-modal", 963, 1264, true); // Custom Thumbnail Size call using the_post_thumbnail('foto-integrante-modal');
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use.
     /*add_theme_support('custom-background', array(
