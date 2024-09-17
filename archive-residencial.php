@@ -9,7 +9,7 @@ $residencial_query = new WP_Query([
 
 // Check if the custom query has posts
 if ($residencial_query->have_posts()): ?>
-    <section id="interna" class="black-headings pt-100 pb-30">
+    <section id="interna" class="black-headings pt-150 pb-30">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
@@ -32,7 +32,8 @@ if ($residencial_query->have_posts()): ?>
             <div class="swiper-wrapper">
                 <?php // Loop through all posts from the custom query
     // Loop through all posts from the custom query
-    while ($residencial_query->have_posts()):
+    // Loop through all posts from the custom query
+                while ($residencial_query->have_posts()):
                     $residencial_query->the_post(); ?>
                     <div class="swiper-slide">
                         <a href="<?php the_permalink(); ?>">
@@ -64,7 +65,8 @@ if ($residencial_query->have_posts()): ?>
 
 <?php // Reset post data after the custom query loop
     // Reset post data after the custom query loop
-    wp_reset_postdata();else: ?>
+    // Reset post data after the custom query loop
+wp_reset_postdata();else: ?>
     <p>No posts found.</p>
 <?php endif;
 ?>
