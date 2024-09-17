@@ -18,11 +18,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-9 mb-4 my-lg-auto text-center">
-                <div class="ratio ratio-16x9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zpOULjyy-n8?si=O3sp9ZkhALc_3RCa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <?php if (get_field("video")): ?>
+                <div class="col-lg-9 mb-4 my-lg-auto text-center">
+                    <div class="ratio ratio-16x9">
+                        <?php the_field("video"); ?>
+                    </div>
                 </div>
-            </div>
+            <?php endif; ?>
             <div class="col-lg-3 my-auto text-center">
                 <?php
                 $current_post_id = get_the_ID(); // Get the ID of the current post
