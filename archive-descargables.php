@@ -2,7 +2,7 @@
 
 <?php if (have_posts()): ?>
 
-<section id="interna-featured" class="interna-dark interna-posts pt-100 pb-30">
+<section id="interna-featured" class="interna-dark interna-descargables pt-100 pb-30">
     <div class="container">
         <div class="row">
             <?php
@@ -57,7 +57,7 @@
     </div>
 </section>
 
-<section id="interna" class="interna-dark interna-posts pb-100">
+<section id="interna" class="interna-dark interna-descargables pb-100">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
