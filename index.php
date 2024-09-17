@@ -612,7 +612,7 @@
                 class="col-6 col-xl-3 d-flex align-items-center justify-content-center"
             >
                 <a
-                    href="<?php echo get_category_link(3); ?>"
+                    href="<?php echo esc_url(home_url()); ?>/multimedia"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="100"
@@ -628,7 +628,7 @@
                 class="col-6 col-xl-3 d-flex align-items-center justify-content-center"
             >
                 <a
-                    href="<?php echo get_category_link(4); ?>"
+                    href="<?php echo get_category_link(16); ?>"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="200"
@@ -642,7 +642,7 @@
                 class="col-6 col-xl-3 d-flex align-items-center justify-content-center"
             >
                 <a
-                    href="<?php echo get_category_link(5); ?>"
+                    href="<?php echo esc_url(home_url()); ?>/descargables"
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="300"

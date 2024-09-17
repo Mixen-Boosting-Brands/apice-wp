@@ -2,7 +2,7 @@
 
 <?php if (have_posts()): ?>
 
-<section id="interna-featured" class="interna-dark interna-posts pt-100 pb-30">
+<section id="interna-featured" class="interna-dark interna-posts pt-150 pb-30">
     <div class="container">
         <div class="row">
             <?php
