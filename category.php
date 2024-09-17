@@ -81,6 +81,7 @@
                         $args = [
                             "cat" => $category->term_id,
                             "posts_per_page" => -1, // Display all posts
+                            "category__not_in" => [get_cat_ID("Destacado")], // Exclude 'Destacado' category
                         ];
                         $all_posts_query = new WP_Query($args);
 
