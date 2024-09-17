@@ -50,7 +50,7 @@
     </div>
 </section>
 
-<section id="interna" class="interna-dark interna-posts pb-30">
+<section id="interna" class="interna-dark interna-posts pb-100">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
