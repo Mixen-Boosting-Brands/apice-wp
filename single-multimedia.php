@@ -4,7 +4,7 @@
     while (have_posts()):
         the_post(); ?>
 
-<section id="interna" class="interna-dark interna-multimedia single-multimedia pt-150 pb-30">
+<section id="interna" class="interna-dark interna-multimedia single-multimedia pt-150 pb-60">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
