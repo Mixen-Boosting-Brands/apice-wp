@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function () {
             enabled: false,
         },
         mousewheel: true,
-        slidesPerView: 3,
+        height: 600,
     });
 });
 
