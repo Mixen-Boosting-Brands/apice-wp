@@ -302,10 +302,10 @@ function html5wp_index($length)
     return 20;
 }
 
-// Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
+// Create 100 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
 function html5wp_custom_post($length)
 {
-    return 40;
+    return 100;
 }
 
 // Create the Custom Excerpts callback

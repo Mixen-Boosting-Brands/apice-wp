@@ -111,6 +111,13 @@
         }
         */
     }
+
+    #interna-featured {
+        .excerpt {
+            column-count: 2;
+            column-gap: 30px;
+        }
+    }
 }
 
 // Large devices (desktops, 992px and up)

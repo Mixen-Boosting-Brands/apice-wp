@@ -29,7 +29,7 @@
     </div>
 </section>
 
-<section id="interna" class="interna-dark interna-posts pt-100 pb-30">
+<section id="interna" class="interna-dark interna-posts pb-30">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
