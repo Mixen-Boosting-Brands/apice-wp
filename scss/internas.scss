@@ -132,6 +132,11 @@
     }
 }
 
+.single-multimedia {
+    @include background("../images/multimedia/bg.png", center, cover);
+    color: $white;
+}
+
 #modelos {
     text-align: center;
 
