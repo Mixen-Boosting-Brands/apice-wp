@@ -381,6 +381,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
+/*
 document.addEventListener("DOMContentLoaded", function () {
     // init Swiper:
     const swiperVertical = new Swiper(".swiper-vertical", {
@@ -401,8 +402,11 @@ document.addEventListener("DOMContentLoaded", function () {
             enabled: false,
         },
         mousewheel: true,
+        slidesPerView: 3,
+        spaceBetween: 20,
     });
 });
+*/
 
 // Initialize AOS
 AOS.init();
