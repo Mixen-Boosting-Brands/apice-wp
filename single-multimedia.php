@@ -10,7 +10,7 @@
             <div class="col-12 text-center">
                 <h1
                     class="mb-40"
-                    data-aos="fade-right"
+                    data-aos="fade-up"
                     data-aos-duration="1000"
                 >
                     <?php the_title(); ?>
@@ -44,11 +44,13 @@
                 $multimedia_query = new WP_Query($args);
 
                 if ($multimedia_query->have_posts()):
+                    $i == 2;
                     while ($multimedia_query->have_posts()):
                         $multimedia_query->the_post(); ?>
                     <div class="row">
                         <div class="col-12">
-                            <div class="card">
+                            <div class="card" data-aos="fade-up"
+                            data-aos-duration="1000" data-aos-delay="<?php echo $i; ?>00">
                                 <a href="<?php the_permalink(); ?>">
                                     <i class="fa-regular fa-circle-play"></i>
                                     <?php the_post_thumbnail("proyecto", [
@@ -59,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                <?php
+                <?php $i++;
                     endwhile;
                     wp_reset_postdata();
                 else:
