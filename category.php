@@ -5,26 +5,47 @@
 <section id="interna-featured" class="interna-dark interna-posts pt-100 pb-30">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <div class="container-content" style="background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0%, #333 100%),
-                    url(&quot;<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/header-general/bg.webp&quot;) no-repeat;">
-                    <h1
-                        class="titulo mb-5"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                    >
-                        <?php if (is_category()):
-                            single_cat_title();
-                        endif; ?>
-                    </h1>
+            <?php
+            // Custom query to get the latest post from 'Destacado' category
+            $args = [
+                "category_name" => "Destacado", // Fetch posts from 'Destacado' category
+                "posts_per_page" => 1, // Limit to 1 post
+            ];
+            $featured_query = new WP_Query($args);
 
-                    <p class="excerpt">
-                        <?php html5wp_excerpt("html5wp_custom_post"); ?>
-                    </p>
+            if ($featured_query->have_posts()):
+                while ($featured_query->have_posts()):
+                    $featured_query->the_post(); ?>
+                <div class="col">
+                    <div class="container-content" style="background: linear-gradient(to bottom, rgba(51, 51, 51, 0) 0%, #333 100%),
+                        url('<?php echo esc_url(
+                            get_template_directory_uri()
+                        ); ?>/assets/images/header-general/bg.webp') no-repeat;">
+                        <h1 class="titulo mb-4" data-aos="fade-up" data-aos-duration="1000">
+                            <?php the_title();
+                    // Output the post title
+                    ?>
+                        </h1>
+
+                        <p class="excerpt">
+                            <?php html5wp_excerpt("html5wp_custom_post");
+                    // Output the excerpt
+                    ?>
+                        </p>
+                    </div>
                 </div>
-            </div>
+            <?php
+                endwhile;
+            else:
+                 ?>
+                <p><?php _e("Sorry, no posts matched your criteria."); ?></p>
+            <?php
+            endif;
+            ?>
+
+            <?php wp_reset_postdata();
+    // Reset the post data after the query
+    ?>
         </div>
     </div>
 </section>
