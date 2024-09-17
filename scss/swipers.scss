@@ -164,7 +164,7 @@
     .swiper-slide {
         height: calc(
             100% / 3
-        ); /* Each slide takes up one-third of the container */
+        ) !important; /* Each slide takes up one-third of the container */
     }
 
     .card {
