@@ -76,6 +76,7 @@
 
         a {
             color: $main-font-color;
+            position: relative;
         }
     }
 }
@@ -93,6 +94,25 @@
 
     .card {
         background-color: #333;
+    }
+}
+
+.interna-multimedia {
+    background-color: #333;
+
+    .card {
+        background-color: transparent;
+        padding: 0;
+
+        a {
+            color: $main-font-color;
+
+            i {
+                position: absolute;
+                @include absolute-center-x;
+                @include absolute-center-y;
+            }
+        }
     }
 }
 
