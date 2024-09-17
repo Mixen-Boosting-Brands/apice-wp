@@ -27,21 +27,33 @@
             <?php endif; ?>
             <div class="col-lg-3 my-auto text-center">
                 <?php
-                $current_post_id = get_the_ID(); // Get the ID of the current post
+                $terms_to_check = ["Destacado", "Podcast", "Webinar"];
+                $taxonomy = "categoria-multimedia";
 
-                $args = [
-                    "post_type" => "multimedia",
-                    "tax_query" => [
-                        [
-                            "taxonomy" => "categoria-multimedia",
-                            "field" => "slug",
-                            "terms" => "webinar",
-                        ],
-                    ],
-                    "post__not_in" => [$current_post_id], // Exclude the current post
-                    "posts_per_page" => 3, // Retrieve 3 posts
-                    "orderby" => "rand", // Randomize the order
-                ];
+                if (is_singular()) {
+                    // Check if it's a single post view
+                    $current_post_id = get_the_ID(); // Get the ID of the current post
+
+                    foreach ($terms_to_check as $term) {
+                        if (has_term($term, $taxonomy, $current_post_id)) {
+                            // The post belongs to this term
+                            $args = [
+                                "post_type" => "multimedia",
+                                "tax_query" => [
+                                    [
+                                        "taxonomy" => $taxonomy,
+                                        "field" => "slug",
+                                        "terms" => $term,
+                                    ],
+                                ],
+                                "post__not_in" => [$current_post_id], // Exclude the current post
+                                "posts_per_page" => 3, // Retrieve 3 posts
+                                "orderby" => "rand", // Randomize the order
+                            ];
+                            break; // Exit the loop if you only need to know it belongs to any of these terms
+                        }
+                    }
+                }
 
                 $multimedia_query = new WP_Query($args);
 
