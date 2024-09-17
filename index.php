@@ -424,162 +424,81 @@
                     data-aos-delay="100"
                 >
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a
-                                class="integrante integrante-1"
-                                style="background: url('<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/saul-sanchez.png'); no-repeat;"
-                                href="javascript:void(0)"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modal-equipo"
-                                data-bg="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/saul-sanchez.png"
-                                data-bg-modal="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/modal-saul-sanchez.png"
-                                data-name="Arq. Saúl Sánchez C."
-                                data-position="Director Ejecutivo"
-                                data-bio="Desde mi graduación en la Universidad La Salle en el año 2002, he estado inmerso en el mundo de la arquitectura y la gestión de proyectos, buscando constantemente superar los límites de la creatividad y la eficiencia.
+                        <?php
+                        // Define the query parameters
+                        $args = [
+                            "post_type" => "equipo", // Custom post type
+                            "posts_per_page" => -1, // Retrieve all posts
+                            "orderby" => "date", // Order by date
+                            "order" => "ASC", // Oldest to newest
+                        ];
 
-                                Mi pasión por la arquitectura me llevó a buscar una mayor especialización, obteniendo un Máster en Desarrollo Urbano y Regional de la Universidad Autónoma de México, donde adquirí una comprensión profunda de los entornos urbanos y regionales y su impacto en el diseño arquitectónico.
+                        // Custom query to fetch the posts
+                        $equipo_query = new WP_Query($args);
+                        ?>
+                        <?php if ($equipo_query->have_posts()):
 
-                                Sin embargo, mi búsqueda de excelencia no se detuvo ahí. En el año 2024, tuve el privilegio de completar un segundo máster en Gestión de Proyectos en Summa University. Esta experiencia me brindó las habilidades y herramientas necesarias para liderar proyectos de manera efectiva y eficiente, cumpliendo con los más altos estándares de calidad y rendimiento.
+                            $i == 1;
+                            while ($equipo_query->have_posts()):
+                                $equipo_query->the_post(); ?>
+                            <div class="swiper-slide">
+                                <a
+                                    class="integrante integrante-<?php echo $i; ?>"
+                                    style="background: url('<?php // Check if the post has a featured image
+                                    if (has_post_thumbnail()) {
+                                        // Get the URL of the featured image
+                                        $thumbnail_url = get_the_post_thumbnail_url(
+                                            get_the_ID(),
+                                            "foto-integrante"
+                                        );
 
-                                Mi especialidad en edificios inteligentes ha sido una fuente constante de inspiración para mí. Me apasiona la integración de tecnologías innovadoras con diseños arquitectónicos funcionales y estéticos, asegurando que cada proyecto que emprendemos sea tanto visionario como práctico.
-
-                                Además, mi experiencia en project management, lean management y procedimientos para construcción en concreto me ha permitido enfrentar desafíos con confianza y liderar equipos hacia el éxito en todas las etapas del proceso de construcción.
-
-                                Durante los últimos cuatro años, he tenido el privilegio de formar parte de la dirección de operaciones y planificación estratégica de nuestro equipo, donde he contribuido con mi visión y liderazgo para impulsar el crecimiento y la innovación en nuestra organización."
-                                data-quote="La arquitectura es el arte de gastar el espacio."
-                                data-quote-author="―Philip Johnson"
-                            >
-                                <div class="overlay"></div>
-                            </a>
-                            <h1>Arq. Saúl Sánchez C.</h1>
-                            <p>Director Ejecutivo</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <a
-                                class="integrante integrante-2"
-                                style="background: url('<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/jennifer-jimenez.png'); no-repeat;"
-                                href="javascript:void(0)"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modal-equipo"
-                                data-bg="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/jennifer-jimenez.png"
-                                data-bg-modal="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/modal-jennifer-jimenez.png"
-                                data-name="Arq. Jennifer Jiménez O."
-                                data-position="Gerente PMO"
-                                data-bio="Con una sólida formación académica respaldada por un título de Arquitectura obtenido en la Universidad Autónoma de Ciudad Juárez en 2016, y complementada con un Master en Gestión de Proyectos de Summa University en 2024, mi trayectoria profesional abarca más de una década de experiencia en el sector. Mis habilidades se extienden desde la implementación de metodologías como Lean Management hasta la aplicación de plataformas de gestión de proyectos de vanguardia como Procore. A lo largo de mi carrera, he desempeñado roles clave en el diseño, coordinación y dirección de ingenierías de proyectos constructivos, así como en la gestión integral de obras como Gerente de Proyectos, especializándome en optimizar los procesos de construcción mediante una sólida gestión de proyectos.
-
-                                Con un enfoque orientado hacia la excelencia y la eficiencia, mi compromiso es liderar equipos hacia el éxito mediante una combinación de experiencia técnica y habilidades de gestión. Mi sólida base académica y mi experiencia práctica me permiten abordar los desafíos del desarrollo organizacional con perspectivas innovadoras, asegurando resultados sobresalientes en cada proyecto. Estoy emocionada por la oportunidad de contribuir con mis habilidades y conocimientos a tu proyecto, y espero colaborar en la creación de soluciones constructivas y sostenibles que superen tus expectativas."
-                                data-quote="La arquitectura es el encuentro entre la luz y la sombra."
-                                data-quote-author="―Tadao Ando"
-                            >
-                                <div class="overlay"></div>
-                            </a>
-                            <h1>Arq. Jennifer Jiménez O.</h1>
-                            <p>Gerente PMO</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <a
-                                class="integrante integrante-3"
-                                style="background: url('<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/valeria-jimenez.webp'); no-repeat;"
-                                href="javascript:void(0)"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modal-equipo"
-                                data-bg="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/valeria-jimenez.webp"
-                                data-bg-modal="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/modal-valeria-jimenez.webp"
-                                data-name="Lic. Valeria Jiménez M."
-                                data-position="Gerente de Mercadotecnia y RRPP"
-                                data-bio="Mi enfoque profesional se caracteriza por una actitud dinámica y una organización impecable, lo que me permite adaptarme con facilidad a diversos entornos y desafíos. Como defensor del trabajo en equipo y los valores de compañerismo, me esfuerzo por cultivar un ambiente colaborativo donde cada miembro pueda alcanzar su máximo potencial.
-
-                                A lo largo de mi trayectoria, he alcanzado metas profesionales significativas, siempre buscando nuevos desafíos que me permitan fortalecer relaciones tanto internas como externas. Mi experiencia se ha centrado en la supervisión estratégica de esfuerzos de marketing, guiando equipos hacia la consecución de objetivos compartidos y contribuyendo con mis conocimientos para el logro de metas exitosas y mutuamente beneficiosas."
-                                data-quote="Las oportunidades no ocurren, tú las creas."
-                                data-quote-author=""
-                            >
-                                <div class="overlay"></div>
-                            </a>
-                            <h1>Lic. Valeria Jiménez M.</h1>
-                            <p>Gerente de Mercadotecnia y RRPP</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <a
-                                class="integrante integrante-4"
-                                style="background: url('<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/karla-torres.png'); no-repeat;"
-                                href="javascript:void(0)"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modal-equipo"
-                                data-bg="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/karla-torres.png"
-                                data-bg-modal="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/modal-karla-torres.png"
-                                data-name="Lic. Karla Torres"
-                                data-position="Diseñadora Gráfica Sr."
-                                data-bio="Mi trayectoria profesional ha sido regida por mis estudios en Diseño Gráfico y Comunicación, los cuales me han guiado a laborar en medios de comunicación como periódicos, radio y revistas, así mismo actualmente en el sector de la construcción.
-
-                                He desempeñado roles de editora y redactora, diseñadora gráfica (editorial, de identidad corporativa y promocional), fotógrafa, diseño digital y diseño web. Estas experiencias me han permitido desarrollar estrategias de comunicación efectivas, tanto gráficas como de interacción, consiguiendo un sentido más analístico y creativo.
-
-                                Mi visión editorial estructurada y funcional, junto con mi capacidad para innovar y ser creativa, me convierten en una profesional versátil. He contribuido al incremento de visibilidad y engagement en redes sociales, creado identidades corporativas únicas y gestionado campañas publicitarias.
-
-                                Así mismo, cuento con un Máster en Comunicación y Periodismo Gastronómico, con el que he obtenido herramientas para aplicar y adaptar mis conocimientos a cualquier sector o marcar, siempre con responsabilidad y profesionalismo, dando un gran sazón a mi perfil profesional."
-                                data-quote="Creatividad y funcionalidad, esa es la clave."
-                                data-quote-author=""
-                            >
-                                <div class="overlay"></div>
-                            </a>
-                            <h1>Lic. Karla Torres</h1>
-                            <p>Diseñadora Gráfica Sr.</p>
-                        </div>
-                        <div class="swiper-slide">
-                            <a
-                                class="integrante integrante-5"
-                                style="background: url('<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/caleb-medrano.png'); no-repeat;"
-                                href="javascript:void(0)"
-                                data-bs-toggle="modal"
-                                data-bs-target="#modal-equipo"
-                                data-bg="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/caleb-medrano.png"
-                                data-bg-modal="<?php echo esc_url(
-                                    get_template_directory_uri()
-                                ); ?>/assets/images/equipo/modal-caleb-medrano.png"
-                                data-name="Lic. Caleb Medrano A."
-                                data-position="Gerente de Comunicación Organizacional"
-                                data-bio="Con más de siete años de inmersión en los ámbitos de comunicación, mercadotecnia, creación de contenidos e inbound marketing, mi trayectoria profesional ha sido un constante viaje hacia la excelencia en la esfera corporativa. A lo largo de mi carrera, he tenido el privilegio de compartir conocimientos a través de conferencias sobre comunicación digital y monográficos enfocados en el desarrollo de habilidades para una comunicación asertiva, así como la trascendencia de una comunicación organizacional efectiva.
-
-                                En este vertiginoso paisaje digital, he reconocido la trascendencia de las redes sociales y la gestión experta de contenidos multimedia. Esta comprensión me ha llevado a especializarme en publicidad y tendencias digitales, explorando el poder transformador que estas herramientas ejercen en nuestro entorno.
-
-                                Con un enfoque apasionado y orientado a resultados, me comprometo a ser un catalizador de éxito para cualquier marca que tenga la visión de destacar en el competitivo panorama empresarial."
-                                data-quote="Deja que tu creatividad hable por ti."
-                                data-quote-author=""
-                            >
-                                <div class="overlay"></div>
-                            </a>
-                            <h1>Lic. Caleb Medrano A.</h1>
-                            <p>
-                                Gerente de Comunicación Organizacional
-                            </p>
-                        </div>
+                                        // Output the URL
+                                        echo $thumbnail_url;
+                                    } ?>'); no-repeat;"
+                                    href="javascript:void(0)"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modal-equipo"
+                                    data-bg="<?php echo esc_url(
+                                        get_template_directory_uri()
+                                    ); ?>/assets/images/equipo/saul-sanchez.png"
+                                    data-bg-modal="<?php if (
+                                        get_field("foto_modal")
+                                    ):
+                                        the_field("foto_modal");
+                                    endif; ?>"
+                                    data-name="<?php the_title(); ?>"
+                                    data-position="<?php if (
+                                        get_field("puesto")
+                                    ):
+                                        the_field("puesto");
+                                    endif; ?>"
+                                    data-bio="<?php the_content(); ?>"
+                                    data-quote="<?php if (get_field("frase")):
+                                        the_field("frase");
+                                    endif; ?>"
+                                    data-quote-author="―<?php if (
+                                        get_field("autor")
+                                    ):
+                                        the_field("autor");
+                                    endif; ?>"
+                                >
+                                    <div class="overlay"></div>
+                                </a>
+                                <h1><?php the_title(); ?></h1>
+                                <p><?php if (get_field("puesto")):
+                                    the_field("puesto");
+                                endif; ?></p>
+                            </div>
+                        <?php $i++;
+                            endwhile;
+                            wp_reset_postdata();
+                            ?>
+                        <?php
+                        else:
+                             ?>
+                            <p>No team members found.</p>
+                        <?php
+                        endif; ?>
                     </div>
 
                     <!-- If we need navigation buttons -->
