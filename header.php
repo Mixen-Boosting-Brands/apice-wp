@@ -54,7 +54,7 @@
 
         <link rel="stylesheet" href="<?php echo esc_url(
             get_template_directory_uri()
-        ); ?>/assets/css/styles.css?v=32" />
+        ); ?>/assets/css/styles.css?v=33" />
 
         <?php wp_head(); ?>
     </head>
@@ -158,8 +158,7 @@
         </div>
 
         <header id="navbar" class="<?php if (
-            !is_home() ||
-            get_post_type() != "descargables"
+            !is_home()
         ): ?>navbar-interna<?php endif; ?>">
             <div class="container-fluid">
                 <div class="row">
