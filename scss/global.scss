@@ -237,6 +237,11 @@ header {
 }
 
 .navbar-interna {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 1),
+        rgba(255, 255, 255, 1)
+    );
+
     #mburger {
         color: $primary;
     }
