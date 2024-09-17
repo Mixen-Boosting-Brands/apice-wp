@@ -2,6 +2,27 @@
 
 <?php if (have_posts()): ?>
 
+<section id="interna-featured" class="interna-dark" style="
+    background: url(&quot;<?php echo esc_url(
+        get_template_directory_uri()
+    ); ?>/assets/images/header-general/bg.webp&quot;)
+        no-repeat;
+">
+    <div class="row">
+        <div class="col">
+            <h1
+                class="titulo ms-lg-4 mb-5"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+            >
+                <?php if (is_category()):
+                    single_cat_title();
+                endif; ?>
+            </h1>
+        </div>
+    </div>
+</section>
+
 <section id="interna" class="interna-dark interna-posts pt-100 pb-30">
     <div class="container">
         <div class="row">
