@@ -108,7 +108,9 @@
             color: $main-font-color;
 
             i {
+                color: $white;
                 position: absolute;
+                @include font-size(3rem);
                 @include absolute-center-x;
                 @include absolute-center-y;
             }
