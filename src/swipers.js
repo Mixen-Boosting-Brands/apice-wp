@@ -381,5 +381,30 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // init Swiper:
+    const swiperVertical = new Swiper(".swiper-vertical", {
+        // configure Swiper to use modules
+        modules: [Navigation, Autoplay, Mousewheel, Keyboard],
+
+        // Optional parameters
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        direction: "vertical",
+        allowTouchMove: true,
+        spaceBetween: 25,
+        loop: false,
+        grabCursor: false,
+        keyboard: {
+            enabled: false,
+        },
+        mousewheel: false,
+        slidesPerView: "auto",
+        centeredSlides: true,
+    });
+});
+
 // Initialize AOS
 AOS.init();
