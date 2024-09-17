@@ -105,7 +105,7 @@
         padding: 0;
 
         a {
-            color: $main-font-color;
+            color: $white;
 
             i {
                 color: $white;
@@ -113,7 +113,12 @@
                 @include font-size(3rem);
                 @include absolute-center-x;
                 @include absolute-center-y;
+                left: 45%;
             }
+        }
+
+        .card-body {
+            color: $white;
         }
     }
 }
