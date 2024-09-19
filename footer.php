@@ -44,20 +44,6 @@
                                 </ul>
                             </address>
                         <?php endif; ?>
-
-                        <?php
-                        $phoneNumber = "6566232823";
-
-                        // Use preg_replace to format the number
-                        $formattedPhoneNumber = preg_replace(
-                            "/(\d{3})(\d{3})(\d{4})/",
-                            "($1) $2 $3",
-                            $phoneNumber
-                        );
-
-                        echo $formattedPhoneNumber;
-                        ?>
-
                         <?php if (have_rows("telefonos_contacto", "option")): ?>
                             <ul
                                 class="list-unstyled mb-4"
