@@ -17,13 +17,13 @@
                             </h1>
                         <?php endif; ?>
                         <?php if (get_field("texto_contacto", "option")): ?>
-                            <p
+                            <div
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="100"
                             >
                                 <?php the_field("texto_contacto", "option"); ?>
-                            </p>
+                            </div>
                         <?php endif; ?>
                         <?php if (get_field("direccion_contacto", "option")): ?>
                             <address
