@@ -590,7 +590,9 @@
     <div class="container-fluid h-100">
         <div class="row mb-2 mb-lg-4">
             <div class="col">
-                <h1>Ápiteca</h1>
+                <?php if (get_field("titulo_apiteca", "option")): ?>
+                    <h1><?php the_field("titulo_apiteca", "option"); ?></h1>
+                <?php endif; ?>
             </div>
         </div>
         <div class="row second-row h-100">
