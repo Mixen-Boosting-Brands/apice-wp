@@ -76,22 +76,21 @@
                                         )
                                     ):
                                         the_row(); ?>
-                                        <a href="tel:+52<?php the_sub_field(
+                                        <?php
+                                        // Retrieve the phone number
+                                        $phoneNumber = get_sub_field(
                                             "telefono"
-                                        ); ?>">
-                                            <?php
-                                            $phoneNumber =
-                                                '<?php the_sub_field("telefono"); ?>';
+                                        );
 
-                                            // Use preg_replace to format the number
-                                            $formattedPhoneNumber = preg_replace(
-                                                "/(\d{3})(\d{3})(\d{4})/",
-                                                "($1) $2 $3",
-                                                $phoneNumber
-                                            );
-
-                                            echo $formattedPhoneNumber;
-                                            ?>
+                                        // Format the phone number
+                                        $formattedPhoneNumber = preg_replace(
+                                            "/(\d{3})(\d{3})(\d{4})/",
+                                            "($1) $2 $3",
+                                            $phoneNumber
+                                        );
+                                        ?>
+                                        <a href="tel:+52<?php echo $phoneNumber; ?>">
+                                            <?php echo $formattedPhoneNumber; ?>
                                         </a>
                                     <?php
                                     endwhile; ?>
