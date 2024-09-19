@@ -44,6 +44,20 @@
                                 </ul>
                             </address>
                         <?php endif; ?>
+
+                        <?php
+                        $phoneNumber = "6566232823";
+
+                        // Use preg_replace to format the number
+                        $formattedPhoneNumber = preg_replace(
+                            "/(\d{3})(\d{3})(\d{4})/",
+                            "($1) $2 $3",
+                            $phoneNumber
+                        );
+
+                        echo $formattedPhoneNumber;
+                        ?>
+
                         <?php if (have_rows("telefonos_contacto", "option")): ?>
                             <ul
                                 class="list-unstyled mb-4"
@@ -64,9 +78,21 @@
                                         the_row(); ?>
                                         <a href="tel:+52<?php the_sub_field(
                                             "telefono"
-                                        ); ?>"><?php the_sub_field(
-    "telefono"
-); ?></a>
+                                        ); ?>">
+                                            <?php
+                                            $phoneNumber =
+                                                '<?php the_sub_field("telefono"); ?>';
+
+                                            // Use preg_replace to format the number
+                                            $formattedPhoneNumber = preg_replace(
+                                                "/(\d{3})(\d{3})(\d{4})/",
+                                                "($1) $2 $3",
+                                                $phoneNumber
+                                            );
+
+                                            echo $formattedPhoneNumber;
+                                            ?>
+                                        </a>
                                     <?php
                                     endwhile; ?>
                                 </li>
