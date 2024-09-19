@@ -56,6 +56,14 @@
                                 </li>
                                 <li>
                                     <?php
+                                    // Get the total number of rows
+                                    $total_rows = count(
+                                        get_field(
+                                            "telefonos_contacto",
+                                            "option"
+                                        )
+                                    );
+
                                     $i = 1;
                                     while (
                                         have_rows(
@@ -80,10 +88,16 @@
                                         <a href="tel:+52<?php echo $phoneNumber; ?>">
                                             <?php echo $formattedPhoneNumber; ?>
                                         </a>
-                                        <?php if ($i == 1):
-                                            echo "y";
+
+                                        <?php // Only echo 'y' if there are 2 or more rows and we are on the first phone number
+                                        if ($i == 1 && $total_rows > 1):
+                                            echo " y ";
                                         endif; ?>
-                                    <?php $i++;
+
+                                        <?php $i++;
+                                        // Increment the counter
+                                        ?>
+                                    <?php
                                     endwhile;
                                     ?>
                                 </li>
