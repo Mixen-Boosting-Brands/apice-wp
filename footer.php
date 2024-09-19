@@ -1,77 +1,97 @@
-        <section id="contacto">
+        <section id="contacto" <?php if (
+            get_field("imagen_de_fondo_contacto", "option")
+        ): ?>style="background: url('<?php the_field(
+    "imagen_de_fondo_contacto",
+    "option"
+); ?>') no-repeat;"<?php endif; ?>>
             <div class="container-fluid">
                 <div class="row g-0">
                     <div class="col-lg-6 my-auto p-5">
-                        <h1
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="0"
-                        >
-                            Contacto
-                        </h1>
-                        <p
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="100"
-                        >
-                            Tu proyecto es único y queremos ayudarte a hacerlo
-                            realidad. Cuéntanos mas sobre tus planes y visión.
-                            Comparte tus datos con nosotros o agenda una cita
-                            virtual ahora mismo.
-                        </p>
-                        <p
-                            class="fw-bold mb-5"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="200"
-                        >
-                            Estamos emocionados de trabajar contigo.
-                        </p>
-                        <address
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="300"
-                        >
-                            <ul class="list-unstyled mb-4">
+                        <?php if (get_field("titulo_contacto", "option")): ?>
+                            <h1
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="0"
+                            >
+                                <?php the_field("titulo_contacto", "option"); ?>
+                            </h1>
+                        <?php endif; ?>
+                        <?php if (get_field("texto_contacto", "option")): ?>
+                            <p
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="100"
+                            >
+                                <?php the_field("texto_contacto", "option"); ?>
+                            </p>
+                        <?php endif; ?>
+                        <?php if (get_field("direccion_contacto", "option")): ?>
+                            <address
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="300"
+                            >
+                                <ul class="list-unstyled mb-4">
+                                    <li class="mb-2">
+                                        <i class="fa-solid fa-location-pin"></i>
+                                    </li>
+                                    <li>
+                                        <?php the_field(
+                                            "direccion_contacto",
+                                            "option"
+                                        ); ?>
+                                    </li>
+                                </ul>
+                            </address>
+                        <?php endif; ?>
+                        <?php if (get_field("telefonos_contacto", "option")): ?>
+                            <ul
+                                class="list-unstyled mb-4"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="400"
+                            >
                                 <li class="mb-2">
-                                    <i class="fa-solid fa-location-pin"></i>
+                                    <i class="fa-solid fa-mobile"></i>
                                 </li>
                                 <li>
-                                    Balcones de Vista Hermosa No. 3<br />
-                                    Col. Balcones Coloniales, C.P. 76140<br />
-                                    Querétaro, Qro., México
+                                    <?php if (
+                                        get_sub_field("telefono", "option")
+                                    ): ?>
+                                        <a href="tel:+52<?php the_sub_field(
+                                            "telefono",
+                                            "option"
+                                        ); ?>"><?php the_sub_field(
+    "telefono",
+    "option"
+); ?></a>
+                                    <?php endif; ?>
                                 </li>
                             </ul>
-                        </address>
-                        <ul
-                            class="list-unstyled mb-4"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="400"
-                        >
-                            <li class="mb-2">
-                                <i class="fa-solid fa-mobile"></i>
-                            </li>
-                            <li>
-                                <a href="tel:+526566232823">(656) 623 2823</a> y
-                                <a href="tel:+526566945575">(656) 694 5575</a>
-                            </li>
-                        </ul>
-                        <ul
-                            class="list-unstyled"
-                            data-aos="fade-up"
-                            data-aos-duration="1000"
-                            data-aos-delay="500"
-                        >
-                            <li class="mb-2">
-                                <i class="fa-solid fa-envelope"></i>
-                            </li>
-                            <li>
-                                <a href="mailto:calebmed@apiceac.com"
-                                    >calebmed@apiceac.com</a
-                                >
-                            </li>
-                        </ul>
+                        <?php endif; ?>
+                        <?php if (get_field("correo_contacto", "option")): ?>
+                            <ul
+                                class="list-unstyled"
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay="500"
+                            >
+                                <li class="mb-2">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </li>
+                                <li>
+                                    <a href="mailto:<?php the_field(
+                                        "correo_contacto",
+                                        "option"
+                                    ); ?>"
+                                        ><?php the_field(
+                                            "correo_contacto",
+                                            "option"
+                                        ); ?></a
+                                    >
+                                </li>
+                            </ul>
+                        <?php endif; ?>
                     </div>
                     <div class="col-lg-6">
                         <div class="contenedor-calendly p-5">
