@@ -1039,7 +1039,9 @@ $index-jumbotron: 1;
 }
 
 #contacto {
-    @include background("../images/contacto/bg.webp", center, cover);
+    background: ("./images/contacto/bg.webp") no-repeat;
+    background-position: center !important;
+    background-size: cover !important;
     color: $white;
 
     .container-fluid {
