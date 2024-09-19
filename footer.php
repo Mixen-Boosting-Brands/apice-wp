@@ -1,4 +1,4 @@
-        <section id="contacto" <?php if (
+        <section id="contacto" <?php if(
             get_field("imagen_de_fondo_contacto", "option")
         ): ?>style="background: url('<?php the_field(
     "imagen_de_fondo_contacto",
@@ -7,7 +7,7 @@
             <div class="container-fluid">
                 <div class="row g-0">
                     <div class="col-lg-6 my-auto p-5">
-                        <?php if (get_field("titulo_contacto", "option")): ?>
+                        <?php if( get_field("titulo_contacto", "option") ): ?>
                             <h1
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
@@ -16,7 +16,7 @@
                                 <?php the_field("titulo_contacto", "option"); ?>
                             </h1>
                         <?php endif; ?>
-                        <?php if (get_field("texto_contacto", "option")): ?>
+                        <?php if( get_field("texto_contacto", "option") ): ?>
                             <p
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
@@ -25,7 +25,7 @@
                                 <?php the_field("texto_contacto", "option"); ?>
                             </p>
                         <?php endif; ?>
-                        <?php if (get_field("direccion_contacto", "option")): ?>
+                        <?php if( get_field("direccion_contacto", "option") ): ?>
                             <address
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
@@ -44,7 +44,7 @@
                                 </ul>
                             </address>
                         <?php endif; ?>
-                        <?php if (get_field("telefonos_contacto", "option")): ?>
+                        <?php if( have_rows('telefonos_contacto', 'option') ): ?>
                             <ul
                                 class="list-unstyled mb-4"
                                 data-aos="fade-up"
@@ -55,21 +55,13 @@
                                     <i class="fa-solid fa-mobile"></i>
                                 </li>
                                 <li>
-                                    <?php if (
-                                        get_sub_field("telefono", "option")
-                                    ): ?>
-                                        <a href="tel:+52<?php the_sub_field(
-                                            "telefono",
-                                            "option"
-                                        ); ?>"><?php the_sub_field(
-    "telefono",
-    "option"
-); ?></a>
+                                    <?php while( have_rows('telefonos_contacto', 'option') ) : the_row(); ?>
+                                        <a href="tel:+52<?php the_sub_field("telefono"); ?>"><?php the_sub_field("telefono"); ?></a>
                                     <?php endif; ?>
                                 </li>
                             </ul>
                         <?php endif; ?>
-                        <?php if (get_field("correo_contacto", "option")): ?>
+                        <?php if( get_field("correo_contacto", "option") ): ?>
                             <ul
                                 class="list-unstyled"
                                 data-aos="fade-up"
