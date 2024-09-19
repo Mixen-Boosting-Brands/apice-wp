@@ -55,7 +55,7 @@
                                     <i class="fa-solid fa-mobile"></i>
                                 </li>
                                 <li>
-                                    <?php while (
+                                    <?php $i==1; while (
                                         have_rows(
                                             "telefonos_contacto",
                                             "option"
@@ -78,8 +78,9 @@
                                         <a href="tel:+52<?php echo $phoneNumber; ?>">
                                             <?php echo $formattedPhoneNumber; ?>
                                         </a>
+                                        <?php if( $i = 1 ): echo 'y'; ?>
                                     <?php
-                                    endwhile; ?>
+                                    $1++; endwhile; ?>
                                 </li>
                             </ul>
                         <?php endif; ?>
