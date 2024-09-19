@@ -78,7 +78,7 @@
                                         <a href="tel:+52<?php echo $phoneNumber; ?>">
                                             <?php echo $formattedPhoneNumber; ?>
                                         </a>
-                                        <?php if( $i == 1 ): echo 'y'; ?><?php endif; ?>
+                                        <?php if( $i = 1 ): echo 'y'; ?><?php endif; ?>
                                     <?php
                                     $1++; endwhile; ?>
                                 </li>
