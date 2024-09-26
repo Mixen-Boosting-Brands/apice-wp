@@ -90,6 +90,7 @@
                                         </a>
 
                                         <?php // Only echo 'y' if there are 2 or more rows and we are on the first phone number
+
                                         if ($i == 1 && $total_rows > 1):
                                             echo " y ";
                                         endif; ?>
@@ -1143,6 +1144,6 @@
 
         <script src="<?php echo esc_url(
             get_template_directory_uri()
-        ); ?>/assets/js/app.bundle.js?v=65"></script>
+        ); ?>/assets/js/app.bundle.js?v=66"></script>
     </body>
 </html>
