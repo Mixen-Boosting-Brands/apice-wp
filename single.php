@@ -71,14 +71,18 @@
                             data-aos-duration="1000"
                             data-aos-delay="600"
                         >
-                            <?php esc_html_e(
-                                "Por",
-                                "html5blank"
-                            ); ?> <?php echo get_the_author_meta(
+                            <?php if (get_field("autor_personalizado")): ?>
+                                <?php the_field("autor_personalizado"); ?>
+                            <?php else: ?>
+                                <?php esc_html_e(
+                                    "Por",
+                                    "html5blank"
+                                ); ?> <?php echo get_the_author_meta(
      "user_firstname"
  ) .
      " " .
      get_the_author_meta("user_lastname"); ?>
+                            <?php endif; ?>
                         </h6>
                     </div>
                 </div>
