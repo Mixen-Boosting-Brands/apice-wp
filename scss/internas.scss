@@ -36,7 +36,7 @@
 
     .post-details {
         color: $text-post-details;
-        padding: 60px 40px;
+        padding: 60px;
         text-align: center;
 
         h1,
@@ -47,6 +47,10 @@
         h6 {
             color: $text-post-details;
         }
+    }
+
+    .content {
+        text-align: justify;
     }
 }
 

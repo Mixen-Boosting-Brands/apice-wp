@@ -213,6 +213,21 @@ form {
     }
 }
 
+.wp-block-image .alignleft {
+    float: left;
+    margin: 1.5em 2em 1.5em 0; /* Increase margin */
+}
+
+.wp-block-image .aligncenter {
+    display: block;
+    margin: 1.5em auto; /* Add top and bottom margin, center horizontally */
+}
+
+.wp-block-image .alignright {
+    float: right;
+    margin: 1.5em 0 1.5em 2em; /* Increase margin */
+}
+
 .whatsapp {
     @include whatsapp-button;
 }
