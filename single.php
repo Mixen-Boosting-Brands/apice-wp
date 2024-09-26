@@ -99,18 +99,20 @@
     </div>
 </section>
 
-<section id="comentarios" class="py-60">
-    <div class="container">
-        <div class="row">
-            <div class="col" data-aos="fade-up"
-            data-aos-duration="1000">
-                <?php comments_template("", true);
-        // Remove if you don't want comments.
-        ?>
+<?php if (!is_singular("descargables")): ?>
+    <section id="comentarios" class="py-60">
+        <div class="container">
+            <div class="row">
+                <div class="col" data-aos="fade-up"
+                data-aos-duration="1000">
+                    <?php comments_template("", true);
+    // Remove if you don't want comments.
+    ?>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 
 <?php
     endwhile; ?>
