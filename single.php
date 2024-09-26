@@ -57,7 +57,7 @@
 
                         <?php if (get_field("entradilla")): ?>
                             <div
-                                class="text-start mb-5"
+                                class="content mb-5"
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay="400"
