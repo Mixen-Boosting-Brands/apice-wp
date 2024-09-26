@@ -1144,6 +1144,6 @@
 
         <script src="<?php echo esc_url(
             get_template_directory_uri()
-        ); ?>/assets/js/app.bundle.js?v=66"></script>
+        ); ?>/assets/js/app.bundle.js?v=67"></script>
     </body>
 </html>
