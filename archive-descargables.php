@@ -100,11 +100,18 @@
                             "post_type" => "descargables", // Custom post type
                             "posts_per_page" => -1, // Display all posts
                             "tax_query" => [
+                                "relation" => "AND",
                                 [
                                     "taxonomy" => "categoria-descargables", // Custom taxonomy
                                     "field" => "slug",
                                     "terms" => "destacado", // Term slug to exclude
                                     "operator" => "NOT IN", // Exclude posts with 'Destacado' term
+                                ],
+                                [
+                                    "taxonomy" => "categoria-descargables", // Custom taxonomy
+                                    "field" => "slug",
+                                    "terms" => "oculto", // Term slug to exclude
+                                    "operator" => "NOT IN", // Exclude posts with 'Oculto' term
                                 ],
                             ],
                         ];
