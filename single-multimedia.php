@@ -27,7 +27,13 @@
             <?php endif; ?>
             <div class="col-lg-3 my-auto text-center">
                 <?php
-                $terms_to_check = ["Destacado", "Podcast", "Webinar"];
+                $terms_to_check = [
+                    "Destacado",
+                    "Podcast",
+                    "Webinar",
+                    "Contenido Genérico",
+                    "Contenido Especializado",
+                ];
                 $taxonomy = "categoria-multimedia";
 
                 if (is_singular()) {
