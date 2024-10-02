@@ -36,10 +36,12 @@
                                         <i class="fa-solid fa-location-pin"></i>
                                     </li>
                                     <li>
-                                        <?php the_field(
-                                            "direccion_contacto",
-                                            "option"
-                                        ); ?>
+                                        <address>
+                                            <?php the_field(
+                                                "direccion_contacto",
+                                                "option"
+                                            ); ?>
+                                        </address>
                                     </li>
                                 </ul>
                             </address>
@@ -247,19 +249,28 @@
                                     data-aos-duration="1000"
                                     data-aos-delay="200"
                                 >
-                                    <ul class="list-unstyled mb-4">
-                                        <li class="mb-2">
-                                            <i
-                                                class="fa-solid fa-location-pin"
-                                            ></i>
-                                        </li>
-                                        <li>
-                                            Balcones de Vista Hermosa No. 3<br />
-                                            Col. Balcones Coloniales, C.P.
-                                            76140<br />
-                                            Querétaro, Qro., México
-                                        </li>
-                                    </ul>
+                                    <?php if (
+                                        get_field(
+                                            "direccion_contacto",
+                                            "option"
+                                        )
+                                    ): ?>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="mb-2">
+                                                <i
+                                                    class="fa-solid fa-location-pin"
+                                                ></i>
+                                            </li>
+                                            <li>
+                                                <address>
+                                                    <?php the_field(
+                                                        "direccion_contacto",
+                                                        "option"
+                                                    ); ?>
+                                                </address>
+                                            </li>
+                                        </ul>
+                                    <?php endif; ?>
                                 </address>
                                 <a
                                     href="<?php echo get_permalink(3); ?>"
