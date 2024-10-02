@@ -52,101 +52,89 @@
 
 <section id="historia" class="black-headings pt-60 pb-30">
     <div class="container">
-        <div class="row mb-4">
-            <div class="col-lg-6 my-lg-auto">
-                <h1
-                    class="mb-30"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                >
-                    Historia
-                </h1>
-                <p
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                >
-                    Ápice se crea en febrero del 2024 con el fin de
-                    consolidarse como una empresa sólida y reconocida en
-                    el sector de la construcción e inmobiliar- ia, con
-                    un permanente crecimiento y gran proyección de
-                    participación en el mercado, su creación ha logrado
-                    ser el punto para el desarrollo de profesionales con
-                    más de 15 años de experiencia en diferentes ámbitos,
-                    tales como la arquitectura, ingeniería civil, diseño
-                    entre otros.
-                </p>
+        <?php if (get_field("historia", "option")): ?>
+            <div class="row mb-4">
+                <div class="col-lg-6 my-lg-auto">
+                    <h1
+                        class="mb-30"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                    >
+                        Historia
+                    </h1>
+                    <p
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        data-aos-delay="100"
+                    >
+                        <?php the_field("historia", "option"); ?>
+                    </p>
+                </div>
+                <div class="col-lg-6 my-lg-auto">
+                    <img
+                        src="<?php echo esc_url(
+                            get_template_directory_uri()
+                        ); ?>/assets/images/home/thumb-historia.webp"
+                        alt=""
+                        class="img-fluid"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-delay="200"
+                    />
+                </div>
             </div>
-            <div class="col-lg-6 my-lg-auto">
-                <img
-                    src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/home/thumb-historia.webp"
-                    alt=""
-                    class="img-fluid"
-                    data-aos="fade-left"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                />
+        <?php endif; ?>
+        <?php if (
+            get_field("mision", "option") &&
+            get_field("vision", "option")
+        ): ?>
+            <div class="row mb-4">
+                <div class="col-lg-6 order-lg-2 mb-4 my-lg-auto">
+                    <h1
+                        class="mb-30"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                    >
+                        Misión
+                    </h1>
+                    <p
+                        class="mb-40"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-delay="100"
+                    >
+                        <?php the_field("mision", "option"); ?>
+                    </p>
+                    <h1
+                        class="mb-30"
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-delay="200"
+                    >
+                        Visión
+                    </h1>
+                    <p
+                        data-aos="fade-left"
+                        data-aos-duration="1000"
+                        data-aos-delay="300"
+                    >
+                        <?php the_field("vision", "option"); ?>
+                    </p>
+                </div>
+                <div class="col-lg-6 order-lg-1 my-lg-auto">
+                    <img
+                        src="<?php echo esc_url(
+                            get_template_directory_uri()
+                        ); ?>/assets/images/home/thumb-mision-vision.webp"
+                        alt=""
+                        class="img-fluid"
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                        data-aos-delay="400"
+                    />
+                </div>
             </div>
-        </div>
-        <div class="row mb-4">
-            <div class="col-lg-6 order-lg-2 mb-4 my-lg-auto">
-                <h1
-                    class="mb-30"
-                    data-aos="fade-left"
-                    data-aos-duration="1000"
-                >
-                    Misión
-                </h1>
-                <p
-                    class="mb-40"
-                    data-aos="fade-left"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                >
-                    En Ápice, nos esforzamos por ser líderes en sector
-                    de la construcción de obras industriales y
-                    habitacionales, entregando proyectos de clase mun-
-                    dial que impulsen el desarrollo económico y la
-                    innovación, mientras man- tenemos un compromiso
-                    firme con la calidad, la integridad y el servicio.
-                </p>
-                <h1
-                    class="mb-30"
-                    data-aos="fade-left"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
-                    Visión
-                </h1>
-                <p
-                    data-aos="fade-left"
-                    data-aos-duration="1000"
-                    data-aos-delay="300"
-                >
-                    Nos visualizamos como la empresa constructora de
-                    referencia en el mer- cado, destacando por nuestra
-                    capacidad de proyectar un crecimiento rentable y
-                    seguro, con el fin de realizar proyectos
-                    industriales y habita- cionales de alta complejidad
-                    y envergadura, mientras mantenemos un enfoque
-                    centrado en la eficiencia, honestidad y excelencia.
-                </p>
-            </div>
-            <div class="col-lg-6 order-lg-1 my-lg-auto">
-                <img
-                    src="<?php echo esc_url(
-                        get_template_directory_uri()
-                    ); ?>/assets/images/home/thumb-mision-vision.webp"
-                    alt=""
-                    class="img-fluid"
-                    data-aos="fade-right"
-                    data-aos-duration="1000"
-                    data-aos-delay="400"
-                />
-            </div>
-        </div>
+        <?php endif; ?>
     </div>
 </section>
 
