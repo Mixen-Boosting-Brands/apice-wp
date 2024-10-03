@@ -184,15 +184,17 @@ document.addEventListener("DOMContentLoaded", function () {
         // Preload the background images (to avoid FOUC)
         const residencialBg = new Image();
         const industrialBg = new Image();
-        residencialBg.src = window.fondoResidencial;
-        industrialBg.src = window.fondoIndustrial;
+        residencialBg.src = "../images/proyectos-y-servicios/bg-1.webp";
+        industrialBg.src = "../images/proyectos-y-servicios/bg-2.webp";
 
         residencial.addEventListener("mouseenter", function () {
-            section.style.background = `url('${window.fondoResidencial}') no-repeat`;
+            section.classList.add("residencial-bg");
+            section.classList.remove("industrial-bg");
         });
 
         industrial.addEventListener("mouseenter", function () {
-            section.style.background = `url('${window.fondoIndustrial}') no-repeat`;
+            section.classList.add("industrial-bg");
+            section.classList.remove("residencial-bg");
         });
     }
 });
