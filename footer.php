@@ -1151,6 +1151,17 @@
 
         <?php wp_footer(); ?>
 
+        <?php if (is_home()): ?>
+            <script>
+                window.fondoResidencial = '<?php echo esc_url(
+                    get_field("fondo_residencial", "option")
+                ); ?>';
+                window.fondoIndustrial = '<?php echo esc_url(
+                    get_field("fondo_industrial", "option")
+                ); ?>';
+            </script>
+        <?php endif; ?>
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="<?php echo esc_url(
