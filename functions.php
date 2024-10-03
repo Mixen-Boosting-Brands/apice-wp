@@ -635,4 +635,24 @@ function bootstrap_pagination(
         }
     }
     return null;
+} // Agregar estilos personalizados
+function agregar_estilos_personalizados()
+{
+    $fondo_residencial = get_field("fondo_residencial", "option");
+    $fondo_industrial = get_field("fondo_industrial", "option");
+    if ($fondo_residencial || $fondo_industrial) {
+        echo '<style type="text/css">
+            .residencial-bg {
+                background-image: url("' .
+            esc_url($fondo_residencial) .
+            '") !important;
+            }
+            .industrial-bg {
+                background-image: url("' .
+            esc_url($fondo_industrial) .
+            '") !important;
+            }
+        </style>';
+    }
 }
+add_action("wp_head", "agregar_estilos_personalizados");

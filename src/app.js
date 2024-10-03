@@ -181,12 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const industrial = document.querySelector(".categoria-industrial");
 
     if (section && residencial && industrial) {
-        // Preload the background images (to avoid FOUC)
-        const residencialBg = new Image();
-        const industrialBg = new Image();
-        residencialBg.src = "../images/proyectos-y-servicios/bg-1.webp";
-        industrialBg.src = "../images/proyectos-y-servicios/bg-2.webp";
-
         residencial.addEventListener("mouseenter", function () {
             section.classList.add("residencial-bg");
             section.classList.remove("industrial-bg");
