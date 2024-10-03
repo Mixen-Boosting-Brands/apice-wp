@@ -212,20 +212,6 @@ document.addEventListener("DOMContentLoaded", function () {
         noticias &&
         ebooksDescargables
     ) {
-        // Preload the background images (to avoid FOUC)
-        const apitecaSectionBg = new Image();
-        const articulosBg = new Image();
-        const contenidoMultimediaBg = new Image();
-        const noticiasBg = new Image();
-        const ebooksDescargablesBg = new Image();
-        apitecaSectionBg.src = "../images/apiteca/bg-articulos.webp";
-        articulosBg.src = "../images/apiteca/bg-articulos.webp";
-        contenidoMultimediaBg.src =
-            "../images/apiteca/bg-contenido-multimedia.webp";
-        noticiasBg.src = "../images/apiteca/bg-noticias.webp";
-        ebooksDescargablesBg.src =
-            "../images/apiteca/bg-ebooks-descargables.webp";
-
         articulos.addEventListener("mouseenter", function () {
             apitecaSection.classList.add("articulos-bg");
             apitecaSection.classList.remove("contenido-multimedia-bg");

@@ -640,19 +640,59 @@ function agregar_estilos_personalizados()
 {
     $fondo_residencial = get_field("fondo_residencial", "option");
     $fondo_industrial = get_field("fondo_industrial", "option");
-    if ($fondo_residencial || $fondo_industrial) {
-        echo '<style type="text/css">
-            .residencial-bg {
-                background-image: url("' .
+    $fondo_articulos = get_field("fondo_articulos", "option");
+    $fondo_contenido_multimedia = get_field(
+        "fondo_contenido_multimedia",
+        "option"
+    );
+    $fondo_noticias = get_field("fondo_noticias", "option");
+    $fondo_ebooks_descargables = get_field(
+        "fondo_ebooks_descargables",
+        "option"
+    );
+    echo '<style type="text/css">';
+    if ($fondo_residencial) {
+        echo '.residencial-bg {
+            background-image: url("' .
             esc_url($fondo_residencial) .
             '") !important;
-            }
-            .industrial-bg {
-                background-image: url("' .
+        }';
+    }
+    if ($fondo_industrial) {
+        echo '.industrial-bg {
+            background-image: url("' .
             esc_url($fondo_industrial) .
             '") !important;
-            }
-        </style>';
+        }';
     }
+    if ($fondo_articulos) {
+        echo '.articulos-bg {
+            background-image: url("' .
+            esc_url($fondo_articulos) .
+            '") !important;
+        }';
+    }
+    if ($fondo_contenido_multimedia) {
+        echo '.contenido-multimedia-bg {
+            background-image: url("' .
+            esc_url($fondo_contenido_multimedia) .
+            '") !important;
+        }';
+    }
+    if ($fondo_noticias) {
+        echo '.noticias-bg {
+            background-image: url("' .
+            esc_url($fondo_noticias) .
+            '") !important;
+        }';
+    }
+    if ($fondo_ebooks_descargables) {
+        echo '.ebooks-descargables-bg {
+            background-image: url("' .
+            esc_url($fondo_ebooks_descargables) .
+            '") !important;
+        }';
+    }
+    echo "</style>";
 }
 add_action("wp_head", "agregar_estilos_personalizados");
