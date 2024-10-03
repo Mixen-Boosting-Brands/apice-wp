@@ -650,6 +650,11 @@ function agregar_estilos_personalizados()
         "fondo_ebooks_descargables",
         "option"
     );
+    $imagen_modal_vacantes = get_field("imagen_modal_vacantes", "option");
+    $imagen_modal_proveedores_y_contratistas = get_field(
+        "imagen_modal_proveedores_y_contratistas",
+        "option"
+    );
     echo '<style type="text/css">';
     if ($fondo_residencial) {
         echo '.residencial-bg {
@@ -690,6 +695,20 @@ function agregar_estilos_personalizados()
         echo '.ebooks-descargables-bg {
             background-image: url("' .
             esc_url($fondo_ebooks_descargables) .
+            '") !important;
+        }';
+    }
+    if ($imagen_modal_vacantes) {
+        echo '#modal-vacantes .foto {
+            background-image: url("' .
+            esc_url($imagen_modal_vacantes) .
+            '") !important;
+        }';
+    }
+    if ($imagen_modal_proveedores_y_contratistas) {
+        echo '#modal-proveedores-y-contratistas .foto {
+            background-image: url("' .
+            esc_url($imagen_modal_proveedores_y_contratistas) .
             '") !important;
         }';
     }
