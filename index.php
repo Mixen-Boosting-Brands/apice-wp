@@ -72,9 +72,10 @@
                 </div>
                 <div class="col-lg-6 my-lg-auto">
                     <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/home/thumb-historia.webp"
+                        src="<?php the_field(
+                            "thumbnail_historia",
+                            "option"
+                        ); ?>"
                         alt=""
                         class="img-fluid"
                         data-aos="fade-left"
@@ -123,9 +124,10 @@
                 </div>
                 <div class="col-lg-6 order-lg-1 my-lg-auto">
                     <img
-                        src="<?php echo esc_url(
-                            get_template_directory_uri()
-                        ); ?>/assets/images/home/thumb-mision-vision.webp"
+                        src="<?php the_field(
+                            "thumbnail_mision_vision",
+                            "option"
+                        ); ?>"
                         alt=""
                         class="img-fluid"
                         data-aos="fade-right"
