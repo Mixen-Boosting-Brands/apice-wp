@@ -352,34 +352,33 @@
     </div>
 </section>
 
-<section id="descanso">
-    <div class="container mb-5">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1 text-center">
-                <h1
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="0"
-                >
-                    Sumamos talentos para alcanzar<br />
-                    grandes resultados
-                </h1>
+<?php if (get_field("titulo_del_descanso", "option")): ?>
+    <section id="descanso">
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 text-center">
+                    <h1
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay="0"
+                    >
+                        <?php the_field("titulo_del_descanso", "option"); ?>
+                    </h1>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
-        <img
-            src="<?php echo esc_url(
-                get_template_directory_uri()
-            ); ?>/assets/images/home/bg-descanso.webp"
-            alt=""
-            class="img-fluid"
-            data-aos="zoom-in"
-            data-aos-duration="2000"
-            data-aos-delay="100"
-        />
-    </div>
-</section>
+        <div class="container-fluid">
+            <img
+                src="<?php the_field("imagen_del_descanso", "option"); ?>"
+                alt=""
+                class="img-fluid"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+                data-aos-delay="100"
+            />
+        </div>
+    </section>
+<?php endif; ?>
 
 <section id="equipo">
     <div class="container mb-5">
