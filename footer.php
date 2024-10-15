@@ -1159,6 +1159,35 @@
                 window.fondoIndustrial = '<?php echo esc_url(
                     get_field("fondo_industrial", "option")
                 ); ?>';
+
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Select all elements that have both .swiper-slide and .bg-jumbotron-X classes
+                    const bgJumbotrons = document.querySelectorAll('.swiper-slide[class*="bg-jumbotron-"]');
+
+                    bgJumbotrons.forEach(function (bgJumbotron) {
+                        // Get the image URL from the data attribute
+                        const bgUrl = bgJumbotron.getAttribute('data-bg-url');
+
+                        if (bgUrl) {
+                            // Extract the specific bg-jumbotron-X class to target the correct ::before pseudo-element
+                            const bgJumbotronClass = Array.from(bgJumbotron.classList).find(cls => cls.startsWith('bg-jumbotron-'));
+
+                            if (bgJumbotronClass) {
+                                // Apply the background image to the correct ::before pseudo-element via inline CSS
+                                const style = document.createElement('style');
+                                style.innerHTML = `
+                                    .${bgJumbotronClass}::before {
+                                        background-image: url('${bgUrl}');
+                                        background-position: center;
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
+                                    }
+                                `;
+                                document.head.appendChild(style);
+                            }
+                        }
+                    });
+                });
             </script>
         <?php endif; ?>
 
