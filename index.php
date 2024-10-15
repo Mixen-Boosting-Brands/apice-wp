@@ -8,7 +8,7 @@
                 $i = 1;
                 while (have_rows("slider_principal", "option")):
                     the_row(); ?>
-                <div class="swiper-slide bg-jumbotron-<?php echo $i; ?>" data-bg-url="<?php echo acf_esc_html(get_sub_field("imagen") ?>">
+                <div class="swiper-slide bg-jumbotron-<?php echo $i; ?>" data-bg-url="<?php echo acf_esc_html(get_sub_field("imagen"); ?>">
                     <div class="container-fluid">
                         <div class="row">
                             <div
