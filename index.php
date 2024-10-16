@@ -157,7 +157,7 @@
                             class="card-img-top"
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/valores/1.webp"
+                            ); ?>/assets/images/valores/1.png"
                             alt=""
                             class="img-fluid"
                         />
@@ -183,7 +183,7 @@
                             class="card-img-top"
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/valores/2.webp"
+                            ); ?>/assets/images/valores/2.png"
                             alt=""
                             class="img-fluid"
                         />
@@ -209,7 +209,7 @@
                             class="card-img-top"
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/valores/3.webp"
+                            ); ?>/assets/images/valores/3.png"
                             alt=""
                             class="img-fluid"
                         />
@@ -235,7 +235,7 @@
                             class="card-img-top"
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/valores/4.webp"
+                            ); ?>/assets/images/valores/4.png"
                             alt=""
                             class="img-fluid"
                         />
@@ -261,7 +261,7 @@
                             class="card-img-top"
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/valores/5.webp"
+                            ); ?>/assets/images/valores/5.png"
                             alt=""
                             class="img-fluid"
                         />
@@ -287,7 +287,7 @@
                             class="card-img-top"
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/valores/6.webp"
+                            ); ?>/assets/images/valores/6.png"
                             alt=""
                             class="img-fluid"
                         />
@@ -312,7 +312,7 @@
                             class="card-img-top"
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/valores/7.webp"
+                            ); ?>/assets/images/valores/7.png"
                             alt=""
                             class="img-fluid"
                         />
@@ -337,7 +337,7 @@
                             class="card-img-top"
                             src="<?php echo esc_url(
                                 get_template_directory_uri()
-                            ); ?>/assets/images/valores/8.webp"
+                            ); ?>/assets/images/valores/8.png"
                             alt=""
                             class="img-fluid"
                         />
