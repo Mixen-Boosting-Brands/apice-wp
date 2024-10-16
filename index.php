@@ -144,213 +144,48 @@
 
 <section id="valores" class="black-headings pt-30 pb-60">
     <div class="container">
-        <div class="row">
-            <div class="col-6 col-lg-3 mb-md-4">
-                <div
-                    class="card"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="0"
-                >
-                    <div>
-                        <img
-                            class="card-img-top"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/valores/1.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <div class="card-body">
-                            <h1 class="card-title">Confianza</h1>
-                            <p class="card-text">
-                                En el equipo de trabajo como con
-                                nuestros clientes.
-                            </p>
+        <?php if (have_rows("valores", "option")): ?>
+            <div class="row">
+                <?php
+                $i == 0;
+                while (have_rows("valores")):
+                    the_row(); ?>
+                    <div class="col-6 col-lg-3 mb-md-4">
+                        <div
+                            class="card"
+                            data-aos="fade-up"
+                            data-aos-duration="1000"
+                            data-aos-delay="0"
+                        >
+                            <div>
+                                <img
+                                    class="card-img-top"
+                                    src="<?php echo acf_esc_html(
+                                        get_sub_field("icono")
+                                    ); ?>"
+                                    alt="<?php echo acf_esc_html(
+                                        get_sub_field("titulo")
+                                    ); ?>"
+                                    class="img-fluid"
+                                />
+                                <div class="card-body">
+                                    <h1 class="card-title"><?php echo acf_esc_html(
+                                        get_sub_field("titulo")
+                                    ); ?></h1>
+                                    <p class="card-text">
+                                        <?php echo acf_esc_html(
+                                            get_sub_field("texto")
+                                        ); ?>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php $i++;
+                endwhile;
+                ?>
             </div>
-            <div class="col-6 col-lg-3 mb-md-4">
-                <div
-                    class="card"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                >
-                    <div>
-                        <img
-                            class="card-img-top"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/valores/2.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <div class="card-body">
-                            <h1 class="card-title">Honestidad</h1>
-                            <p class="card-text">
-                                Actuando siempre con transparencia y
-                                claridad.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-md-4">
-                <div
-                    class="card"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
-                    <div>
-                        <img
-                            class="card-img-top"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/valores/3.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <div class="card-body">
-                            <h1 class="card-title">Calidad</h1>
-                            <p class="card-text">
-                                En cada procedimiento, proceso y
-                                producto que ofrecemos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-md-4">
-                <div
-                    class="card"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="300"
-                >
-                    <div>
-                        <img
-                            class="card-img-top"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/valores/4.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <div class="card-body">
-                            <h1 class="card-title">Servicio</h1>
-                            <p class="card-text">
-                                Especializado para cada uno de nuestros
-                                clientes y colaboradores.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-md-4">
-                <div
-                    class="card"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="0"
-                >
-                    <div>
-                        <img
-                            class="card-img-top"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/valores/5.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <div class="card-body">
-                            <h1 class="card-title">Innovación</h1>
-                            <p class="card-text">
-                                Mejorando siempre las actividades que
-                                realizamos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-md-4">
-                <div
-                    class="card"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="100"
-                >
-                    <div>
-                        <img
-                            class="card-img-top"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/valores/6.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <div class="card-body">
-                            <h1 class="card-title">Eficiencia</h1>
-                            <p class="card-text">
-                                En nuestro trabajo mejorando cada día.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-md-4">
-                <div
-                    class="card"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="200"
-                >
-                    <div>
-                        <img
-                            class="card-img-top"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/valores/7.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <div class="card-body">
-                            <h1 class="card-title">Integridad</h1>
-                            <p class="card-text">
-                                En cada situación a afrontar.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-lg-3 mb-md-4">
-                <div
-                    class="card"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay="300"
-                >
-                    <div>
-                        <img
-                            class="card-img-top"
-                            src="<?php echo esc_url(
-                                get_template_directory_uri()
-                            ); ?>/assets/images/valores/8.png"
-                            alt=""
-                            class="img-fluid"
-                        />
-                        <div class="card-body">
-                            <h1 class="card-title">Excelencia</h1>
-                            <p class="card-text">
-                                En cada proyecto que entregamos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php endif; ?>
     </div>
 </section>
 
