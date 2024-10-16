@@ -147,33 +147,34 @@
         <?php if (have_rows("valores", "option")): ?>
             <div class="row">
                 <?php
-                $i == 0;
-                while (have_rows("valores")):
+                $i = 0;
+                while (have_rows("valores", "option")):
                     the_row(); ?>
                     <div class="col-6 col-lg-3 mb-md-4">
                         <div
                             class="card"
                             data-aos="fade-up"
                             data-aos-duration="1000"
-                            data-aos-delay="0"
+                            data-aos-delay="<?php if (
+                                $i == 0
+                            ): ?>0<?php else:echo $i; ?>00<?php endif; ?>"
                         >
                             <div>
                                 <img
-                                    class="card-img-top"
-                                    src="<?php echo acf_esc_html(
+                                    class="card-img-top img-fluid"
+                                    src="<?php echo esc_url(
                                         get_sub_field("icono")
                                     ); ?>"
-                                    alt="<?php echo acf_esc_html(
+                                    alt="<?php echo esc_attr(
                                         get_sub_field("titulo")
                                     ); ?>"
-                                    class="img-fluid"
                                 />
                                 <div class="card-body">
-                                    <h1 class="card-title"><?php echo acf_esc_html(
+                                    <h1 class="card-title"><?php echo esc_html(
                                         get_sub_field("titulo")
                                     ); ?></h1>
                                     <p class="card-text">
-                                        <?php echo acf_esc_html(
+                                        <?php echo esc_html(
                                             get_sub_field("texto")
                                         ); ?>
                                     </p>
