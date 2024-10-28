@@ -72,7 +72,10 @@
                             data-aos-delay="600"
                         >
                             <?php if (get_field("autor_personalizado")): ?>
-                                Por <?php the_field("autor_personalizado"); ?>
+                                <?php esc_html_e(
+                                    "Por",
+                                    "html5blank"
+                                ); ?> <?php the_field("autor_personalizado"); ?>
                             <?php else: ?>
                                 <?php esc_html_e(
                                     "Por",
