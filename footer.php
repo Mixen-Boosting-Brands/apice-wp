@@ -351,9 +351,9 @@
             </div>
         </footer>
 
-        <!-- a href="https://wa.me/52614?text=Hola%20FOO%20BAR,%20necesito%20información." class="whatsapp" target="_blank">
-        <i class="fab fa-whatsapp whatsapp-icon"></i>
-    </a -->
+        <a href="https://wa.me/524424753008?text=Hola%20Ápice,%20necesito%20más%20información." class="whatsapp" target="_blank">
+            <i class="fab fa-whatsapp whatsapp-icon"></i>
+        </a>
 
         <!-- Modales -->
         <!-- Modal Imagen Singular -->
