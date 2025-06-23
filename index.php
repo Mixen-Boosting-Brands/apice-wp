@@ -220,6 +220,7 @@
 
 <section id="equipo">
     <div class="container mb-5">
+    <?php if (get_field("texto_del_equipo", "option")): ?>
         <div class="row">
             <div class="col-lg-10 offset-lg-1 text-center">
                 <p
@@ -228,12 +229,11 @@
                     data-aos-duration="1000"
                     data-aos-delay="0"
                 >
-                    Te presentamos las mentes brillantes que lideran
-                    proyectos, innovan y fomentan un ambiente
-                    colaborativo en esta organización.
+                    <?php the_field("texto_del_equipo", "option"); ?>
                 </p>
             </div>
         </div>
+    <?php endif; ?>
     </div>
     <div class="container-fluid">
         <div class="row mb-4">
