@@ -13,7 +13,7 @@
         ?></title>
 
 		<link rel="alternate" type="application/rss+xml" title="<?php bloginfo(
-      "name"
+      "name",
   ); ?>" href="<?php bloginfo("rss2_url"); ?>" />
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -24,7 +24,7 @@
             rel="apple-touch-icon"
             sizes="180x180"
             href="<?php echo esc_url(
-                get_template_directory_uri()
+                get_template_directory_uri(),
             ); ?>/apple-touch-icon.png"
         />
         <link
@@ -32,7 +32,7 @@
             type="image/png"
             sizes="32x32"
             href="<?php echo esc_url(
-                get_template_directory_uri()
+                get_template_directory_uri(),
             ); ?>/favicon-32x32.png"
         />
         <link
@@ -40,21 +40,21 @@
             type="image/png"
             sizes="16x16"
             href="<?php echo esc_url(
-                get_template_directory_uri()
+                get_template_directory_uri(),
             ); ?>/favicon-16x16.png"
         />
         <link rel="manifest" href="<?php echo esc_url(
-            get_template_directory_uri()
+            get_template_directory_uri(),
         ); ?>/site.webmanifest" />
         <link rel="mask-icon" href="<?php echo esc_url(
-            get_template_directory_uri()
+            get_template_directory_uri(),
         ); ?>/safari-pinned-tab.svg" color="#121212" />
         <meta name="msapplication-TileColor" content="#121212" />
         <meta name="theme-color" content="#121212" />
 
         <link rel="stylesheet" href="<?php echo esc_url(
-            get_template_directory_uri()
-        ); ?>/assets/css/styles.css?v=69" />
+            get_template_directory_uri(),
+        ); ?>/assets/css/styles.css?v=70" />
 
         <?php wp_head(); ?>
 
@@ -183,7 +183,7 @@
                         <a href="<?php echo esc_url(home_url()); ?>">
                             <img
                                 src="<?php echo esc_url(
-                                    get_template_directory_uri()
+                                    get_template_directory_uri(),
                                 ); ?>/assets/images/logo<?php if (
     !is_home()
 ): ?>-color<?php endif; ?>@2x.webp"
