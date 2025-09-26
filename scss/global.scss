@@ -202,8 +202,9 @@ form {
     }
 
     .btn {
-        background-color: $form-button-color;
-        color: $primary;
+        background-color: $form-button-color !important;
+        border-radius: 0 !important;
+        color: $primary !important;
 
         &:hover,
         &:focus {
