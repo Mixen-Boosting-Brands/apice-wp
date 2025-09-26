@@ -131,7 +131,7 @@
                         <?php endif; ?>
                     </div>
                     <div class="col-lg-6">
-                        <div class="contenedor-calendly p-5">
+                        <div class="contenedor-formulario p-5">
                             <h1
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
