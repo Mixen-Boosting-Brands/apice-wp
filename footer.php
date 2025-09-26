@@ -2,7 +2,7 @@
             get_field("imagen_de_fondo_contacto", "option")
         ): ?>style="background: url('<?php the_field(
     "imagen_de_fondo_contacto",
-    "option"
+    "option",
 ); ?>') no-repeat;"<?php endif; ?>>
             <div class="container-fluid">
                 <div class="row g-0">
@@ -39,7 +39,7 @@
                                         <address>
                                             <?php the_field(
                                                 "direccion_contacto",
-                                                "option"
+                                                "option",
                                             ); ?>
                                         </address>
                                     </li>
@@ -62,29 +62,29 @@
                                     $total_rows = count(
                                         get_field(
                                             "telefonos_contacto",
-                                            "option"
-                                        )
+                                            "option",
+                                        ),
                                     );
 
                                     $i = 1;
                                     while (
                                         have_rows(
                                             "telefonos_contacto",
-                                            "option"
+                                            "option",
                                         )
                                     ):
                                         the_row(); ?>
                                         <?php
                                         // Retrieve the phone number
                                         $phoneNumber = get_sub_field(
-                                            "telefono"
+                                            "telefono",
                                         );
 
                                         // Format the phone number
                                         $formattedPhoneNumber = preg_replace(
                                             "/(\d{3})(\d{3})(\d{4})/",
                                             "($1) $2 $3",
-                                            $phoneNumber
+                                            $phoneNumber,
                                         );
                                         ?>
                                         <a href="tel:+52<?php echo $phoneNumber; ?>">
@@ -119,11 +119,11 @@
                                 <li>
                                     <a href="mailto:<?php the_field(
                                         "correo_contacto",
-                                        "option"
+                                        "option",
                                     ); ?>"
                                         ><?php the_field(
                                             "correo_contacto",
-                                            "option"
+                                            "option",
                                         ); ?></a
                                     >
                                 </li>
@@ -140,7 +140,12 @@
                                 Agenda una sesión y<br />déjanos tus datos
                             </h1>
 
-                            <!-- Principio del widget integrado de Calendly -->
+                            <!-- Formulario de contacto -->
+                            <?php echo do_shortcode(
+                                '[wpforms id="1221" title="false"]',
+                            ); ?>
+
+                            <!-- Principio del widget integrado de Calendly
                             <div
                                 class="calendly-inline-widget"
                                 data-url="https://calendly.com/apiceac/30min?background_color=c1b4ad&text_color=222222&primary_color=c06b36"
@@ -154,7 +159,7 @@
                                 src="https://assets.calendly.com/assets/external/widget.js"
                                 async
                             ></script>
-                            <!-- Final del widget integrado de Calendly -->
+                            Final del widget integrado de Calendly -->
                         </div>
                     </div>
                 </div>
@@ -168,7 +173,7 @@
                         <a id="logo-footer-a" href="/">
                             <img
                                 src="<?php echo esc_url(
-                                    get_template_directory_uri()
+                                    get_template_directory_uri(),
                                 ); ?>/assets/images/logo-footer@2x.webp"
                                 alt=""
                                 class="img-fluid"
@@ -252,7 +257,7 @@
                                     <?php if (
                                         get_field(
                                             "direccion_contacto",
-                                            "option"
+                                            "option",
                                         )
                                     ): ?>
                                         <ul class="list-unstyled mb-4">
@@ -265,7 +270,7 @@
                                                 <address>
                                                     <?php the_field(
                                                         "direccion_contacto",
-                                                        "option"
+                                                        "option",
                                                     ); ?>
                                                 </address>
                                             </li>
@@ -343,7 +348,7 @@
                             data-aos-offset="20"
                         >
                             &copy; <?php echo bloginfo(
-                                "name"
+                                "name",
                             ); ?>, <?php echo date("Y"); ?>
                         </p>
                     </div>
@@ -456,7 +461,7 @@
                                     <!-- /Aquí se inyecta feedback a usuario vía Ajax -->
                                     <form
                                         action="<?php echo esc_url(
-                                            get_template_directory_uri()
+                                            get_template_directory_uri(),
                                         ); ?>/mailer-vacantes.php"
                                         method="POST"
                                         class="row g-3 needs-validation formulario-vacantes"
@@ -651,7 +656,7 @@
                                                 >
                                                     Acepto el
                                                     <a href="<?php echo get_permalink(
-                                                        3
+                                                        3,
                                                     ); ?>"
                                                         >Aviso de Privacidad</a
                                                     >
@@ -723,7 +728,7 @@
                                     <!-- /Aquí se inyecta feedback a usuario vía Ajax -->
                                     <form
                                         action="<?php echo esc_url(
-                                            get_template_directory_uri()
+                                            get_template_directory_uri(),
                                         ); ?>/mailer-proveedores-y-contratistas.php"
                                         method="POST"
                                         class="row g-3 needs-validation formulario-proveedores-y-contratistas"
@@ -1065,7 +1070,7 @@
                                                 >
                                                     Acepto el
                                                     <a href="<?php echo get_permalink(
-                                                        3
+                                                        3,
                                                     ); ?>"
                                                         >Aviso de Privacidad</a
                                                     >
@@ -1154,10 +1159,10 @@
         <?php if (is_home()): ?>
             <script>
                 window.fondoResidencial = '<?php echo esc_url(
-                    get_field("fondo_residencial", "option")
+                    get_field("fondo_residencial", "option"),
                 ); ?>';
                 window.fondoIndustrial = '<?php echo esc_url(
-                    get_field("fondo_industrial", "option")
+                    get_field("fondo_industrial", "option"),
                 ); ?>';
 
                 document.addEventListener('DOMContentLoaded', function () {
@@ -1194,7 +1199,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script src="<?php echo esc_url(
-            get_template_directory_uri()
+            get_template_directory_uri(),
         ); ?>/assets/js/app.bundle.js?v=69"></script>
     </body>
 </html>
