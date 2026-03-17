@@ -726,4 +726,5 @@ add_filter("rest_authentication_errors", function ($result) {
     return new WP_Error("rest_forbidden", "REST API restricted", [
         "status" => 401,
     ]);
-});
+}); // Desactivar registro de usuarios nuevos
+add_filter("option_users_can_register", "__return_false");
