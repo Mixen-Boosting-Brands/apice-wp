@@ -9,7 +9,7 @@
                 while (have_rows("slider_principal", "option")):
                     the_row(); ?>
                 <div class="swiper-slide bg-jumbotron-<?php echo $i; ?>" data-bg-url="<?php echo acf_esc_html(
-    get_sub_field("imagen")
+    get_sub_field("imagen"),
 ); ?>">
                     <div class="container-fluid">
                         <div class="row">
@@ -22,7 +22,7 @@
                                     data-aos-duration="1000"
                                 >
                                     <?php echo acf_esc_html(
-                                        get_sub_field("texto")
+                                        get_sub_field("texto"),
                                     ); ?>
                                 </h1>
                             </div>
@@ -62,7 +62,7 @@
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        Historia
+                        <?php the_field("titulo_historia", "option"); ?>
                     </h1>
                     <p
                         data-aos="fade-right"
@@ -76,7 +76,7 @@
                     <img
                         src="<?php the_field(
                             "thumbnail_historia",
-                            "option"
+                            "option",
                         ); ?>"
                         alt=""
                         class="img-fluid"
@@ -98,7 +98,7 @@
                         data-aos="fade-left"
                         data-aos-duration="1000"
                     >
-                        Misión
+                        <?php the_field("titulo_mision", "option"); ?>
                     </h1>
                     <p
                         class="mb-40"
@@ -114,7 +114,7 @@
                         data-aos-duration="1000"
                         data-aos-delay="200"
                     >
-                        Visión
+                        <?php the_field("titulo_vision", "option"); ?>
                     </h1>
                     <p
                         data-aos="fade-left"
@@ -128,7 +128,7 @@
                     <img
                         src="<?php the_field(
                             "thumbnail_mision_vision",
-                            "option"
+                            "option",
                         ); ?>"
                         alt=""
                         class="img-fluid"
@@ -163,19 +163,19 @@
                                 <img
                                     class="card-img-top img-fluid"
                                     src="<?php echo esc_url(
-                                        get_sub_field("icono")
+                                        get_sub_field("icono"),
                                     ); ?>"
                                     alt="<?php echo esc_attr(
-                                        get_sub_field("titulo")
+                                        get_sub_field("titulo"),
                                     ); ?>"
                                 />
                                 <div class="card-body">
                                     <h1 class="card-title"><?php echo esc_html(
-                                        get_sub_field("titulo")
+                                        get_sub_field("titulo"),
                                     ); ?></h1>
                                     <p class="card-text">
                                         <?php echo esc_html(
-                                            get_sub_field("texto")
+                                            get_sub_field("texto"),
                                         ); ?>
                                     </p>
                                 </div>
@@ -277,7 +277,7 @@
                                         // Get the URL of the featured image
                                         $thumbnail_url = get_the_post_thumbnail_url(
                                             get_the_ID(),
-                                            "foto-integrante"
+                                            "foto-integrante",
                                         );
 
                                         // Output the URL
@@ -287,7 +287,7 @@
                                     data-bs-toggle="modal"
                                     data-bs-target="#modal-equipo"
                                     data-bg="<?php echo esc_url(
-                                        get_template_directory_uri()
+                                        get_template_directory_uri(),
                                     ); ?>/assets/images/equipo/saul-sanchez.png"
                                     data-bg-modal="<?php if (
                                         get_field("foto_modal")
@@ -311,7 +311,7 @@
                                     $content = preg_replace(
                                         "/\r\n|\r|\n{2,}/",
                                         PHP_EOL . PHP_EOL,
-                                        $content
+                                        $content,
                                     );
 
                                     // Convert content to plain text
